@@ -1,0 +1,373 @@
+﻿body {
+    background-color: rgb(255,255,255) !important;
+}
+
+.top-menu-2 .navbar-inner,
+.top-menu-2 ul.nav > .dropdown > .dropdown-menu,
+.top-menu-2 .dropdown-submenu > .dropdown-menu {
+    background-color: #222;
+}
+
+.breaking-news-widget,
+.ticker-swipe,
+.ticker-swipe span {
+    background-color: #fff !important;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar-track {
+    background-color: #d5d5d5;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.4);
+}
+
+a {
+    color: #494949; /*#3F5765;*/
+}
+
+.btn-theme:hover, .btn-theme:focus,
+.btn-theme:active, .btn-theme.active {
+    color: #fff;
+    background-color: #333;
+}
+
+/* bootstrap tooltip */
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #111;
+}
+
+.tooltip-inner {
+    padding: 3px 8px;
+    background-color: #111;
+}
+
+.widget .widget-content a.btn-theme:hover,
+.widget .widget-content a.btn-theme:focus {
+    color: #fff;
+}
+
+.btn-theme.disabled, .btn-theme[disabled] {
+    color: #919191;
+    background-color: #DADADA;
+    cursor: default;
+}
+
+.highlight {
+    background-color: #FAFF77;
+}
+
+.carousel-nav {
+    background-color: #E6E6E6;
+}
+
+.navbar-top .navbar-inverse .navbar-inner,
+.navbar-top .dropdown-menu,
+.navbar-top .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-top .navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-top .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle,
+.navbar-top .dropdown-menu > li > a:hover,
+.navbar-top .dropdown-menu > li > a:focus,
+.navbar-top .dropdown-submenu:hover > a,
+.navbar-top .dropdown-submenu:focus > a {
+    background: #1F1F1F;
+    background-color: #1F1F1F;
+    /*-webkit-box-shadow: 0px 5px 20px rgba(54, 54, 54, 0.94);
+    -moz-box-shadow: 0px 5px 20px rgba(54, 54, 54, 0.94);
+    box-shadow: 0 5px 20px rgba(54, 54, 54, 0.94);*/
+}
+
+    .navbar-top .navbar-inverse .navbar-inner:before,
+    .navbar-top .navbar-inverse .navbar-inner:after {
+    }
+
+.navbar-main .navbar .navbar-inner {
+    /*-webkit-box-shadow: 0px 5px 13px rgba(54, 54, 54, 0.94);
+    -moz-box-shadow: 0px 5px 13px rgba(54, 54, 54, 0.94);
+    box-shadow: 0px 5px 13px rgba(54, 54, 54, 0.94);*/
+}
+
+/* Login Form */
+.input-append .add-on, .input-prepend .add-on {
+    background-color: #fff;
+}
+
+
+.cat-widget,
+.widget,
+.widget-300,
+.article-content,
+.author-bio,
+.article-tags {
+    /*border-color: #FF1F00 #d5d5d5 #d5d5d5 #d5d5d5; /* #333745, #3F5765 */
+    /*border-color: #d5d5d5 !important;*/
+}
+
+/*
+    .widget .widget-title,
+    .widget-300 .widget-300-title,
+    .author-bio .cat-widget-title,
+    .cat-related-news .cat-widget-title,
+    .comments-box .cat-widget-title {
+        color: #fff !important;
+    }
+
+        .author-bio .cat-widget-title > h3,
+        .cat-related-news .cat-widget-title > h3,
+        .comments-box .cat-widget-title > h3 {
+            color: #fff;
+        }
+
+    .cat-widget .cat-widget-title > a {
+        color: #fff !important;
+    }
+*/
+
+.breaking-news-widget > .row-fluid > .title h3
+{
+    color:#fff;
+}
+
+.cat-widget .cat-widget-title h3, 
+.author-bio .cat-widget-title h3, 
+.widget .widget-title h4,
+.widget-300 .widget-300-title h4,
+.modern-footer .f-widget > .f-widget-title h4
+{
+    color:#292929;
+}
+
+.posts-in-scrolling-box .paging-footer .pagination ul > li:hover > a > i,
+.posts-in-scrolling-box .paging-footer .pagination ul > li:focus > a > i {
+    color: #fff;
+}
+
+.modern-footer .f-copyright {
+    /*background-color: rgb(37, 37, 37);*/
+    /*color: #a3a3a3;*/
+}
+
+.article-content .post-review .total-score .progress-striped .bar {
+    /*background-color:#333;*/
+}
+
+/* Font and Icons Colors */
+a:hover, a:focus,
+i:hover, i:focus,
+.ticker-content a:hover,
+.widget a:hover, .widget-300 a:hover, .cat-widget a:hover,
+.cat-horiz a:hover,
+.cat-horiz .related-posts .media-list a:hover,
+.cat-horiz .last-post .post-info .post-meta a:hover,
+.cat-horiz .related-posts .media-list .post-meta a:hover,
+.cat-horiz .last-post .post-info .post-meta a:hover > i,
+.cat-horiz .related-posts .media-list .post-meta a:hover > i,
+.cat-horiz-divided a:hover,
+.cat-horiz-divided .related-posts .media-list a:hover,
+.cat-horiz-divided .last-post .post-meta a:hover,
+.cat-horiz-divided .last-post .post-meta a:hover > i,
+.cat-horiz-divided .last-post .post-meta a:focus,
+.cat-horiz-divided .last-post .post-meta a:focus > i,
+.cat-horiz-divided .related-posts .media-list .post-meta a:hover,
+.cat-horiz-divided .related-posts .media-list .post-meta a:hover > i,
+.cat-vertical a:hover,
+.cat-vertical a:hover > i,
+.cat-vertical a:hover > span,
+.cat-vertical .last-post .post-info .post-meta a:hover,
+.cat-vertical .last-post .post-info .post-meta a:hover > i,
+.cat-vertical .last-post .post-info .post-meta a:focus,
+.cat-vertical .last-post .post-info .post-meta a:focus > i,
+.cat-vertical .related-posts .media-list a:hover,
+.cat-vertical .related-posts .media-list .post-meta a:hover,
+.cat-vertical .related-posts .media-list a:hover > i,
+.cat-vertical .related-posts .media-list .post-meta a:hover > i,
+.cat-vertical .related-posts .media-list a:focus > i,
+.cat-vertical .related-posts .media-list .post-meta a:focus > i,
+.posts-in-thumbs .media-list a:hover,
+.posts-in-scrolling-box .media-list a:hover,
+.posts-in-thumbs .media-list li:hover a,
+.posts-in-scrolling-box .media-list li:hover a,
+.widget .widget-content .tabs-body-style .media-list li:hover a,
+.article-content .post-info .post-meta a:hover,
+.article-content .post-info .breadcrumb a:hover,
+.article-content .post-info .post-meta a:hover > i,
+.article-content .post-info .breadcrumb a:hover > i,
+.comments-box .cat-widget-content .media-body .media ul > li > a:hover,
+.comments-box .cat-widget-content .media-body .media ul > li > a:hover > i,
+.comments-box .cat-widget-content .media-body .media .media-body .media ul > li > a:hover,
+.comments-box .cat-widget-content .media-body .media .media-body .media ul > li > a:hover > i,
+.post-navigation a:hover,
+.posts-in-thumbs .media-list .post-meta a:hover,
+.posts-in-scrolling-box .media-list .post-meta a:hover,
+.widget .widget-content .tabs-body-style .media-list .post-meta a:hover,
+.post-navigation div a:hover > span,
+.post-navigation div a:hover > i,
+.blog-item .post-meta ul li a:hover,
+.blog-item .post-meta ul li a:hover > i {
+    /*color: #000;*/
+}
+
+.navbar-main .navbar .navbar-inner {
+    /*background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    filter: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;*/
+    background-image: linear-gradient(to bottom,rgb(53, 53, 53),rgb(24, 24, 24));
+}
+
+.navbar-main .navbar .navbar-inner {
+    /*background: rgb(36, 36, 36);
+    background-color: rgb(36, 36, 36);*/
+}
+
+.navbar-main .navbar .divider-vertical {
+    border-right-color: #424242;
+    border-left-color: #1A1A1A;
+}
+
+.navbar-main .navbar .nav > li > a,
+.navbar-main .navbar .nav > li > i,
+.navbar-main .navbar .brand,
+.navbar-main .navbar .nav > li > a [class^="icon-"],
+.navbar-main .navbar .nav > li > a [class*="icon-"],
+.navbar-main .dropdown-menu > li > a {
+    color: #fff;
+    text-shadow: none;
+}
+
+.navbar-main .navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-main .navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar-main .navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar-main .navbar .nav li.dropdown.open.active > .dropdown-toggle,
+.navbar-main .navbar .nav > li.dropdown.active [class^="icon-"],
+.navbar-main .navbar .nav > li.dropdown.open.active [class^="icon-"],
+.navbar-main .navbar .nav > li.dropdown.active [class*="icon-"],
+.navbar-main .navbar .nav > li.dropdown.open.active [class*="icon-"],
+.navbar-main .navbar .nav > li > a:focus,
+.navbar-main .navbar .nav > li > a:hover,
+.navbar-main .navbar .nav > li > a:focus [class^="icon-"],
+.navbar-main .navbar .nav > li > a:hover [class^="icon-"],
+.navbar-main .navbar .nav > li > a:focus [class*="icon-"],
+.navbar-main .navbar .nav > li > a:hover [class*="icon-"],
+.navbar-main .navbar .nav > li > i:focus,
+.navbar-main .navbar .nav > li > i:hover,
+.navbar-main .navbar .dropdown .caret:hover,
+.navbar-main .navbar .nav > .active > a,
+.navbar-main .navbar .nav > .active > a:hover,
+.navbar-main .navbar .nav > .active > a:focus,
+.navbar-main .dropdown-menu > li > a:hover,
+.navbar-main .dropdown-menu > li > a:focus,
+.navbar-main .dropdown-submenu:hover > a,
+.navbar-main .dropdown-submenu:focus > a
+{
+    color: #fff;
+}
+
+.widget .widget-content ul.tabs-header li {
+}
+
+    .widget .widget-content ul.tabs-header li.btn-theme a {
+        color: #fff;
+        /*text-shadow: 0px 1px 1px rgb(0,0,0);*/
+        text-shadow: none;
+    }
+
+.widget .widget-content ul.tabs-header li {
+    background-color: #555;
+}
+
+
+    .widget .widget-content ul.tabs-header li:hover {
+        background-color: #696969;
+    }
+    
+.widget .widget-content ul.tabs-header li.btn-theme a:hover,
+.widget .widget-content ul.tabs-header > li.btn-theme.active > a {
+    color: #fff;
+}
+
+.widget span, 
+.widget-300 span, 
+.cat-widget span {
+    color: #3a3a3a;
+}
+
+.cat-horiz .last-post .post-info .post-desc p,
+.cat-vertical .last-post .post-info .post-desc p,
+.cat-horiz-divided .last-post .post-desc p {
+    color: #686868;
+}
+
+
+
+.article-content .social-share-footer,
+.posts-in-scrolling-box .paging-footer {
+    background-color: #F8F8F8;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+}
+
+    .posts-in-scrolling-box .paging-footer a:hover {
+        background-color: #3F5765;
+    }
+
+    .posts-in-scrolling-box .paging-footer .pagination a {
+        background-color: #fff;
+    }
+
+    .posts-in-scrolling-box .paging-footer .pagination ul > li > a [class^="icon-"],
+    .posts-in-scrolling-box .paging-footer .pagination ul > li > a [class*="icon-"] {
+        color: #3a3a3a;
+    }
+
+.post-navigation .prev-post span,
+.post-navigation .next-post span,
+.post-navigation .prev-post i,
+.post-navigation .next-post i,
+.post-navigation div {
+    color: #fff;
+}
+
+.cat-horiz .related-posts .media-list li:hover,
+.cat-horiz-divided .related-posts .media-list li:hover,
+.cat-vertical .related-posts .media-list li:hover,
+.posts-in-thumbs .media-list li:hover,
+.posts-in-scrolling-box .media-list li:hover,
+.widget .widget-content .tabs-body-style .media-list li:hover {
+    /*background: #f6f6f6;*/
+}
+
+.widget, .widget-300, .article-content, .author-bio, .article-tags {
+    /* #333745, #3F5765 */
+}
+
+    .widget a, .widget-300 a, .cat-widget a {
+        /*color: #3F5765;*/
+    }
+
+.posts-in-widget span,
+.posts-in-widget i,
+.blog-item .post-meta,
+.blog-item .post-meta ul li a, .blog-item .post-meta ul li span,
+.blog-item .post-meta .post-author a {
+    color: #A5A5A5;
+}
+
+.carousel-caption h4 a {
+    color: #d5d5d5;
+}
