@@ -144,13 +144,12 @@
                             <div class="row-fluid">
                             <div class="span12">
 
-                               <div id="allContent"><table border="0" height="100%" width="100%"><tr><td align="center" valign="middle" height="100%" width="100%">
+                               <div id="allContent"><table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%"><tr><td align="center" valign="middle" height="100%" width="100%">
 		
 		<div id="alertBoxes"></div>
-                                    <h1 itemprop="headline">Ingresa tus Datos &Uacute;nicos de Acceso</h1>
 		<span class="loginBlock"><span class="inner">
 			<?php
-            if ( isset($_SESSION['admonusuario_Gl']) && isset($_SESSION['Id_UsuG']) && $_SESSION['admonusuario_Gl'] != '' && $_SESSION['Id_UsuG'] != '0' ){
+if ( isset($_SESSION['username']) && isset($_SESSION['userid']) && $_SESSION['username'] != '' && $_SESSION['userid'] != '0' ){
 	echo '<div class="session_on">
 		Ya iniciaste sesi&oacute;n &#124; Ahora has un <a href="javascript:void(0);" id="sessionKiller">logout</a>.<span class="timer" id="timer"  style="margin-left: 10px;"></span>
 	</div>';
