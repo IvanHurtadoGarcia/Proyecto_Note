@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Adams Magazine | Archives Page</title>
+    <title>Inicio de Sesi&oacute;n</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -38,16 +38,13 @@
         <div class="navbar navbar-banner">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
+                    <div class="logo-240 pull-left"  itemtype="http://schema.org/Brand">
                         <h1 class="hidden" itemprop="name">Serpentsoft</h1>
                         <a href="../index.html">
                             <img itemprop="logo" src="../../images/logoNiN.png" alt="Logo" /></a>
                     </div>
 
-                    <div class="adv-970 pull-right visible-desktop">
-                        <a href="#MyThemeAdv" target="_blank">
-                            <img class="pull-right" src="../../images/ad-970.jpg" alt="970x90" /></a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -55,62 +52,7 @@
     </header>
 
      <nav class="container-fluid navbar-main enable-fixed">
-        <h2 class="hidden">Site Navigation Bar</h2>
-
-
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="clearfix">
-
-                    <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target="#divNav2">
-                        <span class="icon-reorder"></span>
-                    </button>
-
-                    <div id="divNav2" class="nav-collapse collapse clearfix">
-
-                        <ul class="nav">
-
-                            <li class="dropdown active" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="ancHomePages" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="../index.html"><i class="icon-home"></i></a>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a6" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Page Layout<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="../home-styles/blog.html" title="">Blog Style</a></li>
-                                    <li><a href="../home-styles/left-sb.html" title="">Left Sidebars</a></li>
-                                    <li><a href="../home-styles/middle-content.html" title="">Middle Content</a></li>
-                                </ul>
-
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
-                            <li class="divider-vertical"></li>
-
-                            
-
-                            
-
-                            <li class="divider-vertical"></li>
-                        </ul>
-
-                        <ul class="nav pull-right">
-                            <li class="divider-vertical"></li>
-
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 align="center">Ingresa Datos de Acceso &Uacute;nico</h1>
     </nav>
 
 
@@ -122,7 +64,7 @@
             <!-- main content -->
             <div class="span6 main-content">
 
-                <!-- Breaking News -->
+             
                 
 
                 <!-- main content -->
@@ -151,11 +93,11 @@
 			<?php
 if ( isset($_SESSION['username']) && isset($_SESSION['userid']) && $_SESSION['username'] != '' && $_SESSION['userid'] != '0' ){
 	echo '<div class="session_on">
-		Ya iniciaste sesi&oacute;n &#124; Ahora has un <a href="javascript:void(0);" id="sessionKiller">logout</a>.<span class="timer" id="timer"  style="margin-left: 10px;"></span>
+		Ya iniciaste sesi&oacute;n &#124; Para salir has un <a href="javascript:void(0);" id="sessionKiller">logout</a>.<span class="timer" id="timer"  style="margin-left: 10px;"></span>
 	</div>';
 }
 else{
-	echo '<form method="post" action="">
+	echo '<form method="post" action="" name="form">
 		<table cellpadding="0" cellspacing="0" border="0">
 			<tr>
 				<td>Usuario:</td>
