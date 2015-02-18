@@ -98,7 +98,7 @@ if ( isset($_SESSION['username']) && isset($_SESSION['userid']) && $_SESSION['us
 }
 else{
 	echo '<form method="post" action="" name="form">
-		<table cellpadding="0" cellspacing="0" border="0">
+		<table cellpadding="0" cellspacing="0" border="0" align="center">
 			<tr>
 				<td>Usuario:</td>
 				<td><input type="text" name="login_username" id="login_username" /></td>
@@ -108,7 +108,7 @@ else{
 				<td><input type="password" name="login_userpass" id="login_userpass" /></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="right"><span class="timer" id="timer"></span><button id="login_userbttn">Login</button></td>
+				<td colspan="2" align="center"><span class="timer" id="timer"></span><button id="login_userbttn">Login</button></td>
 			</tr>
 		</table>
 	</form>';

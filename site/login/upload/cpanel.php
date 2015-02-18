@@ -123,12 +123,13 @@
                             <div class="row-fluid">
                                 <span>Ingresa el articulo</span>
 
-                                <form class="form-horizontal clearfix" method="post" action="">
+                                <form class="form-horizontal clearfix" method="post" action="../procesar.php">
 
                                     <div class="span7">
                                         <div class="row-fluid">
                                             <div class="span12">
                                                 <div class="login-inputs">
+												
                                                     <input type="text" class="span12" required="required" id="titulo"        name="titulo" placeholder="Titulo" />
                                                     <input type="text" class="span12" required="required" id="subtitulo"     name="subtitulo" placeholder="Subtitulo" />
                                                     <textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>

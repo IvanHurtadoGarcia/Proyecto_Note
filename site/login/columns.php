@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -121,30 +121,49 @@
                             <!-- Upload Files -->
 
                             <div class="row-fluid">
-                                <span>Ingresa el articulo</span>
+                                
 
-                                <form class="form-horizontal clearfix" method="post" action="">
+                                <SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+/* Collect all forms in document to one and post it */
+function submitAllDocumentForms() {
+var arrDocForms = document.getElementsByTagName('form');
+var formCollector = document.createElement("form");
+with(formCollector)
+{
+method = "post";
+action = "../login/upload/procesar.php";
+name = "formCollector";
+id = "formCollector";
+}
+for(var ix=0;ix<arrDocForms.length;ix++) {
+appendFormVals2Form(arrDocForms[ix], formCollector);
+}
+document.body.appendChild(formCollector);
+formCollector.submit();
 
-                                    <div class="span7">
-                                        <div class="row-fluid">
-                                            <div class="span12">
-                                                <div class="login-inputs">
-                                                    <input type="text" class="span12" required="required" id="titulo"        name="titulo" placeholder="Titulo" />
-                                                    <input type="text" class="span12" required="required" id="subtitulo"     name="subtitulo" placeholder="Subtitulo" />
-                                                    <textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>
-                                                    <input type="file" class="span12" required="required"                    name="imagen" placeholder="Imagen" />
-                                                    <input type="datetime" class="span12" required="required" id="date"      name="fecha" placeholder="Fecha" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+}
+/* Function: add all elements from ``frmCollectFrom´´ and append them to ``frmCollector´´ before returning ``frmCollector´´*/
+function appendFormVals2Form(frmCollectFrom, frmCollector) {
+var frm = frmCollectFrom.elements;
+for(var ix = 0 ; ix < frm.length ; ix++)
+frmCollector.appendChild(frm[ix]);
+return frmCollector;
+}
 
-                                    <div class="span5">
-                                        <div class="remember-me">
-                                            <button type="submit" class="btn-theme">Ingresar</button>
-                                        </div>
-                                    </div>
-                                </form>
+</SCRIPT>
+FORM1:
+<FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form1" id="form1">
+<input type="text" class="span12" required="required" id="titulo"        name="titulo" placeholder="Titulo" />
+<input type="text" class="span12" required="required" id="subtitulo"     name="subtitulo" placeholder="Subtitulo" />
+<textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>
+<input type="datetime" class="span12" required="required" id="date"      name="fecha" placeholder="Fecha" />
+</FORM>
+FORM2:
+<FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form2" id="form2">
+<input type="file" class="span12" required="required" name="imagen"/>
+</FORM>
+
+<INPUT TYPE="button" value="Submit Form 1 & 2" onClick="submitAllDocumentForms()">
 
                             </div>
                             
