@@ -7,66 +7,38 @@
 	<body>
 <?php
           include("conectar.php");
-		
-		  conectarBd();
-         $titulo=$_REQUEST["titulo"];
-		 $subtitulo=$_REQUEST["subtitulo"];
-		 $articulo=$_REQUEST["articulo"];
-		 $fecha=$_REQUEST["fecha"];
-		 
+		  $dbi = conectarBd();
+		  
+		  $idart=$_REQUEST["id_art"];
+          $titulo=$_REQUEST["titulo"];
+		  $subtitulo=$_REQUEST["subtitulo"];
+		  $articulo=$_REQUEST["articulo"];
+		  $fecha=$_REQUEST["fecha"];
+		  
+		  $id=$_REQUEST["id_img"];
 		  $ruta="..upload/imagenes";
           $archivo=$_FILES['imagen']['tmp_name'];
           $nombreArchivo=$_FILES['imagen']['name'];
           move_uploaded_file($archivo,$ruta."/".$nombreArchivo);
           $ruta=$ruta."/".$nombreArchivo;
 
+		  
+$query=("insert into vida_tecno (Id_art,titulo,subtitulo,articulo,date)
+		values($idart,'$titulo','$subtitulo','$articulo','$fecha')");
+mysql_query($query,$dbi) or die("<center><br><br><br><h4>NO PUDO INGRESAR EL REGISTRO registrados</h4><br><br><br></center>");
+ 
+$query=("insert into img_vida_tecno (id,image)
+		values($id,'".$ruta."',)");
+mysql_query($query,$dbi) or die("<center><br><br><br><h4>NO PUDO INGRESAR EL REGISTRO imagen</h4><br><br><br></center>");
+ 
+ 
+ 
+echo "<center><br><br><br><h4>La Inscripción fue realizada satisfactoriamente, para acceder haga clic <a href=\"index.php\">Aquí</a></h4><br><br><br></center><br> ";
+ 
+echo "<center></center>";
 
 
 
-		 
-$insertar=mysql_query("insert into vida_tecno (titulo,subtitulo,articulo,image,fecha) values('$tittle','$subtittle','$article','".$ruta."','$date')");
-
-
-
-if($insertar)
-{
-	"<html>
-		<head>
-		
-		
-		</head>
-		<body>
-			
-			<script>
-			
-				alert('articulo insertado con exito');
-			
-			</script>
-		</body>
-    
-    
-    
-    </html>";
-}else{
-	
-	echo "<html>
-		<head>
-		
-		
-		</head>
-		<body>
-			
-			<script>
-			
-				alert('La insercion Fallo');
-			
-			</script>
-		</body>
-    
-    
-    
-    </html>";
-}
 
 ?>
 </body>

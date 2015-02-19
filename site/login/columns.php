@@ -151,19 +151,21 @@ return frmCollector;
 }
 
 </SCRIPT>
-FORM1:
+Información del Articulo:
 <FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form1" id="form1">
+<input type="text" class="span12" required="required" id="id_art"        name="id_art" placeholder="Identificador" />
 <input type="text" class="span12" required="required" id="titulo"        name="titulo" placeholder="Titulo" />
 <input type="text" class="span12" required="required" id="subtitulo"     name="subtitulo" placeholder="Subtitulo" />
 <textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>
 <input type="datetime" class="span12" required="required" id="date"      name="fecha" placeholder="Fecha" />
 </FORM>
-FORM2:
+Imagen para el Articulo:
 <FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form2" id="form2">
+<input type="text" class="span12" required="required" id="id_img"        name="id_img" placeholder="Identificador de Imagen" />
 <input type="file" class="span12" required="required" name="imagen"/>
 </FORM>
 
-<INPUT TYPE="button" value="Submit Form 1 & 2" onClick="submitAllDocumentForms()">
+<INPUT TYPE="button" value="Ingresar" onClick="submitAllDocumentForms()">
 
                             </div>
                             
