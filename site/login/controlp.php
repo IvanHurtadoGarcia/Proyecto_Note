@@ -1,6 +1,4 @@
-<?php
-include("conexion.php"); 
-session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -123,9 +121,10 @@ session_start(); ?>
                             <!-- Upload Files -->
 
                             <div class="row-fluid">
+                               <div class="row-fluid">
                                 
 
-<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+<script language="JavaScript" type="text/javascript">
     /* Collect all forms in document to one and post it */
     function submitAllDocumentForms() {
         var arrDocForms = document.getElementsByTagName('form');
@@ -151,10 +150,10 @@ session_start(); ?>
         return frmCollector;
     }
 
-</SCRIPT>
+</script>
 Información del Articulo:
 <FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form1" id="form1">
-<input type="text" class="span12" required="required" id="id_art" name="id_art" placeholder="Identificador" required/>
+<input type="text" class="span12" required="required" id="id_art" name="id_art" placeholder="Identificador" />
 <input type="text" class="span12" required="required" id="titulo" name="titulo" placeholder="Titulo" />
 <input type="text" class="span12" required="required" id="subtitulo" name="subtitulo" placeholder="Subtitulo" />
 <textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>
@@ -182,8 +181,7 @@ Imagen para el Articulo:
 
                                 <div class="row-fluid">
                                     <div class="span2">
-                                        <p><span class="drop-capital">1</span>
-										</p>
+                                        <p><span class="drop-capital">1</span> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, Highlight Text: lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
                                     </div>
 
                                     <div class="span2">
