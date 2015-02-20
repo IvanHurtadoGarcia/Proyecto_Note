@@ -1,4 +1,6 @@
-﻿<?php session_start(); ?>
+﻿<?php
+include("conexion.php"); 
+session_start(); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -123,7 +125,7 @@
                             <div class="row-fluid">
                                 
 
-                                <SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
 /* Collect all forms in document to one and post it */
 function submitAllDocumentForms() {
 var arrDocForms = document.getElementsByTagName('form');
@@ -153,20 +155,20 @@ return frmCollector;
 </SCRIPT>
 Información del Articulo:
 <FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form1" id="form1">
-<input type="text" class="span12" required="required" id="id_art"        name="id_art" placeholder="Identificador" />
-<input type="text" class="span12" required="required" id="titulo"        name="titulo" placeholder="Titulo" />
-<input type="text" class="span12" required="required" id="subtitulo"     name="subtitulo" placeholder="Subtitulo" />
+<input type="text" class="span12" required="required" id="id_art" name="id_art" placeholder="Identificador" />
+<input type="text" class="span12" required="required" id="titulo" name="titulo" placeholder="Titulo" />
+<input type="text" class="span12" required="required" id="subtitulo" name="subtitulo" placeholder="Subtitulo" />
 <textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>
-<input type="datetime" class="span12" required="required" id="date"      name="fecha" placeholder="Fecha" />
-</FORM>
+<input type="datetime" class="span12" required="required" id="date" name="fecha" placeholder="Fecha" />
+
+
 Imagen para el Articulo:
 <FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form2" id="form2">
-<input type="text" class="span12" required="required" id="id_img"        name="id_img" placeholder="Identificador de Imagen" />
+<input type="text" class="span12" required="required" id="id_img" name="id_img" placeholder="Identificador de Imagen" />
 <input type="file" class="span12" required="required" name="imagen"/>
 </FORM>
-
-<INPUT TYPE="button" value="Ingresar" onClick="submitAllDocumentForms()">
-
+<INPUT TYPE="submit" value="Ingresar">
+</FORM>
                             </div>
                             
                         </div>
@@ -183,7 +185,15 @@ Imagen para el Articulo:
 
                                 <div class="row-fluid">
                                     <div class="span2">
-                                        <p><span class="drop-capital">1</span> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, Highlight Text: lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                                        <p><span class="drop-capital">1</span>
+										<?php 
+	                                    $consultar=mysql_query("SELECT * FROM img_vida_tecno where id=1");
+                                        while($imagenes=mysql_fetch_array($consultar)) {
+                                        $imagen=$imagenes['imagen'];
+                                        $id=$imagenes['id'];
+	                                    echo "<img src='$imagen' width='220' height='140'>";    
+                                         }
+	                         ?></p>
                                     </div>
 
                                     <div class="span2">
