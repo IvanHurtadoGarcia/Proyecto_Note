@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include("conexion.php"); 
 session_start(); ?>
 <!DOCTYPE html>
@@ -160,15 +160,13 @@ Información del Articulo:
 <input type="text" class="span12" required="required" id="subtitulo" name="subtitulo" placeholder="Subtitulo" />
 <textarea rows="10" cols="70" class="span12" required="required" id="articulo" name="articulo" placeholder="Articulo" ></textarea>
 <input type="datetime" class="span12" required="required" id="date" name="fecha" placeholder="Fecha" />
-
-
 Imagen para el Articulo:
+</FORM>
 <FORM METHOD="POST" ACTION="../login/upload/procesar.php" NAME="form2" id="form2">
 <input type="text" class="span12" required="required" id="id_img" name="id_img" placeholder="Identificador de Imagen" />
 <input type="file" class="span12" required="required" name="imagen"/>
 </FORM>
 <INPUT TYPE="submit" value="Ingresar">
-</FORM>
                             </div>
                             
                         </div>
@@ -186,14 +184,7 @@ Imagen para el Articulo:
                                 <div class="row-fluid">
                                     <div class="span2">
                                         <p><span class="drop-capital">1</span>
-										<?php 
-	                                    $consultar=mysql_query("SELECT * FROM img_vida_tecno where id=1");
-                                        while($imagenes=mysql_fetch_array($consultar)) {
-                                        $imagen=$imagenes['imagen'];
-                                        $id=$imagenes['id'];
-	                                    echo "<img src='$imagen' width='220' height='140'>";    
-                                         }
-	                         ?></p>
+										</p>
                                     </div>
 
                                     <div class="span2">
