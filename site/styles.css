@@ -1,0 +1,155 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/09/2014, 11:24:39 AM
+    Author     : HARTMAN
+*/
+
+.container_12 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+/*header {
+    display: block;
+    padding-top: 34px;
+    position: relative;
+    z-index: 999;
+    background: #000;
+    padding-bottom: 48px;
+}*/
+.grid_12 {
+    display: block;
+    float: left;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.menu_block {
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding-top: 25px;
+}
+footer{
+    margin-top: 30pt;
+    display: block;
+    padding-top: 34px;
+    position: relative;
+    z-index: 999;
+    background: #000;
+    padding-bottom: 48px;
+}
+
+@font-face {
+    font-family: "blade";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/Blade.woff") 
+        format("woff"), url("fonts/Blade.ttf")
+        format("truetype");
+}
+@font-face {
+    font-family: "LED";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/LEDBOARD.woff") 
+        format("woff"), url("fonts/LEDBOARD.ttf")
+        format("truetype");
+}
+@font-face {
+    font-family: "Halo";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/Halo.woff") 
+        format("woff"), url("fonts/Halo.ttf")
+        format("truetype");
+}
+@font-face {
+    font-family: "pony";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("fonts/equestria.woff") 
+        format("woff"), url("fonts/equestria.ttf")
+        format("truetype");
+}
+
+
+/*
+
+h2{
+   
+    display:inline-block;
+    font-family: LED;
+    font-size: 24px;
+    font-weight: lighter;
+    color:graytext;
+}
+
+th{
+    background:blanchedalmond;
+    color:orangered;
+    font-weight: bold;
+}
+p{
+    font-family: Arial;
+    color: yellow;
+    font-size: 10pt;
+}
+
+.farel{
+    height:25px;
+    width:50px;
+    border: 1px  #6495ED;
+    border-radius: 5px;                                                                             
+    background-color: #bcd2ee;
+}  
+.clear{
+    display: inline-block;
+}
+.body{
+    margin-left: 10px;
+    margin-left: 10px;
+    margin-top: 5pt;
+    display: block;
+    alignment-adjust: ideographic;
+    text-align: left;
+}
+.body1{
+    margin-left: 10px;
+    margin-left: 10px;
+    margin-top: 5pt;
+    display:inline-block;
+    alignment-adjust: ideographic;
+     text-align: left;
+}
+.ttm{
+    display:nome;
+}
+body{
+    font-family:serif;
+    font-size: 13px;
+    background-image: url(my_little_pony_wallpaper04.png); 
+    background-position: center;
+    background-repeat:repeat-y;
+}
+.lyra{
+    height:300px;
+    width:300px;
+}
+.pony{
+     font-family: pony;
+    color: orange;
+    font-size: 50pt;
+}
+h4{
+    font-family: pony;
+    font-size: 15px;
+} */
+    .derpy{
+     font-family: LED;
+    color: blue;
+    font-size: 50pt;
+}
