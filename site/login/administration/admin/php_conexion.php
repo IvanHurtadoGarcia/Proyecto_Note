@@ -1,7 +1,7 @@
 <?php
 ////////////////////////////////CONEXION//////////////////////////
 	$conexion = mysql_connect('localhost','root','workdata1');
-	mysql_select_db('ec',$conexion);
+	mysql_select_db('note_datanetwork',$conexion);
 //////////////////////////////////////////////////////////////////
 //////////////////////////CONFIGURACION REGIONAL//////////////////
 	$sqll=mysql_query("SELECT nombre FROM `region` WHERE id=(SELECT region FROM `empresa` WHERE id=1)");
