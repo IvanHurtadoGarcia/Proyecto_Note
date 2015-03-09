@@ -87,7 +87,7 @@ body {
               <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Editar Contenido<b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
               	<li role="presentation"><a role="menuitem" tabindex="-1" href="datos_empresa.php" target="admin">Datos Empresa</a></li>
-              	<li role="presentation"><a role="menuitem" tabindex="-1" href="titulos.php" target="admin">Editar Titulos</a></li>
+              <!--	<li role="presentation"><a role="menuitem" tabindex="-1" href="titulos.php" target="admin">Editar Titulos</a></li> -->
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="articulo.php" target="admin">Crear Articulo</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="l_articulo.php" target="admin">Consultar Articulos</a></li>
            		<li role="presentation"><a role="menuitem" tabindex="-1" href="tipo_noticias.php" target="admin">Tipo de Noticias</a></li>
