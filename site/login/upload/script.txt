@@ -1,8 +1,0 @@
-create database Imagen;
-use Imagen ;
-
-create table imagenes(
-id int not null primary key,
-imagen varchar( 100 ) not null , 
-texto varchar( 100 ) not null
-);
