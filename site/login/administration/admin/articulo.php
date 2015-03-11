@@ -109,7 +109,7 @@
 				$nameimagen = $_FILES['imagen']['name'];
 				$tmpimagen = $_FILES['imagen']['tmp_name'];
 				$extimagen = pathinfo($nameimagen);
-				$urlnueva = "noticias/".$idd.".jpg";			
+				$urlnueva = "../site/img/".$idd.".jpg";			
 				if(is_uploaded_file($tmpimagen)){
 					copy($tmpimagen,$urlnueva);	
 				}

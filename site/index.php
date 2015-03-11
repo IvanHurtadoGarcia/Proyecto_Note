@@ -1,3 +1,34 @@
+<?php 
+    include('php_conexion.php'); 
+    $n=0;
+    $sqll=mysql_query("SELECT * FROM titulos");
+    while($dato=mysql_fetch_array($sqll)){
+        $n++;
+        $v_titulop[$n]=$dato['titulo'];
+        $v_cuadro[$n]=$dato['cuadro'];
+    }
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc LIMIT 6");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+     
+    $x2=0;
+    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias,tipos where tipo=2  ORDER BY my_date desc LIMIT 6");
+        while($datos2=mysql_fetch_array($sqlx2)){
+        $x2++;
+        $v2_foto[$x2]=$datos2['id'];
+        $v2_titulo[$x2]=$datos2['titulo'];
+        $v2_intro[$x2]=$datos2['intro'];
+        $v2_fecha[$x2]=$datos2['fecha'];
+    }
+
+    
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,7 +42,7 @@
     <!-- Styles Should be After Script -->
     <link rel="stylesheet" href="style.css" />
     
-    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="shortcut icon" href="../images/favicon.png">
     <link id=" cssthemecolor" rel="stylesheet" href="#" />
 
     <!--[if IE 7]>
@@ -315,16 +346,17 @@
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="post-formats/post-image.html">Post With Image</a></li>
-                                <li><a href="post-formats/post-video.html">Post With Video</a></li>
-                                <li><a href="post-formats/post-soundcloud.html">Post With Sound Cloud</a></li>
-                                <li><a href="post-formats/post-googlemap.html">Post With Google Map</a></li>
-                                <li><a href="post-formats/post-image-lightbox.html">Post With Image and Lightbox</a></li>
-                                <li><a href="post-formats/post-review.html">Post With Animated Review System</a></li>
+                                <li><a href="post-formats/post-image.html"><?php echo $v_titulo['1'] ?></a></li>
+                                <li><a href="post-formats/post-video.html"><?php echo $v_titulo['2'] ?></a></li>
+                                <li><a href="post-formats/post-soundcloud.html"><?php echo $v_titulo['3'] ?></a></li>
+                                <li><a href="post-formats/post-googlemap.html"><?php echo $v_titulo['4'] ?></a></li>
+                                <li><a href="post-formats/post-image-lightbox.html"><?php echo $v_titulo['5'] ?></a></li>
+                                <li><a href="post-formats/post-review.html"><?php echo $v_titulo['6'] ?></a></li>
                             </ul>
                         </div>
                     </div>
                 </section>
+                
 
                 <!-- Slider -->
                 <section class="pic-slider">
@@ -336,30 +368,23 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=604&amp;h=345" />
-
-                                            <div class="description visible-part">
+                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[1].'.jpg'; ?>" height="345" width="604">
+                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                            <span class="month">Jan</span>
-                                                            <span class="day">15</span>
-                                                            <span class="month">2013</span>
+                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['1'] ?></p></b>
                                                             <hr />
-                                                            <span class="time">01:15 PM</span>
+                                                         
                                                         </div>
                                                     </div>
 
-                                                    <h3>Post With Featured Image</h3>
+                                                    <h3><?php echo $v_titulo['1'] ?></h3>
 
-                                                    <div class="post-meta">
-                                                        <span><i class="bo-icon-pencil bo-icon-white"></i>Adam</span>
-                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                    </div>
+                                                    
                                                 </div>
 
-                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                <p class="text"><?php echo $v_intro[1]; ?></p>
                                             </div>
 
                                             <a href="post-formats/post-image.html" class="more" title=""></a>
@@ -370,30 +395,21 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=604&amp;h=345" />
-
+                                          <img src="login/administration/admin/noticias/<?php echo $v_foto[2].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                            <span class="month">Jan</span>
-                                                            <span class="day">15</span>
-                                                            <span class="month">2013</span>
+                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['2'] ?></p></b>
                                                             <hr />
-                                                            <span class="time">01:15 PM</span>
+                                                         
                                                         </div>
                                                     </div>
 
-                                                    <h3>Post With Sound Cloud</h3>
-
-                                                    <div class="post-meta">
-                                                        <span><i class="bo-icon-pencil bo-icon-white"></i>Adam</span>
-                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                    </div>
+                                                   <h3><?php echo $v_titulo['2'] ?></h3>
                                                 </div>
 
-                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                 <p class="text"><?php echo $v_intro[2]; ?></p>
                                             </div>
 
                                             <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
@@ -404,30 +420,89 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=604&amp;h=345" />
-
+                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[3].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                            <span class="month">Jan</span>
-                                                            <span class="day">15</span>
-                                                            <span class="month">2013</span>
+                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['3'] ?></p></b>
                                                             <hr />
-                                                            <span class="time">01:15 PM</span>
+                                                         
                                                         </div>
                                                     </div>
 
-                                                    <h3>Post With Video</h3>
-
-                                                    <div class="post-meta">
-                                                        <span><i class="bo-icon-pencil bo-icon-white"></i>Adam</span>
-                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                    </div>
+                                                   <h3><?php echo $v_titulo['3'] ?></h3>
                                                 </div>
+                                             <p class="text"><?php echo $v_intro[3]; ?></p>
+                                            </div>
 
-                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article class="fold-item span12">
+                                        <div class="clearfix">
+                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[4].'.jpg'; ?>" height="345" width="604">
+                                            <div class="description visible-part">
+                                                <div class="title">
+                                                    <div class="post-date">
+                                                        <div class="date">
+                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['4'] ?></p></b>
+                                                            <hr />
+                                                         
+                                                        </div>
+                                                    </div>
+
+                                                   <h3><?php echo $v_titulo['4'] ?></h3>
+                                                </div>
+                                             <p class="text"><?php echo $v_intro[4]; ?></p>
+                                            </div>
+
+                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article class="fold-item span12">
+                                        <div class="clearfix">
+                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[5].'.jpg'; ?>" height="345" width="604">
+                                            <div class="description visible-part">
+                                                <div class="title">
+                                                    <div class="post-date">
+                                                        <div class="date">
+                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['5'] ?></p></b>
+                                                            <hr />
+                                                         
+                                                        </div>
+                                                    </div>
+
+                                                   <h3><?php echo $v_titulo['5'] ?></h3>
+                                                </div>
+                                             <p class="text"><?php echo $v_intro[5]; ?></p>
+                                            </div>
+
+                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article class="fold-item span12">
+                                        <div class="clearfix">
+                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[6].'.jpg'; ?>" height="345" width="604">
+                                            <div class="description visible-part">
+                                                <div class="title">
+                                                    <div class="post-date">
+                                                        <div class="date">
+                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['6'] ?></p></b>
+                                                            <hr />
+                                                         
+                                                        </div>
+                                                    </div>
+
+                                                   <h3><?php echo $v_titulo['6'] ?></h3>
+                                                </div>
+                                             <p class="text"><?php echo $v_intro[6]; ?></p>
                                             </div>
 
                                             <a href="post-formats/post-video.html" class="more" title=""></a>
@@ -435,129 +510,28 @@
                                     </article>
                                 </li>
 
-                                <li>
-                                    <article class="fold-item span12">
-                                        <div class="clearfix">
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=604&amp;h=345" />
-
-                                            <div class="description visible-part">
-                                                <div class="title">
-                                                    <div class="post-date">
-                                                        <div class="date">
-                                                            <span class="month">Jan</span>
-                                                            <span class="day">15</span>
-                                                            <span class="month">2013</span>
-                                                            <hr />
-                                                            <span class="time">01:15 PM</span>
-                                                        </div>
-                                                    </div>
-
-                                                    <h3>Post With Featured Image and Lightbox</h3>
-
-                                                    <div class="post-meta">
-                                                        <span><i class="bo-icon-pencil bo-icon-white"></i>Adam</span>
-                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                    </div>
-                                                </div>
-
-                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                            </div>
-
-                                            <a href="post-formats/post-image-lightbox.html" class="more" title=""></a>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li>
-                                    <article class="fold-item span12">
-                                        <div class="clearfix">
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=604&amp;h=345" />
-
-                                            <div class="description visible-part">
-                                                <div class="title">
-                                                    <div class="post-date">
-                                                        <div class="date">
-                                                            <span class="month">Jan</span>
-                                                            <span class="day">15</span>
-                                                            <span class="month">2013</span>
-                                                            <hr />
-                                                            <span class="time">01:15 PM</span>
-                                                        </div>
-                                                    </div>
-
-                                                    <h3>Post With Self Hosted Audio</h3>
-
-                                                    <div class="post-meta">
-                                                        <span><i class="bo-icon-pencil bo-icon-white"></i>Adam</span>
-                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                    </div>
-                                                </div>
-
-                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                            </div>
-
-                                            <a href="post-formats/post-self-audio.html" class="more" title=""></a>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li>
-                                    <article class="fold-item span12">
-                                        <div class="clearfix">
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=604&amp;h=345" />
-
-                                            <div class="description visible-part">
-                                                <div class="title">
-                                                    <div class="post-date">
-                                                        <div class="date">
-                                                            <span class="month">Jan</span>
-                                                            <span class="day">15</span>
-                                                            <span class="month">2013</span>
-                                                            <hr />
-                                                            <span class="time">01:15 PM</span>
-                                                        </div>
-                                                    </div>
-
-                                                    <h3>Post With Google Map</h3>
-
-                                                    <div class="post-meta">
-                                                        <span><i class="bo-icon-pencil bo-icon-white"></i>Adam</span>
-                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                    </div>
-                                                </div>
-
-                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                            </div>
-
-                                            <a href="post-formats/post-googlemap.html" class="more" title=""></a>
-                                        </div>
-                                    </article>
-                                </li>
                             </ul>
                         </div>
 
                         <div id="mainSlider1-carousel" class="flexslider large carousel">
                             <ul class="slides">
                                 <li>
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=97&amp;h=65" />
+                                     <img src="login/administration/admin/noticias/<?php echo $v_foto[1].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=97&amp;h=65" />
+                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[2].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=97&amp;h=65" />
+                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[3].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=97&amp;h=65" />
+                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[4].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=97&amp;h=65" />
+                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[5].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=97&amp;h=65" />
+                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[6].'.jpg'; ?>" height="65" width="97">
                                 </li>
 
                             </ul>
@@ -1235,7 +1209,7 @@
                                                 </div>
 
                                                 <a href="#" class="clearfix" title="Full Post Title">
-                                                    <h4>Microsoft unveils the new Xbox One - with improved voice controls</h4>
+                                                    <h4><?php echo $v2_titulo['1'] ?></h4>
                                                 </a>
                                             </div>
 

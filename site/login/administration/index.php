@@ -112,6 +112,7 @@
             </div>
     		<div class="item" align="center">
             	<img src="admin/noticias/<?php echo $v_foto[2].'.jpg'; ?>" class="img-polaroid" height="700" width="700">
+                
             	<div class="carousel-caption">
                 	<h4><?php echo $v_titulo['2'] ?></h4>
                     <p><?php echo $v_intro[2]; ?></p>
