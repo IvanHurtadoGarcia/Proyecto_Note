@@ -18,13 +18,22 @@
     }
      
     $x2=0;
-    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias,tipos where tipo=2  ORDER BY my_date desc LIMIT 6");
+    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM videojuegos ORDER BY my_date desc LIMIT 6");
         while($datos2=mysql_fetch_array($sqlx2)){
         $x2++;
         $v2_foto[$x2]=$datos2['id'];
         $v2_titulo[$x2]=$datos2['titulo'];
         $v2_intro[$x2]=$datos2['intro'];
         $v2_fecha[$x2]=$datos2['fecha'];
+    }
+    $x3=0;
+    $sqlx3=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews ORDER BY my_date desc LIMIT 6");
+        while($datos3=mysql_fetch_array($sqlx3)){
+        $x3++;
+        $v3_foto[$x3]=$datos3['id'];
+        $v3_titulo[$x3]=$datos3['titulo'];
+        $v3_intro[$x3]=$datos3['intro'];
+        $v3_fecha[$x3]=$datos3['fecha'];
     }
 
     
@@ -368,12 +377,12 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[1].'.jpg'; ?>" height="345" width="604">
+                                            <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[1].'.jpg'; ?>" height="345" width="604">
                                              <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['1'] ?></p></b>
+                                                          <b><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v_fecha['1'] ?></p></b>
                                                             <hr />
                                                          
                                                         </div>
@@ -395,12 +404,12 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                          <img src="login/administration/admin/noticias/<?php echo $v_foto[2].'.jpg'; ?>" height="345" width="604">
+                                          <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[2].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['2'] ?></p></b>
+                                                          <b><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v_fecha['2'] ?></p></b>
                                                             <hr />
                                                          
                                                         </div>
@@ -420,12 +429,12 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[3].'.jpg'; ?>" height="345" width="604">
+                                            <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[3].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['3'] ?></p></b>
+                                                          <b><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v_fecha['3'] ?></p></b>
                                                             <hr />
                                                          
                                                         </div>
@@ -443,12 +452,12 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[4].'.jpg'; ?>" height="345" width="604">
+                                            <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[4].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['4'] ?></p></b>
+                                                          <b><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v_fecha['4'] ?></p></b>
                                                             <hr />
                                                          
                                                         </div>
@@ -466,12 +475,12 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[5].'.jpg'; ?>" height="345" width="604">
+                                            <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[5].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['5'] ?></p></b>
+                                                          <b><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v_fecha['5'] ?></p></b>
                                                             <hr />
                                                          
                                                         </div>
@@ -489,12 +498,12 @@
                                 <li>
                                     <article class="fold-item span12">
                                         <div class="clearfix">
-                                            <img src="login/administration/admin/noticias/<?php echo $v_foto[6].'.jpg'; ?>" height="345" width="604">
+                                            <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[6].'.jpg'; ?>" height="345" width="604">
                                             <div class="description visible-part">
                                                 <div class="title">
                                                     <div class="post-date">
                                                         <div class="date">
-                                                          <b><p style="font-size:13px">Posteado:<br /><?php echo $v_fecha['6'] ?></p></b>
+                                                          <b><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v_fecha['6'] ?></p></b>
                                                             <hr />
                                                          
                                                         </div>
@@ -516,22 +525,22 @@
                         <div id="mainSlider1-carousel" class="flexslider large carousel">
                             <ul class="slides">
                                 <li>
-                                     <img src="login/administration/admin/noticias/<?php echo $v_foto[1].'.jpg'; ?>" height="65" width="97">
+                                     <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[1].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[2].'.jpg'; ?>" height="65" width="97">
+                                    <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[2].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[3].'.jpg'; ?>" height="65" width="97">
+                                    <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[3].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[4].'.jpg'; ?>" height="65" width="97">
+                                    <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[4].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[5].'.jpg'; ?>" height="65" width="97">
+                                    <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[5].'.jpg'; ?>" height="65" width="97">
                                 </li>
                                 <li>
-                                    <img src="login/administration/admin/noticias/<?php echo $v_foto[6].'.jpg'; ?>" height="65" width="97">
+                                    <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[6].'.jpg'; ?>" height="65" width="97">
                                 </li>
 
                             </ul>
@@ -554,7 +563,7 @@
                 <section class="cat-widget h-cat-1">
                     <div class="cat-widget-title">
                         <a href="#">
-                            <h3>Ultimas en Social</h3>
+                            <h3>Ultimas en Reviews</h3>
                         </a>
                     </div>
 
@@ -568,16 +577,12 @@
                                         <img src="" data-src="holder.js/134x83" alt="post title" /></a>
                                 </div>-->
                                 <div class="span5 img-container" title="">
-                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=243&amp;h=150" />
-
+                                    
+                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[1].'.jpg'; ?>" height="150" width="243">
                                     <div class="img-meta">
                                         <div class="post-date">
                                             <div class="date">
-                                                <span class="month">Jan</span>
-                                                <span class="day">15</span>
-                                                <span class="month">2013</span>
-                                                <hr>
-                                                <span class="time">01:15 PM</span>
+                                             
                                             </div>
                                         </div>
                                     </div>
@@ -589,21 +594,16 @@
                                     <div class="post-info">
                                         <div class="post-title clearfix">
                                             <a href="#" title="Full Post Title">
-                                                <h4 class="pull-left">Horizontal Category with two Metro columns</h4>
+                                                <h4 class="pull-left"><?php echo $v3_titulo['1'] ?></h4>
                                             </a>
                                         </div>
 
                                         <div class="post-meta clearfix">
-                                            <ul class="clearfix">
-                                                <li><a href="#" title="Post Author"><i class="bo-icon-pencil"></i>Serpentsoft</a></li>
-
-                                                <li><a href="#" title="Comments"><i class="bo-icon-comment"></i>15</a></li>
-                                                <li><span title="Views"><i class="bo-icon-eye-open"></i>250</span></li>
-                                            </ul>
+                                            
                                         </div>
 
                                         <div class="post-desc">
-                                            <p>Proin gravida nibh vel velit. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi ...</p>
+                                            <p><?php echo $v3_intro['1'] ?>...</p>
                                         </div>
 
                                     </div>
@@ -625,18 +625,16 @@
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[2].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Featured Image</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['2'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['2'] ?>...</p>
                                                                     </div>
 
                                                                     <a href="post-formats/post-image.html" class="more" title=""></a>
@@ -647,23 +645,20 @@
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[3].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Google Map</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['3'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['3'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-googlemap.html" class="more" title=""></a>
+                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
                                                     </li>
@@ -672,46 +667,40 @@
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[4].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Featured Video</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['4'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['4'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-video.html" class="more" title=""></a>
+                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
 
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[5].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Sound Cloud</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['5'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['5'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
+                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
                                                     </li>
@@ -725,21 +714,19 @@
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[6].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Google Map</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['6'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['6'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-googlemap.html" class="more" title=""></a>
+                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -747,23 +734,20 @@
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[7].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Video</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['7'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['7'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-video.html" class="more" title=""></a>
+                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
                                                     </li>
@@ -772,46 +756,40 @@
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[8].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Featured Image</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['8'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['8'] ?>...</p>
                                                                     </div>
 
                                                                     <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
 
                                                         <div class="span6">
                                                             <article class="fold-item span12">
                                                                 <div class="clearfix">
-                                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=294&amp;h=190" class="post-img" />
-
+                                                                    
+                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[9].'.jpg'; ?>" height="190" width="294">
                                                                     <div class="description visible-part">
-                                                                        <h5 class="title">Post With Sound Cloud</h5>
+                                                                        <h5 class="title"><?php echo $v3_titulo['9'] ?></h5>
 
                                                                         <div class="info">
-                                                                            <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                            <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                            <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                            
                                                                         </div>
 
-                                                                        <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                        <p class="text"><?php echo $v3_intro['9'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
+                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
                                                     </li>
@@ -826,352 +804,7 @@
                         </div>
                 </section>
 
-                <!-- Reviews -->
-                <section class="cat-widget review-cat-1">
-                    <div class="cat-widget-title">
-                        <a href="#">
-                            <h3>Ultimas Reviews</h3>
-                        </a>
-                    </div>
-
-                    <div class="cat-widget-content">
-                        <div class="row-fluid cat-review modern-items-list">
-                            <div id="review_cat_slider1" class="flexslider">
-                                <ul class="slides">
-                                    <li>
-                                        <ul class="items left clearfix">
-                                            <li>
-                                                <article class="review clearfix">
-
-                                                    <div class="span5 img-container" title="">
-                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=243&amp;h=150" />
-
-                                                        <div class="img-meta">
-                                                            <div class="post-result">
-                                                                <div class="percent">
-                                                                    <span>100%</span>
-                                                                    <span class="grade">Excellent</span>
-                                                                </div>
-
-                                                                <div class="stars">
-                                                                    <div class="rating">
-                                                                        <span class="stars-24" title="100% Excellent">
-                                                                            <span class="fill" style="width: 100%"></span>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <a href="#" class="more"></a>
-                                                    </div>
-
-                                                    <div class="span7 content">
-                                                        <div class="post-info">
-                                                            <div class="post-title clearfix">
-                                                                <a href="#" title="Full Post Title">
-                                                                    <h4>Samsung Galaxy S4</h4>
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="post-desc">
-                                                                <ul class="criteria clearfix">
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Build Quality And Design
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            98%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Display
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            70%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Speakers
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            80%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Hardware
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            70%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Battery
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            80%
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </article>
-                                            </li>
-
-                                            <li>
-                                                <article class="review clearfix">
-
-                                                    <div class="span5 img-container" title="">
-                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=243&amp;h=150" />
-
-                                                        <div class="img-meta">
-                                                            <div class="post-result">
-                                                                <div class="percent">
-                                                                    <span>70%</span>
-                                                                    <span class="grade">Very Good</span>
-                                                                </div>
-
-                                                                <div class="stars">
-                                                                    <div class="rating">
-                                                                        <span class="stars-24" title="70% Very Good">
-                                                                            <span class="fill" style="width: 70%"></span>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <a href="#" class="more"></a>
-                                                    </div>
-
-                                                    <div class="span7 content">
-                                                        <div class="post-info">
-                                                            <div class="post-title clearfix">
-                                                                <a href="#" title="Full Post Title">
-                                                                    <h4>Sony Xperia Z</h4>
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="post-desc">
-                                                                <ul class="criteria clearfix">
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Display
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            90%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Speakers
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            50%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Battery
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            80%
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-                                    <li>
-                                        <ul class="items left clearfix">
-                                            <li>
-                                                <article class="review clearfix">
-
-                                                    <div class="span5 img-container" title="">
-                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=243&amp;h=150" />
-
-                                                        <div class="img-meta">
-                                                            <div class="post-result">
-                                                                <div class="percent">
-                                                                    <span>40%</span>
-                                                                    <span class="grade">Not Bad</span>
-                                                                </div>
-
-                                                                <div class="stars">
-                                                                    <div class="rating">
-                                                                        <span class="stars-24" title="40% Not Bad">
-                                                                            <span class="fill" style="width: 40%"></span>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <a href="#" class="more"></a>
-                                                    </div>
-
-                                                    <div class="span7 content">
-                                                        <div class="post-info">
-                                                            <div class="post-title clearfix">
-                                                                <a href="#" title="Full Post Title">
-                                                                    <h4>NOKIA Lumia 900</h4>
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="post-desc">
-                                                                <ul class="criteria clearfix">
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Build Quality And Design
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            40%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Display
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            20%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Speakers
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            30%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Hardware
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            70%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Battery
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            80%
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </article>
-                                            </li>
-
-                                            <li>
-                                                <article class="review clearfix">
-
-                                                    <div class="span5 img-container" title="">
-                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=243&amp;h=150" />
-
-                                                        <div class="img-meta">
-                                                            <div class="post-result">
-                                                                <div class="percent">
-                                                                    <span>60%</span>
-                                                                    <span class="grade">Good</span>
-                                                                </div>
-
-                                                                <div class="stars">
-                                                                    <div class="rating">
-                                                                        <span class="stars-24" title="70% Very Good">
-                                                                            <span class="fill" style="width: 60%"></span>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <a href="#" class="more"></a>
-                                                    </div>
-
-                                                    <div class="span7 content">
-                                                        <div class="post-info">
-                                                            <div class="post-title clearfix">
-                                                                <a href="#" title="Full Post Title">
-                                                                    <h4>Sony 900F</h4>
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="post-desc">
-                                                                <ul class="criteria clearfix">
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Display
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            90%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Speakers
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            50%
-                                                                        </div>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <div class="title">
-                                                                            Battery
-                                                                        </div>
-                                                                        <div class="grade">
-                                                                            80%
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
+                
 
                 <!-- Vertical Categories -->
                 <div class="row-fluid">
@@ -1191,16 +824,12 @@
                                         <article class="post-info">
                                             <div>
                                                 <div class="span12 img-container">
-                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=294&amp;h=180" />
-
+                                                    <img src="login/administration/admin/secciones/videojuegos/<?php echo $v2_foto[1].'.jpg'; ?>" height="180" width="294">
+                                                   
                                                     <div class="img-meta">
                                                         <div class="post-date">
                                                             <div class="date">
-                                                                <span class="month">Jan</span>
-                                                                <span class="day">15</span>
-                                                                <span class="month">2013</span>
-                                                                <hr>
-                                                                <span class="time">01:15 PM</span>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1208,22 +837,15 @@
                                                     <a href="#" class="more"></a>
                                                 </div>
 
-                                                <a href="#" class="clearfix" title="Full Post Title">
+                                                <a href="#" class="clearfix" title="Articulo Completo">
                                                     <h4><?php echo $v2_titulo['1'] ?></h4>
                                                 </a>
                                             </div>
 
-                                            <div class="post-meta clearfix">
-                                                <ul class="clearfix">
-                                                    <li><a href="#" title="Post Author"><i class="bo-icon-pencil"></i>Serpentsoft</a></li>
-
-                                                    <li><a href="#" title="Comments"><i class="bo-icon-comment"></i>15</a></li>
-                                                    <li><span title="Views"><i class="bo-icon-eye-open"></i>250</span></li>
-                                                </ul>
-                                            </div>
+                                            
 
                                             <div class="post-desc">
-                                                <p>Proin gravida nibh vel velit. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p>
+                                                <p><?php echo $v2_intro[1]; ?></p>
                                             </div>
 
                                         </article>
@@ -1236,24 +858,22 @@
                                         <div class="row-fluid modern-items-list">
 
                                             <div id="v_cat_slider1" class="flexslider">
-                                                <ul class="slides">
+                                                <ul>
                                                     <li>
                                                         <ul class="items left clearfix">
                                                             <li>
                                                                 <article class="fold-item span12">
                                                                     <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                        <img src="login/administration/admin/secciones/videojuegos/<?php echo $v2_foto[2].'.jpg'; ?>" height="190" width="294">
 
                                                                         <div class="description visible-part">
-                                                                            <h5 class="title">Post With Featured Image</h5>
+                                                                            <h5 class="title"><?php echo $v2_titulo['2'] ?></h5>
 
                                                                             <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                             
                                                                             </div>
 
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                            <p class="text"><?php echo $v2_intro[2]; ?>...</p>
                                                                         </div>
 
                                                                         <a href="post-formats/post-image.html" class="more" title=""></a>
@@ -1264,19 +884,15 @@
                                                             <li>
                                                                 <article class="fold-item span12">
                                                                     <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                        <img src="login/administration/admin/secciones/videojuegos/<?php echo $v2_foto[3].'.jpg'; ?>" height="190" width="294">
 
                                                                         <div class="description visible-part">
-                                                                            <h5 class="title">Post With Sound Cloud</h5>
-
+                                                                           <h5 class="title"><?php echo $v2_titulo['3'] ?></h5>
                                                                             <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                                
                                                                             </div>
-
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                        </div>
+                                                                            <p class="text"><?php echo $v2_intro[3]; ?>...</p>
+                                                                         </div>
 
                                                                         <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
                                                                     </div>
@@ -1285,55 +901,6 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li>
-                                                        <ul class="items left clearfix">
-                                                            <li>
-                                                                <article class="fold-item span12">
-                                                                    <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=294&amp;h=190" class="post-img" />
-
-                                                                        <div class="description visible-part">
-                                                                            <h5 class="title">Post With Video</h5>
-
-                                                                            <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                            </div>
-
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                        </div>
-
-                                                                        <a href="post-formats/post-video.html" class="more" title=""></a>
-                                                                    </div>
-                                                                </article>
-                                                            </li>
-
-                                                            <li>
-                                                                <article class="fold-item span12">
-                                                                    <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=294&amp;h=190" class="post-img" />
-
-                                                                        <div class="description visible-part">
-                                                                            <h5 class="title">Post With Google Map</h5>
-
-                                                                            <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                            </div>
-
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                        </div>
-
-                                                                        <a href="post-formats/post-googlemap.html" class="more" title=""></a>
-                                                                    </div>
-
-                                                                </article>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-
                                                 </ul>
                                             </div>
 
@@ -1912,86 +1479,7 @@
                 <h2 class="hidden">Left Sidebar</h2>
 
                 <!-- Posts Of The Day -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>M&aacute;s Vistas</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_300_slider3" class="flexslider">
-
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=301&amp;h=200" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=301&amp;h=200" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Self Hosted Audio</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-self-audio.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+                
 
 
                 <!-- Social Counter -->
@@ -2014,7 +1502,7 @@
 
                                         <div class="facebook">
                                             <i class="facebook-sicon-48-white"></i>
-                                            <span>29,000,000</span>
+                                            <span>Like us!</span>
                                             <span class="fans">Fans</span>
                                         </div>
 
@@ -2032,8 +1520,8 @@
                                         <div class="twitter">
 
                                             <i class="twitter-sicon-48-white"></i>
-                                            <span>29,000,000</span>
-                                            <span class="fans">Followers</span>
+                                            <span>Follow us!</span>
+                                            <span class="fans">(ouo)</span>
 
                                         </div>
                                     </div>
@@ -2048,44 +1536,11 @@
 
                                         <div class="youtube">
                                             <i class="youtube-sicon-48-white"></i>
-                                            <span>29,000,000</span>
-                                            <span class="fans">Subscribers</span>
+                                            <span>\(0u0)/</span>
+                                            <span class="fans">Subscribe</span>
                                         </div>
                                     </div>
                                 </li>
-
-                                <!--<li class="vm-wrp">
-                                    <div class="btn-count">
-                                        <div class="social-counter-metro mask">
-                                            <span>Subscribe</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="vimeo">
-                                            <i class="vimeo-sicon-48-white"></i>
-                                            <span>29,000,000</span>
-                                            <span class="fans">Subscribers</span>
-                                        </div>
-                                    </div>
-                                </li>-->
-
-                                <!--<li class="rs-wrp">
-                                    <div class="btn-count">
-                                        <div class="social-counter-metro mask">
-                                            <span>Subscribe</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="rss">
-                                            <i class="rss-sicon-48-white"></i>
-                                            <span>Subscribe</span>
-                                            <span class="fans">To RSS Feed</span>
-                                        </div>
-                                    </div>
-                                </li>-->
-
-
-
                                 <li class="gp-wrp">
                                     <div class="btn-count">
                                         <div class="social-counter-metro mask">
@@ -2095,28 +1550,11 @@
 
                                         <div class="googleplus">
                                             <i class="googleplus-sicon-48-white"></i>
-                                            <span>29,000,000</span>
-                                            <span class="fans">Followers</span>
+                                            <span>Plus!</span>
+                                            <span class="fans">:v</span>
                                         </div>
                                     </div>
                                 </li>
-
-                                <!--<li class="drb-wrp">
-                                    <div class="btn-count">
-                                        <div class="social-counter-metro mask">
-                                            <span>Follow</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="dribbble">
-                                            <i class="dribbble-sicon-48-white"></i>
-                                            <span>29,000,000</span>
-                                            <span class="fans">Followers</span>
-                                        </div>
-                                    </div>
-                                </li>-->
-
-
                             </ul>
                         </div>
                     </div>
@@ -2137,456 +1575,9 @@
                 </aside>-->
 
                 <!-- News Widget -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Popular News</h4>
-                    </div>
+                
 
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_300_slider1" class="flexslider">
-
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=301&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=301&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=301&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image and Lightbox</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-image-lightbox.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=301&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Self Hosted Audio</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-self-audio.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-
-                <!-- Tabs -->
-                <section class="widget w-tabs">
-                    <h3 class="hidden">Tabs Widget</h3>
-
-                    <div class="widget-content clearfix">
-                        <ul class="tabs-header clearfix">
-                            <li class="btn-theme active"><a data-target="#popular" data-toggle="tab">Popular</a></li>
-                            <li class="btn-theme"><a data-target="#recent" data-toggle="tab">Recent</a></li>
-                            <li class="btn-theme"><a data-target="#comments" data-toggle="tab">Comments</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-
-                            <div class="tab-pane active" id="popular">
-                                <aside class="row-fluid">
-                                    <h4 class="hidden">Popular News Tab</h4>
-
-                                    <div class="posts-in-widget">
-                                        <div class="tabs-special-style">
-                                            <ul class="media-list">
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-image.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-image.html" title="Post With Featured Image">
-
-                                                                <h5 class="media-heading">Post With Featured Image</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-video.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-video.html" title="Post With Video">
-                                                                <h5 class="media-heading">Post With Video</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-review.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-review.html" title="Post With Review">
-                                                                <h5 class="media-heading">Post With Review</h5>
-                                                            </a>
-
-                                                            <div class="media">
-
-                                                                <div class="rating">
-                                                                    <span class="stars-12" title="70% Very Good">
-                                                                        <span class="fill" style="width: 70%"></span>
-                                                                    </span>
-                                                                </div>
-
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-self-video.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-self-video.html" title="Post With Self Hosted Video">
-                                                                <h5 class="media-heading">Post With Self Hosted Video</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </aside>
-                            </div>
-
-                            <div class="tab-pane" id="recent">
-                                <aside class="row-fluid">
-                                    <h4 class="hidden">Recent News Tab</h4>
-
-                                    <div class="posts-in-widget">
-                                        <div class="tabs-special-style">
-                                            <ul class="media-list">
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-image-lightbox.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
-                                                                <h5 class="media-heading">Post With Image + Lightbox</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-self-audio.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-self-audio.html" title="Post With Self Hosted Audio">
-                                                                <h5 class="media-heading">Post With Self Hosted Audio</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-soundcloud.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-soundcloud.html" title="Post With Sound-Cloud">
-                                                                <h5 class="media-heading">Post With Sound-Cloud</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <a href="post-formats/post-googlemap.html" class="span3" title="">
-                                                            <div class="media-object thumb-effect">
-                                                                <div class="mask"></div>
-                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=65&amp;h=65" />
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="media-body span9">
-                                                            <a href="post-formats/post-googlemap.html" title="Post With Google Map">
-                                                                <h5 class="media-heading">Post With Google Map</h5>
-                                                            </a>
-
-                                                            <div class="media">
-                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </aside>
-                            </div>
-
-                            <div class="tab-pane" id="comments">
-                                <aside class="row-fluid">
-                                    <h4 class="hidden">Comments</h4>
-
-                                    <div class="posts-in-widget">
-                                        <div class="tabs-special-style comments">
-                                            <ul class="media-list">
-                                                <li class="media">
-                                                    <article>
-                                                        <div class="span3 media-object">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a1.jpg&amp;w=65&amp;h=65" />
-                                                        </div>
-
-                                                        <div class="media-body span9">
-                                                            <h5 class="media-heading">Adam</h5>
-
-                                                            <div class="media">
-                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-
-                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-
-                                                                <div class="leave-comment">
-                                                                    <a href="#">Leave Comment</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <div class="span3 media-object">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a2.jpg&amp;w=65&amp;h=65" />
-                                                        </div>
-
-                                                        <div class="media-body span9">
-                                                            <h5 class="media-heading">Adam</h5>
-
-                                                            <div class="media">
-                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-
-                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-
-                                                                <div class="leave-comment">
-                                                                    <a href="#">Leave Comment</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <div class="span3 media-object">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a3.jpg&amp;w=65&amp;h=65" />
-                                                        </div>
-
-                                                        <div class="media-body span9">
-                                                            <h5 class="media-heading">Adam</h5>
-
-                                                            <div class="media">
-                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-
-                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-
-                                                                <div class="leave-comment">
-                                                                    <a href="#">Leave Comment</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li class="media">
-                                                    <article>
-                                                        <div class="span3 media-object">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a4.jpg&amp;w=65&amp;h=65" />
-                                                        </div>
-
-                                                        <div class="media-body span9">
-                                                            <h5 class="media-heading">Adam</h5>
-
-                                                            <div class="media">
-                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
-
-                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-
-                                                                <div class="leave-comment">
-                                                                    <a href="#">Leave Comment</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </aside>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
 
 
                 <!-- Random Posts (Classic) -->

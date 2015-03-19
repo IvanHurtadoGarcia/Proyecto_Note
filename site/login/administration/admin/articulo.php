@@ -67,6 +67,8 @@
 				$nota=$_POST['nota'];		$tipo=$_POST['tipo'];
 				$fecha= date("Y-m-d H:i:s");
 				
+                if($tipo=="1"){
+
 				$can=mysql_query("SELECT MAX(id) as numero FROM noticias");
 				if($dato=mysql_fetch_array($can)){
 					$id=$dato['numero']+1;
@@ -82,41 +84,334 @@
 				$nameimagen = $_FILES['imagen']['name'];
 				$tmpimagen = $_FILES['imagen']['tmp_name'];
 				$extimagen = pathinfo($nameimagen);
-				$urlnueva = "noticias/".$id.".jpg";			
+				$urlnueva = "secciones/noticiast/".$id.".jpg";			
 				if(is_uploaded_file($tmpimagen)){
 					copy($tmpimagen,$urlnueva);	
 				}
 				////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
 				echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="2"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM videojuegos");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO videojuegos (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/videojuegos/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="3"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM reviews");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO reviews (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/reviews/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="4"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM eventos");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO eventos (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/eventos/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="5"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM recomendacionesm");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO recomendacionesm (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/recomendacionesm/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="6"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM fotografia");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO fotografia(titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/fotografia/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="7"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM video");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO video (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/video/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="8"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM salud");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO salud (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/salud/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="9"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM internacional");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO internacional (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/internacional/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="10"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM nacional");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO nacional (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/nacional/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="11"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM opinion");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO opinion (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/opinion/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="12"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM lecturas");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO lecturas (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/lecturas/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="13"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM descargas");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO descargas (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/descargas/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else if($tipo=="14"){
+
+                    $can=mysql_query("SELECT MAX(id) as numero FROM random");
+                if($dato=mysql_fetch_array($can)){
+                    $id=$dato['numero']+1;
+                }else{
+                    $id=1;
+                }
+                
+                $sql="INSERT INTO random (titulo, intro, texto, tipo, fecha) VALUES 
+                    ('$titulo','$intr','$nota','$tipo','$fecha')";
+                mysql_query($sql);
+                
+                //subir la imagen del articulo
+                $nameimagen = $_FILES['imagen']['name'];
+                $tmpimagen = $_FILES['imagen']['tmp_name'];
+                $extimagen = pathinfo($nameimagen);
+                $urlnueva = "secciones/random/".$id.".jpg";         
+                if(is_uploaded_file($tmpimagen)){
+                    copy($tmpimagen,$urlnueva); 
+                }
+                ////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////
+                echo '<div class="alert alert-success"><strong>Noticia Registrada con Exito!</strong></div>';
+
+                   }else{
+                    echo '<div class="alert alert-success"><strong>Error al Subir el Articulo!, Verifique los campos</strong></div>';
+                   }
+
 			}
 			
-			if(!empty($_POST['id'])){
-				$idd=$_POST['id'];
-				#actualizar
-				$titulo=$_POST['titulo'];	$intr=$_POST['intro'];
-				$nota=$_POST['nota'];		$tipo=$_POST['tipo'];
-				
-				
-				$sql="Update noticias Set titulo='$titulo', 
-										  intro='$intr',
-										  texto='$nota',
-										  tipo='$tipo'
-								Where id=$idd";
-				
-				mysql_query($sql);
-				
-				//subir la imagen del articulo
-				$nameimagen = $_FILES['imagen']['name'];
-				$tmpimagen = $_FILES['imagen']['tmp_name'];
-				$extimagen = pathinfo($nameimagen);
-				$urlnueva = "../site/img/".$idd.".jpg";			
-				if(is_uploaded_file($tmpimagen)){
-					copy($tmpimagen,$urlnueva);	
-				}
-				////////////////////MENSAJE DE CONFIRMACION QUE TODO OK/////////////////echo $sql;
-				echo '<div class="alert alert-success"><strong>Noticia Actualizada con Exito!</strong></div>';
-				
-			}	
+
+
+
 			if(!empty($_GET['id'])){
 			$id=$_GET['id'];
 			$sqll=mysql_query("SELECT * FROM noticias where id=$id");
