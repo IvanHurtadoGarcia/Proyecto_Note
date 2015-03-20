@@ -36,6 +36,16 @@
         $v3_fecha[$x3]=$datos3['fecha'];
     }
 
+    $x4=0;
+    $sqlx4=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas ORDER BY my_date desc LIMIT 6");
+        while($datos4=mysql_fetch_array($sqlx4)){
+        $x4++;
+        $v4_foto[$x4]=$datos4['id'];
+        $v4_titulo[$x4]=$datos4['titulo'];
+        $v4_intro[$x4]=$datos4['intro'];
+        $v4_fecha[$x4]=$datos4['fecha'];
+    }
+
     
 ?>
 <!DOCTYPE html>
@@ -708,94 +718,7 @@
                                                 </ul>
                                             </li>
 
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li class="row-fluid">
-                                                        <div class="span6">
-                                                            <article class="fold-item span12">
-                                                                <div class="clearfix">
-                                                                    
-                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[6].'.jpg'; ?>" height="190" width="294">
-                                                                    <div class="description visible-part">
-                                                                        <h5 class="title"><?php echo $v3_titulo['6'] ?></h5>
-
-                                                                        <div class="info">
-                                                                            
-                                                                        </div>
-
-                                                                        <p class="text"><?php echo $v3_intro['6'] ?>...</p>
-                                                                    </div>
-
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-
-                                                        <div class="span6">
-                                                            <article class="fold-item span12">
-                                                                <div class="clearfix">
-                                                                    
-                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[7].'.jpg'; ?>" height="190" width="294">
-                                                                    <div class="description visible-part">
-                                                                        <h5 class="title"><?php echo $v3_titulo['7'] ?></h5>
-
-                                                                        <div class="info">
-                                                                            
-                                                                        </div>
-
-                                                                        <p class="text"><?php echo $v3_intro['7'] ?>...</p>
-                                                                    </div>
-
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="row-fluid">
-                                                        <div class="span6">
-                                                            <article class="fold-item span12">
-                                                                <div class="clearfix">
-                                                                    
-                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[8].'.jpg'; ?>" height="190" width="294">
-                                                                    <div class="description visible-part">
-                                                                        <h5 class="title"><?php echo $v3_titulo['8'] ?></h5>
-
-                                                                        <div class="info">
-                                                                            
-                                                                        </div>
-
-                                                                        <p class="text"><?php echo $v3_intro['8'] ?>...</p>
-                                                                    </div>
-
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-
-                                                        <div class="span6">
-                                                            <article class="fold-item span12">
-                                                                <div class="clearfix">
-                                                                    
-                                                                    <img src="login/administration/admin/secciones/reviews/<?php echo $v3_foto[9].'.jpg'; ?>" height="190" width="294">
-                                                                    <div class="description visible-part">
-                                                                        <h5 class="title"><?php echo $v3_titulo['9'] ?></h5>
-
-                                                                        <div class="info">
-                                                                            
-                                                                        </div>
-
-                                                                        <p class="text"><?php echo $v3_intro['9'] ?>...</p>
-                                                                    </div>
-
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-                                                    </li>
-
-                                                </ul>
-                                            </li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -927,16 +850,12 @@
                                         <article class="post-info">
                                             <div>
                                                 <div class="span12 img-container">
-                                                    <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=294&amp;h=180" />
-
+                                                    
+                                                    <img src="login/administration/admin/secciones/descargas/<?php echo $v4_foto[1].'.jpg'; ?>" height="180" width="294">
                                                     <div class="img-meta">
                                                         <div class="post-date">
                                                             <div class="date">
-                                                                <span class="month">Jan</span>
-                                                                <span class="day">15</span>
-                                                                <span class="month">2013</span>
-                                                                <hr>
-                                                                <span class="time">01:15 PM</span>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -945,21 +864,16 @@
                                                 </div>
 
                                                 <a href="#" class="clearfix" title="Full Post Title">
-                                                    <h4>UK's coldest spring since 1963 claims 5,000 lives</h4>
+                                                    <h4><?php echo $v4_titulo['1'] ?></h4>
                                                 </a>
                                             </div>
 
                                             <div class="post-meta clearfix">
-                                                <ul class="clearfix">
-                                                    <li><a href="#" title="Post Author"><i class="bo-icon-pencil"></i>Serpentsoft</a></li>
-
-                                                    <li><a href="#" title="Comments"><i class="bo-icon-comment"></i>15</a></li>
-                                                    <li><span title="Views"><i class="bo-icon-eye-open"></i>250</span></li>
-                                                </ul>
+                                               
                                             </div>
 
                                             <div class="post-desc">
-                                                <p>Proin gravida nibh vel velit. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p>
+                                                <p><?php echo $v4_intro['1'] ?> </p>
                                             </div>
 
 
@@ -972,24 +886,22 @@
                                         <div class="row-fluid modern-items-list">
 
                                             <div id="v_cat_slider2" class="flexslider">
-                                                <ul class="slides">
+                                                <ul>
                                                     <li>
                                                         <ul class="items left clearfix">
                                                             <li>
                                                                 <article class="fold-item span12">
                                                                     <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                         <img src="login/administration/admin/secciones/descargas/<?php echo $v4_foto[2].'.jpg'; ?>" height="190" width="294">
 
                                                                         <div class="description visible-part">
-                                                                            <h5 class="title">Post With Featured Image</h5>
+                                                                            <h5 class="title"><?php echo $v4_titulo['2'] ?></h5>
 
                                                                             <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                              
                                                                             </div>
 
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                            <p class="text"><?php echo $v4_intro['2'] ?> ...</p>
                                                                         </div>
 
                                                                         <a href="post-formats/post-image.html" class="more" title=""></a>
@@ -997,78 +909,28 @@
                                                                 </article>
                                                             </li>
 
-                                                            <li>
+                                                             <li>
                                                                 <article class="fold-item span12">
                                                                     <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                         <img src="login/administration/admin/secciones/descargas/<?php echo $v4_foto[3].'.jpg'; ?>" height="190" width="294">
 
                                                                         <div class="description visible-part">
-                                                                            <h5 class="title">Post With Sound Cloud</h5>
+                                                                            <h5 class="title"><?php echo $v4_titulo['3'] ?></h5>
 
                                                                             <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                              
                                                                             </div>
 
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                        </div>
-
-                                                                        <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                                    </div>
-
-                                                                </article>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul class="items left clearfix">
-                                                            <li>
-                                                                <article class="fold-item span12">
-                                                                    <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=294&amp;h=190" class="post-img" />
-
-                                                                        <div class="description visible-part">
-                                                                            <h5 class="title">Post With Featured Image</h5>
-
-                                                                            <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                            </div>
-
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                            <p class="text"><?php echo $v4_intro['3'] ?> ...</p>
                                                                         </div>
 
                                                                         <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                     </div>
                                                                 </article>
                                                             </li>
-
-                                                            <li>
-                                                                <article class="fold-item span12">
-                                                                    <div class="clearfix">
-                                                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=294&amp;h=190" class="post-img" />
-
-                                                                        <div class="description visible-part">
-                                                                            <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                            <div class="info">
-                                                                                <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                                <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                            </div>
-
-                                                                            <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                        </div>
-
-                                                                        <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                                    </div>
-
-                                                                </article>
-                                                            </li>
                                                         </ul>
                                                     </li>
+                                                    
 
                                                 </ul>
                                             </div>
@@ -1186,139 +1048,7 @@
                     </div>
                 </aside>
 
-                 <!--Recent News 
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Recent News</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_270_slider1" class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=271&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=271&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=271&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=271&amp;h=200" class="post-img" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </aside>-->
-
+               
                 <!-- Feedburner -->
                 <aside class="widget w-rss-feed">
                     <div class="widget-title">
@@ -1346,22 +1076,9 @@
 
                     <div class="widget-content clearfix">
                         <div class="widget-weather">
-                            <div class="span4 state">
-                                <span class="thundershowers-but-weather"></span>
-
-                                <span class="degree">26&deg;</span>
-                            </div>
-
-                            <div class="span8 info">
-                                <span class="country">Cairo</span>
-
-                                <span class="state-title">State: Thundershowers</span>
-                                <span class="humidity">Humidity: 120</span>
-                                <span class="wind">Wind: 50 km/h</span>
-
-                                <span class="max-min">32&deg; / 16&deg;</span>
-                            </div>
-
+                          <!-- www.TuTiempo.net - Ancho:274px - Alto:91px -->
+<div id="TT_RCNEEEkkkllc4QsK7frjjzjjjWnKMpS2bYEYkZCIa1zo3IG5G"><a href="http://www.tutiempo.net">El tiempo 15 días</a></div>
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RCNEEEkkkllc4QsK7frjjzjjjWnKMpS2bYEYkZCIa1zo3IG5G"></script>
                         </div>
                     </div>
                 </aside>
