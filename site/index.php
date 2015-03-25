@@ -8,7 +8,7 @@
         $v_cuadro[$n]=$dato['cuadro'];
     }
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc LIMIT 6");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];
@@ -18,7 +18,7 @@
     }
      
     $x2=0;
-    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM videojuegos ORDER BY my_date desc LIMIT 6");
+    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM videojuegos ORDER BY my_date desc ");
         while($datos2=mysql_fetch_array($sqlx2)){
         $x2++;
         $v2_foto[$x2]=$datos2['id'];
@@ -27,7 +27,7 @@
         $v2_fecha[$x2]=$datos2['fecha'];
     }
     $x3=0;
-    $sqlx3=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews ORDER BY my_date desc LIMIT 6");
+    $sqlx3=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews ORDER BY my_date desc");
         while($datos3=mysql_fetch_array($sqlx3)){
         $x3++;
         $v3_foto[$x3]=$datos3['id'];
@@ -37,13 +37,53 @@
     }
 
     $x4=0;
-    $sqlx4=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas ORDER BY my_date desc LIMIT 6");
+    $sqlx4=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas ORDER BY my_date desc ");
         while($datos4=mysql_fetch_array($sqlx4)){
         $x4++;
         $v4_foto[$x4]=$datos4['id'];
         $v4_titulo[$x4]=$datos4['titulo'];
         $v4_intro[$x4]=$datos4['intro'];
         $v4_fecha[$x4]=$datos4['fecha'];
+    }
+
+    $x5=0;
+    $sqlx5=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM nacional ORDER BY my_date desc");
+        while($datos5=mysql_fetch_array($sqlx5)){
+        $x5++;
+        $v5_foto[$x5]=$datos5['id'];
+        $v5_titulo[$x5]=$datos5['titulo'];
+        $v5_intro[$x5]=$datos5['intro'];
+        $v5_fecha[$x5]=$datos5['fecha'];
+    }
+
+    $x6=0;
+    $sqlx6=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc");
+        while($datos6=mysql_fetch_array($sqlx6)){
+        $x6++;
+        $v6_foto[$x6]=$datos6['id'];
+        $v6_titulo[$x6]=$datos6['titulo'];
+        $v6_intro[$x6]=$datos6['intro'];
+        $v6_fecha[$x6]=$datos6['fecha'];
+    }
+
+    $x7=0;
+    $sqlx7=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random ORDER BY my_date desc");
+        while($datos7=mysql_fetch_array($sqlx7)){
+        $x7++;
+        $v7_foto[$x7]=$datos7['id'];
+        $v7_titulo[$x7]=$datos7['titulo'];
+        $v7_intro[$x7]=$datos7['intro'];
+        $v7_fecha[$x7]=$datos7['fecha'];
+    }
+
+    $x8=0;
+    $sqlx8=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM video ORDER BY my_date desc");
+        while($datos8=mysql_fetch_array($sqlx8)){
+        $x8++;
+        $v8_foto[$x8]=$datos8['id'];
+        $v8_titulo[$x8]=$datos['titulo'];
+        $v8_intro[$x8]=$datos8['intro'];
+        $v8_fecha[$x8]=$datos8['fecha'];
     }
 
     
@@ -366,11 +406,11 @@
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
                                 <li><a href="post-formats/post-image.html"><?php echo $v_titulo['1'] ?></a></li>
-                                <li><a href="post-formats/post-video.html"><?php echo $v_titulo['2'] ?></a></li>
-                                <li><a href="post-formats/post-soundcloud.html"><?php echo $v_titulo['3'] ?></a></li>
-                                <li><a href="post-formats/post-googlemap.html"><?php echo $v_titulo['4'] ?></a></li>
-                                <li><a href="post-formats/post-image-lightbox.html"><?php echo $v_titulo['5'] ?></a></li>
-                                <li><a href="post-formats/post-review.html"><?php echo $v_titulo['6'] ?></a></li>
+                                <li><a href="post-formats/post-video.html"><?php echo $v2_titulo['1'] ?></a></li>
+                                <li><a href="post-formats/post-soundcloud.html"><?php echo $v3_titulo['1'] ?></a></li>
+                                <li><a href="post-formats/post-googlemap.html"><?php echo $v4_titulo['1'] ?></a></li>
+                                <li><a href="post-formats/post-image-lightbox.html"><?php echo $v5_titulo['1'] ?></a></li>
+                                <li><a href="post-formats/post-review.html"><?php echo $v6_titulo['1'] ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -963,84 +1003,85 @@
 
                     <div class="widget-content clearfix thumbnails">
                         <ul class="posts-in-images clearfix">
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['1'] ?>">
                                 <a href="post-formats/post-image.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/nacional/<?php echo $v5_foto[1].'.jpg'; ?>" height="75" width="80">
+                                        
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Video" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['2'] ?>">
                                 <a href="post-formats/post-video.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=80&amp;h=75" />
+                                       <img src="login/administration/admin/secciones/nacional/<?php echo $v5_foto[2].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Sound Cloud" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['3'] ?>">
                                 <a href="post-formats/post-soundcloud.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/nacional/<?php echo $v5_foto[3].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['4'] ?>">
                                 <a href="post-formats/post-image-lightbox.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/nacional/<?php echo $v5_foto[4].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['5'] ?>">
                                 <a href="post-formats/post-review.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/nacional/<?php echo $v5_foto[5].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['6'] ?>">
                                 <a href="post-formats/post-googlemap.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/nacional/<?php echo $v5_foto[6].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['1'] ?>">
                                 <a href="post-formats/post-image-lightbox.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=80&amp;h=75" />
+                                       <img src="login/administration/admin/secciones/internacional/<?php echo $v6_foto[1].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['2'] ?>">
                                 <a href="post-formats/post-review.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/internacional/<?php echo $v6_foto[2].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['3'] ?>">
                                 <a href="post-formats/post-googlemap.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=80&amp;h=75" />
+                                        <img src="login/administration/admin/secciones/internacional/<?php echo $v6_foto[3].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
@@ -1083,87 +1124,9 @@
                     </div>
                 </aside>
 
-                 <!--Poll Cloud 
-                <aside class="widget w-poll">
-                    <div class="widget-title">
-                        <h4>Poll</h4>
-                    </div>
+        
 
-                    <div class="widget-content clearfix">
-                        <form method="get">
-                            <div class="poll-ques">
-                                <div class="title">
-                                    <h5>How will history remember George W. Bush?</h5>
-                                </div>
-
-                                <div class="answers">
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
-                                        Failure
-                                    </label>
-
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-                                        Success
-                                    </label>
-
-                                </div>
-
-                                <button type="submit" class="btn-theme vote">Vote!</button>
-
-                                <div class="result hidden">
-                                    <span>Failure (75%)</span>
-
-                                    <span>Success (25%)</span>
-
-                                    <span class="total">Total Voters: 2,522</span>
-
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </aside>-->
-
-
-                <!-- Sponsors (4x125 Adv.) -->
-                <aside class="widget w-sponsors">
-                    <div class="widget-title">
-                        <h4>Sponsors</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <ul class="widget-sponsor clearfix">
-                            <li><a href="http://themeforest.net/item/adams-magazine-responsive-magazineblog-theme/4919511" target="_blank">
-                                <img src="../images/ad-125-1.jpg" /></a></li>
-                            <li><a href="http://themeforest.net/item/adams-magazine-responsive-magazineblog-theme/4919511" target="_blank">
-                                <img src="../images/ad-125-2.jpg" /></a></li>
-                            <li><a href="http://themeforest.net/item/adams-magazine-responsive-magazineblog-theme/4919511" target="_blank">
-                                <img src="../images/ad-125-3.jpg" /></a></li>
-                            <li><a href="http://themeforest.net/item/adams-magazine-responsive-magazineblog-theme/4919511" target="_blank">
-                                <img src="../images/ad-125-4.jpg" /></a></li>
-                        </ul>
-                    </div>
-                </aside>
-
-                <!-- Tags Cloud -->
-                <aside class="widget w-tags">
-                    <div class="widget-title">
-                        <h4>Tags Cloud</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="tags-cloud">
-                            <a href="#" class="btn-theme">UK News</a>
-                            <a href="#" class="btn-theme">Technology</a>
-                            <a href="#" class="btn-theme">Computer</a>
-                            <a href="#" class="btn-theme">Headphone</a>
-                            <a href="#" class="btn-theme">President</a>
-                            <a href="#" class="btn-theme">Vice President</a>
-                            <a href="#" class="btn-theme">Microsoft</a>
-                            <a href="#" class="btn-theme">Apple</a>
-                        </div>
-                    </div>
-                </aside>
+            
 
 
                 <!-- 160 (160x600 Adv.) -->
@@ -1177,16 +1140,6 @@
                     </div>
                 </aside>
 
-                <!-- Facebook Like Box -->
-                <!--<aside class="widget w-facebook">
-                    <div class="widget-title">
-                        <h4>Like Us</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=270&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=true&amp;header=false&amp;appId=494953077210684" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:258px;" allowTransparency="true"></iframe>
-                    </div>
-                </aside>-->
 
             </section>
 
@@ -1277,30 +1230,10 @@
                     </div>
                 </aside>
 
-                <!-- 300x250 Adv -->
-                <!--<aside class="widget w-adv">
-                    <div class="widget-title">
-                        <h4>300x250 Advertisement</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <a href="http://themeforest.net/item/adams-magazine-responsive-magazineblog-theme/4919511" target="_blank">
-                            <img src="../images/ad-300x250.jpg" />
-                        </a>
-                    </div>
-
-                </aside>-->
-
-                <!-- News Widget -->
-                
-
-                
-
-
                 <!-- Random Posts (Classic) -->
                 <aside class="widget w-posts">
                     <div class="widget-title">
-                        <h4>Random Posts (Classic View)</h4>
+                        <h4>Random</h4>
                     </div>
 
                     <div class="widget-content clearfix">
@@ -1311,17 +1244,18 @@
                                         <a href="post-formats/post-image-lightbox.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=65&amp;h=65" />
+                                                <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[1].'.jpg'; ?>" height="65" width="65">
+                                                
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
-                                                <h5 class="media-heading">Post With Image + Lightbox</h5>
+                                            <a href="post-formats/post-image-lightbox.html" title="">
+                                                <h5 class="media-heading"><?php echo $v7_titulo['1'] ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['1'] ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1332,17 +1266,17 @@
                                         <a href="post-formats/post-self-audio.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=65&amp;h=65" />
+                                               <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[2].'.jpg'; ?>" height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-self-audio.html" title="Post With Self Hosted Audio">
-                                                <h5 class="media-heading">Post With Self Hosted Audio</h5>
+                                            <a href="post-formats/post-self-audio.html" title="">
+                                                <h5 class="media-heading"><?php echo $v7_titulo['2'] ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['2'] ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1353,17 +1287,17 @@
                                         <a href="post-formats/post-soundcloud.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=65&amp;h=65" />
+                                               <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[3].'.jpg'; ?>" height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-soundcloud.html" title="Post With Sound-Cloud">
-                                                <h5 class="media-heading">Post With Sound-Cloud</h5>
+                                            <a href="post-formats/post-soundcloud.html" title="">
+                                                <h5 class="media-heading"><?php echo $v7_titulo['3'] ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['3'] ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1374,17 +1308,17 @@
                                         <a href="post-formats/post-googlemap.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=65&amp;h=65" />
+                                                <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[4].'.jpg'; ?>" height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-googlemap.html" title="Post With Google Map">
-                                                <h5 class="media-heading">Post With Google Map</h5>
+                                            <a href="post-formats/post-googlemap.html" title="">
+                                                <h5 class="media-heading"><?php echo $v7_titulo['4'] ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['4'] ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1403,25 +1337,13 @@
                     </div>
 
                     <div class="widget-content clearfix">
-                        <iframe itemprop="contentURL" class="youtube-player" type="text/html"
-                            width="100%" height="200" src="http://www.youtube.com/embed/P5_Msrdg3Hk?wmode=transparent&amp;wmode=opaque"
-                            allowfullscreen frameborder="0"></iframe>
+                        <?php echo $v8_intro['1'] ?>
                     </div>
 
                 </aside>
 
 
-                <!-- Sound Cloud Widget -->
-                <!--<aside class="widget w-audio">
-                    <div class="widget-title">
-                        <h4>SoundCloud Track</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <iframe itemprop="contentURL" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F72646464"></iframe>
-                    </div>
-
-                </aside>-->
+                
 
             </section>
         </div>
@@ -1462,219 +1384,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
 
-                <!--<aside class="span3">
-                    <div class="f-widget w-tags">
-                        <div class="f-widget-title">
-                            <h4>Tags Cloud</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <div class="tags-cloud">
-                                <a href="#" class="btn-theme">UK News</a>
-                                <a href="#" class="btn-theme">Technology</a>
-                                <a href="#" class="btn-theme">Computer</a>
-                                <a href="#" class="btn-theme">Headphone</a>
-                                <a href="#" class="btn-theme">President</a>
-                                <a href="#" class="btn-theme">Vice President</a>
-                                <a href="#" class="btn-theme">Microsoft</a>
-                                <a href="#" class="btn-theme">Apple</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </aside>-->
-
-                <!--<aside class="span3">
-                    <div class="f-widget w-pictures">
-                        <div class="f-widget-title">
-                            <h4>Random Posts</h4>
-                        </div>
-
-                        <div class="f-widget-content clearfix thumbnails">
-                            <ul class="posts-in-images clearfix">
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image" title="">
-                                    <a href="post-formats/post-image.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Video" title="">
-                                    <a href="post-formats/post-video.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Sound Cloud" title="">
-                                    <a href="post-formats/post-soundcloud.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
-                                    <a href="post-formats/post-image-lightbox.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
-                                    <a href="post-formats/post-review.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
-                                    <a href="post-formats/post-googlemap.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
-                                    <a href="post-formats/post-image-lightbox.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
-                                    <a href="post-formats/post-review.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
-                                    <a href="post-formats/post-googlemap.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </aside>-->
-
-                <!--<aside class="span3">
-                    <div class="f-widget w-posts">
-                        <div class="f-widget-title">
-                            <h4>Posts Of The Day</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <div class="posts-in-widget">
-                                <div class="row-fluid modern-items-list">
-
-                                    <div id="widget_span3_slider2" class="flexslider">
-
-                                        <ul class="slides">
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li>
-                                                        <article class="fold-item">
-                                                            <div class="clearfix">
-                                                                <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=286&amp;h=200" />
-
-                                                                <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                                </div>
-
-                                                                <div class="description visible-part">
-                                                                    <h5 class="title">Post With Featured Image</h5>
-
-                                                                    <div class="info">
-                                                                        <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                    </div>
-
-                                                                    <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                </div>
-
-                                                                <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li>
-                                                        <article class="fold-item">
-                                                            <div class="clearfix">
-                                                                <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=286&amp;h=200" />
-
-                                                                <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                                </div>
-
-                                                                <div class="description visible-part">
-                                                                    <h5 class="title">Post With Self Hosted Audio</h5>
-
-                                                                    <div class="info">
-                                                                        <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                    </div>
-
-                                                                    <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                </div>
-
-                                                                <a href="post-formats/post-self-audio.html" class="more" title=""></a>
-                                                            </div>
-
-                                                        </article>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </aside>-->
-
-                <!--<aside class="span3">
-                    <div class="f-widget w-about">
-                        <div class="f-widget-title">
-                            <h4>About Magazine</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
-                        </div>
-
-                    </div>
-                </aside>-->
+                
 
             </div>
         </div>
@@ -1705,202 +1415,7 @@
 
     </section>
 
-    <!--<div id="divStyleSwitcher" class="div-switcher-back-color">
-        <a id="btnToggleStyleSwitcher">
-            <i class="icon-wrench"></i>
-            <img src="../images/settings.png" />
-        </a>
-
-        <div id="divThemeColor" class="row-fluid">
-            <span class="span12">Theme Color</span>
-
-
-            <div class="row-fluid">
-                <div id="divColorRed" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorBlue" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorOrange" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorGreen" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorBlue2" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorMoov" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorFucia" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorFucia2" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-            </div>
-        </div>-->
-
-        <!--<div id="divBackgroundColor" class="row-fluid">
-            <div class="span6">
-                <span class="span12">Background Color</span>
-
-                <div class="row-fluid">
-                    <div class="span12 color-picker">
-                        <a class="select-color-image"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span6">
-                <div id="divBoxed" class="row-fluid">
-                    <span class="span12">Body Style</span>
-
-                    <div class="row-fluid">
-                        <div id="divFluidStyle" class="span6">
-                            <a>Fluid</a>
-                        </div>
-
-                        <div id="divFixedStyle" class="span6">
-                            <div class="span2 left-border"></div>
-
-                            <div class="span8"><a>Fixed</a></div>
-
-                            <div class="span2 right-border"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="divStickyNav" class="row-fluid">
-            <a>Sticky Navigation (Disabled)</a>
-        </div>
-
-        <div id="divBackgroundPattern" class="row-fluid">
-            <span class="span12">Background Pattern</span>
-
-            <div class="row-fluid">
-                <div id="divP-1" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/1.png')"></a>
-                </div>
-                <div id="divP-2" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/2.png')"></a>
-                </div>
-                <div id="divP-3" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/3.png')"></a>
-                </div>
-                <div id="divP-4" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/4.png')"></a>
-                </div>
-
-                <div id="divP-5" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/5.png')"></a>
-                </div>
-                <div id="divP-6" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/6.png')"></a>
-                </div>
-                <div id="divP-7" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/7.png')"></a>
-                </div>
-                <div id="divP-8" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../images/bg/28/8.png')"></a>
-                </div>
-            </div>
-        </div>
-
-        <div id="divCatColors" class="row-fluid">
-            <span class="span12">Categories Colors (some colors doesn't work here)</span>
-
-            <div class="row-fluid">
-                <div class="modern-accordion-container">
-                    <div id="acc_Cat_Colors" class="accordion">
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_HCat">Horizontal Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_HCat" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner">
-                                    <div id="divH_Cat" class="row-fluid">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_RevCat">Review Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_RevCat" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner">
-                                    <div id="divRev_Cat" class="row-fluid">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_VerCat_1">Vertical Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_VerCat_1" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner row-fluid">
-                                    <div id="divV_Cat" class="span6">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-
-                                    <div id="divV_Cat_2" class="span6">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_HD_Cat">Horizontal Divided Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_HD_Cat" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner">
-                                    <div id="divHD_Cat" class="row-fluid">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>-->
+    
 
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
 
