@@ -60,47 +60,16 @@
                             <i class="icon-reorder"></i>
                         </button>
 
-                        <div class="nav-collapse collapse">
+                        <div class="nav-collapse collapse" style="float:right">
                             <!--<a class="brand" href="#">Serpentsoft</a>-->
 
                             <ul class="nav">
 
-                                <li><a href="#">Features</a></li>
-                                <li class="divider-vertical"></li>
-
-                                <li><a href="#">Link</a></li>
-                                <li class="divider-vertical"></li>
-
-                                <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                    <a href="#" data-target="#" tabindex="-1" class="dropdown-toggle"
-                                       data-hover="dropdown" data-delay="200"
-                                       role="button">Dropdown<i class="icon-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="dropdown-submenu">
-                                            <a href="#" tabindex="-1" data-target="#">Sub Menu</a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li class="nav-header">Nav header</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-
+                               
                             <ul class="nav pull-right">
 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>Adams Magazine <i class="icon-angle-down" style="margin-right: 0"></i></a>
+                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>NoteInsideNetwork <i class="icon-angle-down" style="margin-right: 0"></i></a>
 
                                     <ul class="dropdown-menu about-company">
                                         <li>
@@ -108,7 +77,7 @@
 
                                                 <div class="span8 google-map-section clearfix">
                                                     <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-map-marker bo-icon-white"></i>Magazine Location</h3>
+                                                        <h3><i class="bo-icon-map-marker bo-icon-white"></i>¿Donde Estamos?</h3>
                                                         <hr />
                                                     </div>
 
@@ -124,14 +93,14 @@
 
                                                     <div class="row-fluid search-section">
                                                         <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-search bo-icon-white"></i>Search</h3>
+                                                            <h3><i class="bo-icon-search bo-icon-white"></i>Busqueda</h3>
                                                             <hr />
                                                         </div>
 
                                                         <div class="row-fluid">
                                                             <form class="form-search clearfix search-box">
                                                                 <div class="input-append input-block-level">
-                                                                    <input type="text" class="span10 search-query" placeholder="Type and Press Enter" required="required" />
+                                                                    <input type="text" class="span10 search-query" placeholder="¿Buscas algo?" required="required" />
                                                                     <button type="submit" class="btn"><i class="icon-search"></i></button>
                                                                 </div>
                                                             </form>
@@ -139,31 +108,9 @@
                                                     </div>
 
                                                     <div class="row-fluid login-section">
-                                                        <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-user bo-icon-white"></i>Login</h3>
-                                                            <hr />
-                                                        </div>
+                                                       
 
-                                                        <div class="row-fluid">
-                                                            <form method="get" class="login-form">
-                                                                <div class="input-prepend input-block-level">
-                                                                    <span class="add-on"><i class="icon-envelope"></i></span>
-                                                                    <input id="Email1" class="span10" type="email" placeholder="Email" required="required" />
-                                                                </div>
-
-                                                                <div class="input-prepend input-block-level">
-                                                                    <span class="add-on"><i class="icon-key"></i></span>
-                                                                    <input id="Password1" class="span10" type="password" placeholder="Password" required="required" />
-                                                                </div>
-
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" />
-                                                                    Remember me
-                                                                </label>
-
-                                                                <button type="submit" class="btn-theme">Sign in</button>
-                                                            </form>
-                                                        </div>
+                                                        
                                                     </div>
 
                                                 </div>
@@ -175,158 +122,47 @@
                                             <div class="row-fluid">
                                                 <div class="span8">
                                                     <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-flag bo-icon-white"></i>Contact Info</h3>
+                                                        <h3><i class="bo-icon-flag bo-icon-white"></i>Información de Contacto</h3>
                                                         <hr />
                                                     </div>
 
                                                     <ul class="row-fluid contact-info">
 
                                                         <li>
-                                                            <strong>Address:</strong>
-                                                            <span>40 Red Sea st., Taba</span>
+                                                            <strong>Calle:</strong>
+                                                            <span>Heroico Colegio Militar #13, Col. Centro, Pedro Escobedo Querétaro.</span>
                                                         </li>
 
                                                         <li>
-                                                            <strong>Country:</strong>
-                                                            <span>Egypt</span>
+                                                            <strong>País:</strong>
+                                                            <span>México</span>
                                                         </li>
 
                                                         <li>
-                                                            <strong>Telephone:</strong>
-                                                            <span>+20 224 455 66988</span>
+                                                            <strong>Telefono:</strong>
+                                                            <span>(448) 275 0237 </span>
                                                         </li>
 
                                                         <li>
                                                             <strong>Email:</strong>
-                                                            <a href="mailto:magazine@site.com">magazine@site.com</a>
+                                                            <a href="note@insidenetwork.com">note@insidenetwork.com</a>
                                                         </li>
 
                                                     </ul>
 
-                                                    <!-- Join Us - Social Icons -->
-                                                    <div class="row-fluid">
-                                                        <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-plane bo-icon-white"></i>Join Us</h3>
-                                                            <hr />
-                                                        </div>
-
-                                                        <div class="row-fluid">
-                                                            <ul class="social-networks clearfix">
-                                                                <li>
-                                                                    <a href="#" class="fb-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="facebook" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="twitter-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="twitter" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="googleplus-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="googleplus" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="pinterest-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="pinterest" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="youtube-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="youtube" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="linkedin-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="linkedin" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="rss-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="rss" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="skype-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="skype" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="dribble-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="dribbble" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="instagram-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="instagram" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="flickr-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="flickr" title=""></a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a href="#" class="dropbox-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                       data-original-title="dropbox" title=""></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
 
-                                                <div class="span4">
-                                                    <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-question-sign bo-icon-white"></i>About Magazine</h3>
-                                                        <hr />
-                                                    </div>
-
-                                                    <div class="about-desc">
-                                                        <p>
-                                                            A Few Words About your Magazine
-                                                            <br />
-                                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                              
                                             </div>
 
-                                            <!-- Terms and Conditions -->
-                                            <div class="row-fluid">
-                                                <div class="row-fluid title">
-                                                    <h3><i class="bo-icon-bell bo-icon-white"></i>Terms and Conditions</h3>
-                                                    <hr />
-                                                </div>
-
-                                                <div class="row-fluid">
-                                                    <ul class="span7 terms-conditions clearfix">
-
-                                                        <li><a href="../magazine/privacy-policy.html">Privacy Policy</a></li>
-                                                        <li><a href="../magazine/copyright.html">Copyright</a></li>
-                                                        <li><a href="../magazine/archives.html">Archives</a></li>
-                                                        <li><a href="../magazine/about-us.html">About US</a></li>
-
-
-                                                    </ul>
-
-                                                    <div class="span5 copyright clearfix">
-                                                        <span>&copy; Copyright 2013 by Serpentsoft, All Rights Reserved</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="divider-vertical"></li>
 
-                                <li>
-                                    <div class="span-datetime clearfix">
-                                        <span><i class="bo-icon-time bo-icon-white"></i>26-Apr-2013, 05:55 AM</span>
-                                    </div>
-                                </li>
+                                
                             </ul>
 
                         </div>
@@ -551,7 +387,8 @@
                                                             <div class="date-meta">
                                                                 <div class="post-date">
                                                                     <div class="date">
-                                                                        <span class="month">Jan</span>
+
+                                                                        <span class="month"><?php$sdate=date("d")."/".date("m")."/".date("y");?></span>
                                                                         <span class="day">15</span>
                                                                         <span class="year">2013</span>
                                                                         <hr />
