@@ -1,5 +1,5 @@
 <?php 
-    include('php_conexion.php'); 
+    include('../php_conexion.php'); 
     $n=0;
     $sqll=mysql_query("SELECT * FROM titulos");
     while($dato=mysql_fetch_array($sqll)){

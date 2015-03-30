@@ -1,4 +1,23 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('php_conexion.php'); 
+    $n=0;
+    $sqll=mysql_query("SELECT * FROM titulos");
+    while($dato=mysql_fetch_array($sqll)){
+        $n++;
+        $v_titulop[$n]=$dato['titulo'];
+        $v_cuadro[$n]=$dato['cuadro'];
+    }
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>NoteInsideNetwork | Eventos</title>
@@ -79,7 +98,7 @@
                             <ul class="nav pull-right">
 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>Adams Magazine <i class="icon-angle-down" style="margin-right: 0"></i></a>
+                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>NoteInsideNetwork <i class="icon-angle-down" style="margin-right: 0"></i></a>
 
                                     <ul class="dropdown-menu about-company">
                                         <li>
@@ -167,7 +186,7 @@
 
                                                         <li>
                                                             <strong>Country:</strong>
-                                                            <span>Egypt</span>
+                                                            <span>Mexico</span>
                                                         </li>
 
                                                         <li>
@@ -267,7 +286,7 @@
                                                     </ul>
 
                                                     <div class="span5 copyright clearfix">
-                                                        <span>&copy; Copyright 2013 by Serpentsoft, All Rights Reserved</span>
+                                                        <span>&copy; Copyright 2015 by NoteInsideNetwork, All Rights Reserved</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -347,14 +366,14 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="A1" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#">Sociedad<i class="caret"></i></a>
+                                    data-target="#" href="#">SOCIEDAD<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="post-image.html">Eventos</a></li>
-                                    <li><a href="post-video-recomendacion.html">Recomendaciones Musicales</a></li>
-									<li><a href="post-image.html">Fotografia</a></li>
-									<li><a href="post-video.html">Video</a></li>
-									<li><a href="post-image.html">Salud</a></li>
+                                    <li><a href="post-image.html">EVENTOS</a></li>
+                                    <li><a href="post-video-recomendacion.html">MUSICA</a></li>
+									<li><a href="post-image.html">FOTOGRAFIA</a></li>
+									<li><a href="post-video.html">VIDEO</a></li>
+									<li><a href="post-image.html">SALUD</a></li>
 									
                                 </ul>
                             </li>
@@ -364,7 +383,7 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancPostFormats" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Politica<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">POLITICA<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="../short-codes/boxes-messages.html" title="">Boxes and Messages</a></li>
@@ -404,7 +423,7 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a4" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">NOSOTROS<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-submenu">
@@ -425,12 +444,12 @@
 
                             <li class="divider-vertical"></li>
 
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
+                            <!--<li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" role="button"
                                     data-hover="dropdown" data-delay="200"
                                     data-target="#" href="#" title="">Purchase Me</a>
 
-                            </li>
+                            </li>-->
 
                             <li class="divider-vertical"></li>
                         </ul>

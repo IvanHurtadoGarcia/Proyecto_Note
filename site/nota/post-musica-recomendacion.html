@@ -1,4 +1,6 @@
-﻿<?php 
+﻿
+
+<?php 
     include('php_conexion.php'); 
     $n=0;
     $sqll=mysql_query("SELECT * FROM titulos");
@@ -8,7 +10,7 @@
         $v_cuadro[$n]=$dato['cuadro'];
     }
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM video  ORDER BY my_date desc ");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM recomendacionesm  ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];

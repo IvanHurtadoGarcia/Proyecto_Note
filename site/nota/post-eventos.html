@@ -8,7 +8,7 @@
         $v_cuadro[$n]=$dato['cuadro'];
     }
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM video  ORDER BY my_date desc ");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM eventos  ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];
@@ -20,7 +20,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>NoteInsideNetwork | Recomendaciones Misicales</title>
+    <title>Adams Magazine | Notas Locales</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -92,7 +92,7 @@
                                         <li><a href="#">Separated link</a></li>
                                         <li><a href="#">One more separated link</a></li>
                                     </ul>
-                                </li>
+                              </li>
                             </ul>
 
                             <ul class="nav pull-right">
@@ -185,8 +185,8 @@
                                                         </li>
 
                                                         <li>
-                                                            <strong>Country:</strong>
-                                                            <span>Egypt</span>
+                                                            <strong>Pais:</strong>
+                                                            <span>Mexco</span>
                                                         </li>
 
                                                         <li>
@@ -286,20 +286,19 @@
                                                     </ul>
 
                                                     <div class="span5 copyright clearfix">
-                                                        <span>&copy; Copyright 2013 by Serpentsoft, All Rights Reserved</span>
+                                                        <span>&copy; Copyright 2015 by NoteInsideNetwork, All Rights Reserved</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
-                                </li>
+                              </li>
 
                                 <li class="divider-vertical"></li>
 
                                 <li>
                                     <div class="span-datetime clearfix">
-                                        <span><i class="bo-icon-time bo-icon-white"></i>26-Apr-2013, 05:55 AM</span>
-                                    </div>
+                                        <span><i class="bo-icon-time bo-icon-white"></i>26-Apr-2013, 05:55 AM</span>                                    </div>
                                 </li>
                             </ul>
 
@@ -317,13 +316,11 @@
                     <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
                         <h1 class="hidden" itemprop="name">Serpentsoft</h1>
                         <a href="../index.html">
-                            <img itemprop="logo" src="../../images/LogoNiN.png" alt="Logo" /></a>
+                            <img itemprop="logo" src="../../images/logo.png" alt="LogoNIN" /></a>
                     </div>
 
                     <div class="adv-970 pull-right visible-desktop">
-                        <a href="#MyThemeAdv" target="_blank">
-                            <img class="pull-right" src="../../images/ad-970.jpg" alt="970x90" /></a>
-                    </div>
+                        <a href="#MyThemeAdv" target="_blank"></a>                    </div>
                 </div>
             </div>
         </div>
@@ -349,22 +346,19 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="../index.html"><i class="icon-home"></i></a>
-                            </li>
+                                    data-target="#" href="../index.html"><i class="icon-home"></i></a>                            </li>
 
                             <li class="divider-vertical"></li>
 
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a6" role="button"
+                            <li class="dropdown" role="menu" aria-labelledby="dLabel"><a class="dropdown-toggle" id="a6" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Vida Y Tecnologia<i class="caret"></i></a>
+                                    data-target="#" href="#" title=""><i class="caret"></i>Vida y tecnologia</a>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="../home-styles/blog.html" title="">Blog Style</a></li>
                                     <li><a href="../home-styles/left-sb.html" title="">Left Sidebars</a></li>
                                     <li><a href="../home-styles/middle-content.html" title="">Middle Content</a></li>
                                 </ul>
-
                           </li>
 
                             <li class="divider-vertical"></li>
@@ -372,18 +366,14 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="A1" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
+                                    data-target="#" href="#">Sociedad<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="post-image.html">Featured Image</a></li>
-                                    <li><a href="post-image-lightbox.html">Featured Image With Lightbox</a></li>
-                                    <li><a href="post-review.html">Review Criteria</a></li>
-                                    <li><a href="post-video.html">Video</a></li>
-                                    <li><a href="post-soundcloud.html">Sound-Cloud</a></li>
-
-                                    <li><a href="post-googlemap.html">Google Map</a></li>
-                                    <li><a href="post-self-audio.html">Self Hosted Audio</a></li>
-                                    <li><a href="post-self-video.html">Self Hosted Video</a></li>
+								<li><a href="post-video.html">Eventos</a></li>
+                                    <li><a href="post-image.html">Recomendaciones Musicales </a></li>
+                                    <li><a href="post-image-lightbox.html">Fotgrafia</a></li>
+                                    <li><a href="post-review.html">Video</a></li>
+                                    <li><a href="post-video.html">Salud</a></li>
                                 </ul>
                             </li>
 
@@ -407,7 +397,6 @@
                                     <li><a href="../short-codes/shortcodes.html#texts-section" title="">Texts and Paragraph</a></li>
                                     <li><a href="../short-codes/shortcodes.html#typography-section" title="">Typography</a></li>
                                 </ul>
-
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -415,7 +404,7 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a5" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Interes General<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">interes Social<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="../page-templates/authors.html" title="">Authors</a></li>
@@ -441,24 +430,15 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="../categories/category-template.html" title="">Europe</a></li>
                                             <li><a href="../categories/category-template.html" title="">Asia</a></li>
-
                                         </ul>
                                     </li>
                                     <li><a href="../categories/category-template.html" title="">Tecnology</a></li>
-                                    <li><a href="../categories/category-template.html" title="">Health</a></li>
+                                    <li><a href="../categories/category-template.html" title="">Health</a></li>8
                                     <li><a href="../categories/category-template.html" title="">Science</a></li>
                                 </ul>
-
-                            </li>
+                          </li>
 
                             <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Purchase Me</a>
-
-                            </li>
 
                             <li class="divider-vertical"></li>
                         </ul>
@@ -491,16 +471,12 @@
                     <div class="row-fluid">
 
                         <div class="title">
-                            <h3>Breaking News</h3>
+                            <h3>Notas</h3>
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="post-image.html">Post With Image</a></li>
-                                <li><a href="post-video.html">Post With Video</a></li>
-                                <li><a href="post-soundcloud.html">Post With Sound Cloud</a></li>
-                                <li><a href="post-googlemap.html">Post With Google Map</a></li>
-                                <li><a href="post-image-lightbox.html">Post With Image and Lightbox</a></li>
-                                <li><a href="post-review.html">Post With Animated Review System</a></li>
+                                <li><a href="post-image.html">Notas locales  </a></li>
+                                <li><a href="post-video.html">Notas de Queretaro</a></li>
                             </ul>
                         </div>
                     </div>
@@ -515,32 +491,24 @@
                                 <div itemscope itemtype="http://schema.org/WebPage">
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
-                                            <a href="#"><i class="bo-icon-home"></i>Local News</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="#" class="active">Post With Video</a></li>
+                                            <a href="#"><i class="bo-icon-home"></i>Local New</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="figure-container">
-                                    <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/VideoObject">
-                                        <!-- Just Change Code -->
-                                        
-                                        <iframe class="youtube-player" type="text/html"
-                                            width="100%" height="385" src="https://www.youtube.com/embed/nVjsGKrE6E8?wmode=transparent&amp;wmode=opaque"
-                                            allowfullscreen frameborder="0"></iframe>
-
-                                        <figcaption itemprop="caption">Captura de video
-                                        </figcaption>
+                                    <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                      <figcaption itemprop="description"></figcaption>
                                     </figure>
                                 </div>
 
 
-                                <h1 itemprop="headline">Recomendacion Musical</h1>
+                                <h1 itemprop="headline">Eventos</h1>
 
                                 <div class="post-info">
                                     <div class="post-meta">
                                         <ul>
-                                            <li title="Post Author"><a href="#"><i class="bo-icon-pencil"></i>Serpentsoft</a></li>
-                                            <li title="Publish Time" itemprop="datePublished"><i class="bo-icon-time"></i>26 Feb, 2013 at 03:15 PM</li>
+                                            <li title="Post Author"><a href="#"><i class="bo-icon-pencil"></i>NoteInsideNetwork</a></li>
+                                            <li title="Publish Time" itemprop="datePublished"><i class="bo-icon-time"></i>19 Feb, 2015 at 08:06 PM</li>
 
                                             <li><a href="#" itemprop="interactionCount" title="No. of Comments"><i class="bo-icon-comment"></i>15</a></li>
                                             <li itemprop="interactionCount" title="No. of Views"><i class="bo-icon-eye-open"></i>35</li>
@@ -558,14 +526,15 @@
                             <span class="clearfix"></span>
 
                             <div class="post-entry" itemprop="articleBody">
-
-                                <span class="drop-capital">D</span>escripcion del video .
-                            
-                                <blockquote>
-                                <p>Informacion del video y artista </p>
+                              <p>Si tu estas buscando una actividad o te intersea informarte de ellla esta en el lugar adecuado </p>
+                              <blockquote>
+                                <p>&nbsp;</p>
                             </blockquote>
 
-                                <p>OTRAS COSAS QUE SE PUEDEM MENCIANAR SOBRE LA RECOMENACION MUSICAL </p>
+                              
+                               
+
+
                           </div>
 
                             <div class="clearfix"></div>
@@ -602,7 +571,7 @@
                             <!-- Author Biography -->
                             <aside class="author-bio w-user">
                                 <div class="cat-widget-title">
-                                    <h3>About Serpentsoft</h3>
+                                    <h3>ACERCA DE MI </h3>
                                 </div>
 
                                 <div class="cat-widget-content">
@@ -629,9 +598,7 @@
 
                                                 <div class="media">
                                                     <div itemprop="description">
-                                                        <p>
-                                                            A few words about an article author, I am a Web Developer and Designer, i love computer programming either Desktop or Web
-                                                        </p>
+                                                        <p>&nbsp;</p>
                                                     </div>
 
                                                     <ul class="author-personal-info social-networks clearfix">
@@ -690,7 +657,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Featured Image</h5>
@@ -698,8 +665,7 @@
                                                                                 <div class="info">
                                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                                </div>
+                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                                </div>
 
                                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                                             </div>
@@ -712,7 +678,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Google Map</h5>
@@ -720,8 +686,7 @@
                                                                                 <div class="info">
                                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                                </div>
+                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                                </div>
 
                                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                                             </div>
@@ -741,7 +706,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Featured Video</h5>
@@ -749,8 +714,7 @@
                                                                                 <div class="info">
                                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                                </div>
+                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                                </div>
 
                                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                                             </div>
@@ -764,7 +728,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Sound Cloud</h5>
@@ -772,8 +736,7 @@
                                                                                 <div class="info">
                                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                                </div>
+                                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                                </div>
 
                                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                                             </div>
@@ -849,7 +812,7 @@
 
                                                     <!-- Nested Comments -->
                                                     <article class="media">
-                                                        <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a2.jpg&amp;w=65&amp;h=65" alt="65x65" />
+                                                        <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a1.jpg&amp;w=65&amp;h=65" alt="65x65" />
 
                                                         <div class="media-body span10">
                                                             <a itemprop="creator" href="#">
@@ -871,7 +834,7 @@
                                             </article>
 
                                             <article class="media">
-                                                <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a2.jpg&amp;w=65&amp;h=65" alt="65x65" />
+                                                <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a3.jpg&amp;w=65&amp;h=65" alt="65x65" />
 
                                                 <div class="media-body span10">
                                                     <a itemprop="creator" href="#">
@@ -1003,36 +966,59 @@
 
                 <!-- Weather -->
                 <aside class="widget w-weather">
-                  <div class="widget-content clearfix"></div>
-              </aside>
+                    <div class="widget-title">
+                        <h4>Clima</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <div class="widget-weather">
+                            <div class="span4 state">
+                                <span class="thundershowers-but-weather"></span>
+
+                                <span class="degree">15&deg;</span>
+                            </div>
+
+                            <div class="span8 info">
+                                <span class="country">San Juan del Rio,Qro</span>
+
+                                <span class="state-title">Estado: Despejado</span>
+                                <span class="humidity">Humedad: 58 %</span>
+                                <span class="wind">Viento: 7 km/h</span>
+
+                                <span class="max-min">32&deg; / 16&deg;</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </aside>
 
                 <!-- Poll Cloud -->
                 <aside class="widget w-poll">
                     <div class="widget-title">
-                        <h4>Encuesta</h4>
+                        <h4>Poll</h4>
                     </div>
 
                     <div class="widget-content clearfix">
                         <form method="get">
                             <div class="poll-ques">
                                 <div class="title">
-                                    <h5>¿Te gusto la recomendacion Musical </h5>
+                                    <h5>How will history remember George W. Bush?</h5>
                                 </div>
 
                                 <div class="answers">
                                     <label class="radio">
                                         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
-                                        Si
+                                        Failure
                                     </label>
 
                                     <label class="radio">
                                         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-                                        No
+                                        Success
                                     </label>
 
                                 </div>
 
-                                <button type="submit" class="btn-theme vote">Vota</button>
+                                <button type="submit" class="btn-theme vote">Vote!</button>
 
                                 <div class="result hidden">
                                     <span>Failure (75%)</span>
@@ -1202,8 +1188,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=271&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Featured Image</h5>
@@ -1211,8 +1196,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1228,8 +1212,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=271&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Sound Cloud</h5>
@@ -1237,8 +1220,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1258,8 +1240,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=271&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Featured Image</h5>
@@ -1267,8 +1248,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1284,8 +1264,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=271&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Sound Cloud</h5>
@@ -1293,8 +1272,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1356,8 +1334,7 @@
                                                             <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=301&amp;h=200" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Featured Image</h5>
@@ -1365,8 +1342,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1387,8 +1363,7 @@
                                                             <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=301&amp;h=200" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Self Hosted Audio</h5>
@@ -1396,8 +1371,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1581,8 +1555,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=301&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Featured Image</h5>
@@ -1590,8 +1563,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1607,8 +1579,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=301&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Sound Cloud</h5>
@@ -1616,8 +1587,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1639,8 +1609,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=301&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Featured Image and Lightbox</h5>
@@ -1648,8 +1617,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -1665,8 +1633,7 @@
                                                             <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=301&amp;h=200" class="post-img" />
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title">Post With Self Hosted Audio</h5>
@@ -1674,8 +1641,7 @@
                                                                 <div class="info">
                                                                     <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                </div>
 
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
@@ -2316,8 +2282,7 @@
                                                                 <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=286&amp;h=200" />
 
                                                                 <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                                </div>
 
                                                                 <div class="description visible-part">
                                                                     <h5 class="title">Post With Featured Image</h5>
@@ -2325,8 +2290,7 @@
                                                                     <div class="info">
                                                                         <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                         <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                    </div>
+                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                    </div>
 
                                                                     <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                                 </div>
@@ -2347,8 +2311,7 @@
                                                                 <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=286&amp;h=200" />
 
                                                                 <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                                </div>
+                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                                </div>
 
                                                                 <div class="description visible-part">
                                                                     <h5 class="title">Post With Self Hosted Audio</h5>
@@ -2356,8 +2319,7 @@
                                                                     <div class="info">
                                                                         <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
                                                                         <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                    </div>
+                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                    </div>
 
                                                                     <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                                 </div>

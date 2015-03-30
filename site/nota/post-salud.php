@@ -1,7 +1,26 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('php_conexion.php'); 
+    $n=0;
+    $sqll=mysql_query("SELECT * FROM titulos");
+    while($dato=mysql_fetch_array($sqll)){
+        $n++;
+        $v_titulop[$n]=$dato['titulo'];
+        $v_cuadro[$n]=$dato['cuadro'];
+    }
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM salud  ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Adams Magazine | Notas Locales</title>
+    <title>NoteInsideNetwork | Eventos</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -79,7 +98,7 @@
                             <ul class="nav pull-right">
 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>Adams Magazine <i class="icon-angle-down" style="margin-right: 0"></i></a>
+                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>NoteInsideNetwork <i class="icon-angle-down" style="margin-right: 0"></i></a>
 
                                     <ul class="dropdown-menu about-company">
                                         <li>
@@ -166,8 +185,8 @@
                                                         </li>
 
                                                         <li>
-                                                            <strong>Pais:</strong>
-                                                            <span>Mexco</span>
+                                                            <strong>Country:</strong>
+                                                            <span>Mexico</span>
                                                         </li>
 
                                                         <li>
@@ -293,15 +312,12 @@
     <header>
         <div class="navbar navbar-banner">
             <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
+              <div class="row-fluid">
+                <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
                         <h1 class="hidden" itemprop="name">Serpentsoft</h1>
-                        <a href="../index.html">
-                            <img itemprop="logo" src="../../images/logo.png" alt="LogoNIN" /></a>
-                    </div>
+                        <a href="../index.html"><img itemprop="logo" src="../../images/LogoNiN.png" alt="Logo" /></a></div>
 
-                    <div class="adv-970 pull-right visible-desktop">
-                        <a href="#MyThemeAdv" target="_blank"></a>                    </div>
+                  <div class="adv-970 pull-right visible-desktop"></div>
                 </div>
             </div>
         </div>
@@ -327,34 +343,38 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="../index.html"><i class="icon-home"></i></a>                            </li>
+                                    data-target="#" href="../index.html"><i class="icon-home"></i></a>
+                            </li>
 
                             <li class="divider-vertical"></li>
 
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel"><a class="dropdown-toggle" id="a6" role="button"
+                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
+                                <a class="dropdown-toggle" id="a6" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title=""><i class="caret"></i>Vida y tecnologia</a>
+                                    data-target="#" href="#" title="">Vida Y tecnologia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="../home-styles/blog.html" title="">Blog Style</a></li>
                                     <li><a href="../home-styles/left-sb.html" title="">Left Sidebars</a></li>
                                     <li><a href="../home-styles/middle-content.html" title="">Middle Content</a></li>
                                 </ul>
-                          </li>
+
+                            </li>
 
                             <li class="divider-vertical"></li>
 
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="A1" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#">Sociedad<i class="caret"></i></a>
+                                    data-target="#" href="#">SOCIEDAD<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-								<li><a href="post-video.html">Eventos</a></li>
-                                    <li><a href="post-image.html">Recomendaciones Musicales </a></li>
-                                    <li><a href="post-image-lightbox.html">Fotgrafia</a></li>
-                                    <li><a href="post-review.html">Video</a></li>
-                                    <li><a href="post-video.html">Salud</a></li>
+                                    <li><a href="post-image.html">EVENTOS</a></li>
+                                    <li><a href="post-video-recomendacion.html">MUSICA</a></li>
+									<li><a href="post-image.html">FOTOGRAFIA</a></li>
+									<li><a href="post-video.html">VIDEO</a></li>
+									<li><a href="post-image.html">SALUD</a></li>
+									
                                 </ul>
                             </li>
 
@@ -363,7 +383,7 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancPostFormats" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Politica<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">POLITICA<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="../short-codes/boxes-messages.html" title="">Boxes and Messages</a></li>
@@ -378,6 +398,7 @@
                                     <li><a href="../short-codes/shortcodes.html#texts-section" title="">Texts and Paragraph</a></li>
                                     <li><a href="../short-codes/shortcodes.html#typography-section" title="">Typography</a></li>
                                 </ul>
+
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -385,7 +406,7 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a5" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">interes Social<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">Interes General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="../page-templates/authors.html" title="">Authors</a></li>
@@ -402,7 +423,7 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a4" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">NOSOTROS<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-submenu">
@@ -411,15 +432,24 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="../categories/category-template.html" title="">Europe</a></li>
                                             <li><a href="../categories/category-template.html" title="">Asia</a></li>
+
                                         </ul>
                                     </li>
                                     <li><a href="../categories/category-template.html" title="">Tecnology</a></li>
-                                    <li><a href="../categories/category-template.html" title="">Health</a></li>8
+                                    <li><a href="../categories/category-template.html" title="">Health</a></li>
                                     <li><a href="../categories/category-template.html" title="">Science</a></li>
                                 </ul>
-                          </li>
+
+                            </li>
 
                             <li class="divider-vertical"></li>
+
+                            <!--<li class="dropdown" role="menu" aria-labelledby="dLabel">
+                                <a class="dropdown-toggle" role="button"
+                                    data-hover="dropdown" data-delay="200"
+                                    data-target="#" href="#" title="">Purchase Me</a>
+
+                            </li>-->
 
                             <li class="divider-vertical"></li>
                         </ul>
@@ -452,12 +482,16 @@
                     <div class="row-fluid">
 
                         <div class="title">
-                            <h3>Notas</h3>
+                            <h3>Breaking News</h3>
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="post-image.html">Notas locales  </a></li>
-                                <li><a href="post-video.html">Notas de Queretaro</a></li>
+                                <li><a href="post-image.html">Eventos</a></li>
+                                <li><a href="post-video.html">Post With Video</a></li>
+                                <li><a href="post-soundcloud.html">Post With Sound Cloud</a></li>
+                                <li><a href="post-googlemap.html">Post With Google Map</a></li>
+                                <li><a href="post-image-lightbox.html">Post With Image and Lightbox</a></li>
+                                <li><a href="post-review.html">Post With Animated Review System</a></li>
                             </ul>
                         </div>
                     </div>
@@ -472,13 +506,16 @@
                                 <div itemscope itemtype="http://schema.org/WebPage">
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
-                                            <a href="#"><i class="bo-icon-home"></i>Local New</a></li>
+                                            <a href="#"><i class="bo-icon-home"></i>Eventos</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="#" class="active">Eventos</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="figure-container">
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                      <figcaption itemprop="description"></figcaption>
+                                        <img itemprop="contentURL" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=604&amp;h=345" alt="Post With Image" />
+
+                                        <figcaption itemprop="description">Facing Monitor                                        </figcaption>
                                     </figure>
                                 </div>
 
@@ -488,8 +525,8 @@
                                 <div class="post-info">
                                     <div class="post-meta">
                                         <ul>
-                                            <li title="Post Author"><a href="#"><i class="bo-icon-pencil"></i>NoteInsideNetwork</a></li>
-                                            <li title="Publish Time" itemprop="datePublished"><i class="bo-icon-time"></i>19 Feb, 2015 at 08:06 PM</li>
+                                            <li title="Post Author"><a href="#"><i class="bo-icon-pencil"></i>Esteban Castillo Perez</a></li>
+                                            <li title="Publish Time" itemprop="datePublished"><i class="bo-icon-time"></i>26 Feb, 2013 at 03:15 PM</li>
 
                                             <li><a href="#" itemprop="interactionCount" title="No. of Comments"><i class="bo-icon-comment"></i>15</a></li>
                                             <li itemprop="interactionCount" title="No. of Views"><i class="bo-icon-eye-open"></i>35</li>
@@ -507,16 +544,31 @@
                             <span class="clearfix"></span>
 
                             <div class="post-entry" itemprop="articleBody">
-                              <p>Si tu estas buscando una actividad o te intersea informarte de ellla esta en el lugar adecuado </p>
-                              <blockquote>
-                                <p>&nbsp;</p>
+
+                                <span class="drop-capital">D</span>
+                                escripcion del evento
+                            
+                            
+                            <blockquote>
+                                <p>
+                                    Mi opinion respecto al evento antes mencionado
+                                </p>
                             </blockquote>
 
-                              
+                                <p>
+                                    Informacion,fechas,localizacion del evento
+                                </p>
+                                <ul class="icons-ul">
+                                    <li><i class="icon-li icon-ok"></i>More Than 400 List Types.</li>
+                                    <li><i class="icon-li icon-ok"></i>Unlimited Colors.</li>
+                                    <li><i class="icon-li icon-ok"></i>Easy To Use.</li>
+                                    <li><i class="icon-li icon-ok"></i>100% Unique Widget Style.</li>
+                                    <li><i class="icon-li icon-ok"></i>Weather & Poll Widgets.</li>
+                                    <li><i class="icon-li icon-ok"></i>Author Posts.</li>
+                                </ul>
+
                                
-
-
-                          </div>
+                            </div>
 
                             <div class="clearfix"></div>
 
@@ -552,7 +604,7 @@
                             <!-- Author Biography -->
                             <aside class="author-bio w-user">
                                 <div class="cat-widget-title">
-                                    <h3>ACERCA DE MI </h3>
+                                    <h3>About Serpentsoft</h3>
                                 </div>
 
                                 <div class="cat-widget-content">
@@ -579,7 +631,9 @@
 
                                                 <div class="media">
                                                     <div itemprop="description">
-                                                        <p>&nbsp;</p>
+                                                        <p>
+                                                            A few words about an article author, I am a Web Developer and Designer, i love computer programming either Desktop or Web
+                                                        </p>
                                                     </div>
 
                                                     <ul class="author-personal-info social-networks clearfix">
@@ -638,7 +692,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Featured Image</h5>
@@ -659,7 +713,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Google Map</h5>
@@ -687,7 +741,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Featured Video</h5>
@@ -709,7 +763,7 @@
                                                                 <div class="span6">
                                                                     <article class="fold-item span12">
                                                                         <div class="clearfix">
-                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=294&amp;h=190" class="post-img" />
+                                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=294&amp;h=190" class="post-img" />
 
                                                                             <div class="description visible-part">
                                                                                 <h5 class="title">Post With Sound Cloud</h5>
@@ -793,7 +847,7 @@
 
                                                     <!-- Nested Comments -->
                                                     <article class="media">
-                                                        <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a1.jpg&amp;w=65&amp;h=65" alt="65x65" />
+                                                        <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a3.jpg&amp;w=65&amp;h=65" alt="65x65" />
 
                                                         <div class="media-body span10">
                                                             <a itemprop="creator" href="#">
@@ -815,7 +869,7 @@
                                             </article>
 
                                             <article class="media">
-                                                <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a3.jpg&amp;w=65&amp;h=65" alt="65x65" />
+                                                <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a4.jpg&amp;w=65&amp;h=65" alt="65x65" />
 
                                                 <div class="media-body span10">
                                                     <a itemprop="creator" href="#">
@@ -835,7 +889,7 @@
 
                                                     <!-- Nested Comments -->
                                                     <article class="media">
-                                                        <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a2.jpg&amp;w=65&amp;h=65" alt="65x65" />
+                                                        <img class="media-object span2" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a1.jpg&amp;w=65&amp;h=65" alt="65x65" />
 
                                                         <div class="media-body span10">
                                                             <a itemprop="creator" href="#">
@@ -947,75 +1001,15 @@
 
                 <!-- Weather -->
                 <aside class="widget w-weather">
-                    <div class="widget-title">
-                        <h4>Clima</h4>
-                    </div>
+                  <div class="widget-content clearfix"></div>
+              </aside>
 
-                    <div class="widget-content clearfix">
-                        <div class="widget-weather">
-                            <div class="span4 state">
-                                <span class="thundershowers-but-weather"></span>
-
-                                <span class="degree">15&deg;</span>
-                            </div>
-
-                            <div class="span8 info">
-                                <span class="country">San Juan del Rio,Qro</span>
-
-                                <span class="state-title">Estado: Despejado</span>
-                                <span class="humidity">Humedad: 58 %</span>
-                                <span class="wind">Viento: 7 km/h</span>
-
-                                <span class="max-min">32&deg; / 16&deg;</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Poll Cloud -->
-                <aside class="widget w-poll">
-                    <div class="widget-title">
-                        <h4>Poll</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <form method="get">
-                            <div class="poll-ques">
-                                <div class="title">
-                                    <h5>How will history remember George W. Bush?</h5>
-                                </div>
-
-                                <div class="answers">
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
-                                        Failure
-                                    </label>
-
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-                                        Success
-                                    </label>
-
-                                </div>
-
-                                <button type="submit" class="btn-theme vote">Vote!</button>
-
-                                <div class="result hidden">
-                                    <span>Failure (75%)</span>
-
-                                    <span>Success (25%)</span>
-
-                                    <span class="total">Total Voters: 2,522</span>
-
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </aside>
-
-
-                <!-- Sponsors (4x125 Adv.) -->
+                <p>
+                  <!-- Poll Cloud -->
+                </p>
+                <p>
+                  <!-- Sponsors (4x125 Adv.) -->
+                </p>
                 <aside class="widget w-sponsors">
                     <div class="widget-title">
                         <h4>Sponsors</h4>
@@ -1038,7 +1032,7 @@
                 <!-- New In Pictures -->
                 <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>News in Pictures</h4>
+                        <h4>Notas en imagen </h4>
                     </div>
 
                     <div class="widget-content clearfix thumbnails">
