@@ -1,4 +1,22 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('../php_conexion.php'); 
+    $n=0;
+    $sqll=mysql_query("SELECT * FROM titulos");
+    while($dato=mysql_fetch_array($sqll)){
+        $n++;
+        $v_titulop[$n]=$dato['titulo'];
+        $v_cuadro[$n]=$dato['cuadro'];
+    }
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>NoteInsideNetwork-Descargar</title>

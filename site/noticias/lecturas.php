@@ -1,7 +1,25 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('../php_conexion.php'); 
+    $n=0;
+    $sqll=mysql_query("SELECT * FROM titulos");
+    while($dato=mysql_fetch_array($sqll)){
+        $n++;
+        $v_titulop[$n]=$dato['titulo'];
+        $v_cuadro[$n]=$dato['cuadro'];
+    }
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM lecturas ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>NoteInsideNetwork-Random</title>
+    <title>NoteInsideNetwork-Lectura</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -415,7 +433,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="home-styles/descargar.html">Descargar</a></li>
-                                    <li><a href="home-styles/lecturas.html">Lecturas</a></li>
+                                    <li><a href="home-styles/random.html">Random</a></li>
 
 
 
@@ -577,7 +595,7 @@
                                                         <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a>
                                                     </div>
                                                     <script type="text/javascript">
-                                                        var addthis_config = { "data_track_addressbar": true };
+var addthis_config = { "data_track_addressbar": true };
                                                     </script>
                                                     <script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
                                                 </div>
@@ -719,6 +737,137 @@
                                         </article>
                                     </li>
 
+                                    <li class="media blog-item">
+                                        <article>
+                                            <div class="span12 img-container" title="">
+                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=604&amp;h=345" />
+
+                                                <a href="../post-formats/post-video.html" class="more"></a>
+                                            </div>
+
+                                            <div class="row-fluid">
+                                                <div class="media-body span12">
+                                                    <div class="row-fluid">
+                                                        <div class="span2 blog-date">
+                                                            <div class="date-meta">
+                                                                <div class="post-date">
+                                                                    <div class="date">
+                                                                        <span class="month">Mar</span>
+                                                                        <span class="day">22</span>
+                                                                        <span class="year">2013</span>
+                                                                        <hr />
+                                                                        <span class="time">02:00 PM</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="span10 blog-desc-container">
+                                                            <a href="../post-formats/post-image.html" title="Post with an image">
+                                                                <h4 class="media-heading">otra manera de ver las cosas</h4>
+                                                            </a>
+
+                                                            <div class="post-meta clearfix">
+                                                                <ul>
+                                                                    <li><a href="##########################################" title="Post Author"><i class="bo-icon-pencil"></i>Comentar</a></li>
+                                                                    <li><a href="##########################################" title="Comments"><i class="bo-icon-comment"></i>300</a></li>
+                                                                    <li><span title="Views"><i class="bo-icon-eye-open"></i>300</span></li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="media">
+                                                                <p class="blog-desc">
+                                                                    ...........
+                                                                </p>
+                                                                <a href="../post-formats/post-video.html" class="btn-theme">mas...</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+
+                                            <footer class="row-fluid social-share-footer">
+                                                <span class="share-icon icon-caret-right"></span>
+
+                                                <div class="share-icons">
+                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+                                                    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+                                                    <script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
+                                                </div>
+
+                                            </footer>
+
+                                        </article>
+                                    </li>
+
+                                    <li class="media blog-item">
+                                        <article>
+                                            <div class="span12 img-container" title="">
+                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=604&amp;h=345" />
+
+                                                <a href="../post-formats/post-video.html" class="more"></a>
+                                            </div>
+
+                                            <div class="row-fluid">
+                                                <div class="media-body span12">
+                                                    <div class="row-fluid">
+                                                        <div class="span2 blog-date">
+                                                            <div class="date-meta">
+                                                                <div class="post-date">
+                                                                    <div class="date">
+                                                                        <span class="month">Mar</span>
+                                                                        <span class="day">22</span>
+                                                                        <span class="year">2013</span>
+                                                                        <hr />
+                                                                        <span class="time">02:00 PM</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="span10 blog-desc-container">
+                                                            <a href="../post-formats/post-image.html" title="Post with an image">
+                                                                <h4 class="media-heading">otra manera de ver las cosas</h4>
+                                                            </a>
+
+                                                            <div class="post-meta clearfix">
+                                                                <ul>
+                                                                    <li><a href="##########################################" title="Post Author"><i class="bo-icon-pencil"></i>Comentar</a></li>
+                                                                    <li><a href="##########################################" title="Comments"><i class="bo-icon-comment"></i>300</a></li>
+                                                                    <li><span title="Views"><i class="bo-icon-eye-open"></i>300</span></li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="media">
+                                                                <p class="blog-desc">
+                                                                    ...........
+                                                                </p>
+                                                                <a href="../post-formats/post-video.html" class="btn-theme">mas...</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+
+                                            <footer class="row-fluid social-share-footer">
+                                                <span class="share-icon icon-caret-right"></span>
+
+                                                <div class="share-icons">
+                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+                                                    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+                                                    <script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
+                                                </div>
+
+                                            </footer>
+
+                                        </article>
+                                    </li>
                                 </ul>
 
 
@@ -857,7 +1006,7 @@
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">...........</p>
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
@@ -883,7 +1032,7 @@
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">...............</p>
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
 
                                                             <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
@@ -901,406 +1050,235 @@
                         </div>
                     </div>
                 </aside>
-                <!-- anteriores -->
-                <aside class="widget w-posts">
+
+                <!-- nuevo en imagenes -->
+                <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>Servicios anteriores</h4>
+                        <h4>Lo nuevo con captura</h4>
+                    </div>
+
+                    <div class="widget-content clearfix thumbnails">
+                        <ul class="posts-in-images clearfix">
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image" title="">
+                                <a href="../post-formats/post-image.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Video" title="">
+                                <a href="../post-formats/post-video.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Sound Cloud" title="">
+                                <a href="../post-formats/post-soundcloud.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
+                                <a href="../post-formats/post-image-lightbox.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
+                                <a href="../post-formats/post-review.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
+                                <a href="../post-formats/post-googlemap.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
+                                <a href="../post-formats/post-image-lightbox.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
+                                <a href="../post-formats/post-review.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
+                                <a href="../post-formats/post-googlemap.html">
+                                    <div class="thumb-effect">
+                                        <div class="mask"></div>
+                                        <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=80&amp;h=75" />
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Tags Cloud -->
+                <aside class="widget w-tags">
+                    <div class="widget-title">
+                        <h4>Categorias</h4>
                     </div>
 
                     <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_270_slider1" class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...........</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
+                        <div class="tags-cloud">
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
+                            <a href="#" class="btn-theme">...</a>
                         </div>
                     </div>
                 </aside>
-                <!-- anteriores -->
-                <aside class="widget w-posts">
+
+                <!-- Sponsors (4x125 Adv.) --
+                        <aside class="widget w-sponsors">
+                            <div class="widget-title">
+                                <h4>Relacionado</h4>
+                            </div>
+
+                            <!--<div class="widget-content clearfix">
+                    <ul class="widget-sponsor clearfix">
+                        <li><a href="#MyThemeAdv" target="_blank">
+                            <img src="../../images/ad-125-1.jpg" /></a></li>
+                        <li><a href="#MyThemeAdv" target="_blank">
+                            <img src="../../images/ad-125-2.jpg" /></a></li>
+                        <li><a href="#MyThemeAdv" target="_blank">
+                            <img src="../../images/ad-125-3.jpg" /></a></li>
+                        <li><a href="#MyThemeAdv" target="_blank">
+                            <img src="../../images/ad-125-4.jpg" /></a></li>
+                    </ul>
+                </div>
+                        </aside>-->
+                <!-- Feedburner --
+                <aside class="widget w-rss-feed">
                     <div class="widget-title">
-                        <h4>Servicios anteriores</h4>
+                        <h4>Subscribe To RSS Feed</h4>
                     </div>
 
                     <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_270_slider1" class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...........</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
-                                            </ul>
-                                        </li>
-
-                                    </ul>
+                        <div class="feedburner-subscribe">
+                            <form>
+                                <div class="input-append input-block-level">
+                                    <input type="email" class="span12 search-query" placeholder="Enter you email" required="required">
+                                    <button type="submit" class="btn-theme">Subscribe</button>
                                 </div>
 
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </aside>
-                <!-- anteriores -->
-                <aside class="widget w-posts">
+                <!--aqui termina el cuadro de registro-->
+                <!-- Weather --
+                <aside class="widget w-weather">
                     <div class="widget-title">
-                        <h4>Servicios anteriores</h4>
+                        <h4>Weather</h4>
                     </div>
 
                     <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
+                       <div class="widget-weather">
 
-                                <div id="widget_270_slider1" class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                       !--/aqui sugiero poner publisidad--
+                           !--  <div class="span4 state">
+                                <span class="thundershowers-but-weather"></span>
 
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
+                                <span class="degree">26&deg;</span>
+                            </div>
 
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                            <div class="span8 info">
+                                <span class="country">Cairo</span>
 
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
+                                <span class="state-title">State: Thundershowers</span>
+                                <span class="humidity">Humidity: 120</span>
+                                <span class="wind">Wind: 50 km/h</span>
 
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
+                                <span class="max-min">32&deg; / 16&deg;</span>
+                            </div>
 
-                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                        </div>
+                    </div>
+                </aside>-->
+                <!-- Poll Cloud --
+                <aside class="widget w-poll">
+                    <div class="widget-title">
+                        <h4>mas publicidad</h4>
+                    </div>
 
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...........</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
-                                            </ul>
-                                        </li>
-
-                                    </ul>
+                    <div class="widget-content clearfix">
+                        !--<form method="get">
+                            <div class="poll-ques">
+                                <div class="title">
+                                    <h5>How will history remember George W. Bush?</h5>
                                 </div>
 
+                                <div class="answers">
+                                    <label class="radio">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
+                                        Failure
+                                    </label>
+
+                                    <label class="radio">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+                                        Success
+                                    </label>
+
+                                </div>
+
+                                <button type="submit" class="btn-theme vote">Vote!</button>
+
+                                <div class="result hidden">
+                                    <span>Failure (75%)</span>
+
+                                    <span>Success (25%)</span>
+
+                                    <span class="total">Total Voters: 2,522</span>
+
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                    </div>
+                </aside>-->
+                <!-- 160 (160x600 Adv.) -->
+                <aside class="widget w-adv">
+                    <div class="widget-title">
+                        <h4>Extras</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
                     </div>
                 </aside>
 
@@ -1311,7 +1289,682 @@
             <section class="span300">
                 <h2 class="hidden">Left Sidebar</h2>
 
-               
+                <!-- Posts Of The Day -->
+                <aside class="widget w-posts">
+                    <div class="widget-title">
+                        <h4>Mas antiguos</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <div class="posts-in-widget">
+                            <div class="row-fluid modern-items-list">
+
+                                <div id="widget_300_slider3" class="flexslider">
+
+                                    <ul class="slides">
+                                        <li>
+                                            <ul class="items left clearfix">
+                                                <!--aqui empiesa un gitget-->
+                                                <li>
+                                                    <article class="fold-item">
+                                                        <div class="clearfix">
+                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title">Post With Featured Image</h5>
+
+                                                                <div class="info">
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                </div>
+
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                            </div>
+
+                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li> <!--aqui termina 5-->
+                                            </ul>
+                                        </li>
+
+
+                                        <li>
+                                            <ul class="items left clearfix">
+                                                <!--aqui empiesa un gitget-->
+                                                <li>
+                                                    <article class="fold-item">
+                                                        <div class="clearfix">
+                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title">Post With Self Hosted Audio</h5>
+
+                                                                <div class="info">
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                </div>
+
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                            </div>
+
+                                                            <a href="../post-formats/post-self-audio.html" class="more" title=""></a>
+                                                        </div>
+
+                                                    </article>
+                                                </li> <!--aqui termina 6-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+
+                <!-- Social Counter -->
+                <aside class="widget w-social-counter">
+                    <div class="widget-title">
+                        <h4>Nuestras Redes Sociales</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <div class="social-counter-metro">
+                            <ul class="clearfix">
+
+                                <li class="fb-wrp">
+                                    <div class="btn-count">
+
+                                        <div class="social-counter-metro mask">
+                                            <span>Like</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="facebook">
+                                            <i class="facebook-sicon-48-white"></i>
+                                            <span>29,000,000</span>
+                                            <span class="fans">Fans</span>
+                                        </div>
+
+
+                                    </div>
+                                </li>
+
+                                <li class="tr-wrp">
+                                    <div class="btn-count">
+                                        <div class="social-counter-metro mask">
+                                            <span>Follow</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="twitter">
+
+                                            <i class="twitter-sicon-48-white"></i>
+                                            <span>29,000,000</span>
+                                            <span class="fans">Followers</span>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="yt-wrp">
+                                    <div class="btn-count">
+                                        <div class="social-counter-metro mask">
+                                            <span>Subscribe</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="youtube">
+                                            <i class="youtube-sicon-48-white"></i>
+                                            <span>29,000,000</span>
+                                            <span class="fans">Subscribers</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!--<li class="vm-wrp">
+                                    <div class="btn-count">
+                                        <div class="social-counter-metro mask">
+                                            <span>Subscribe</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="vimeo">
+                                            <i class="vimeo-sicon-48-white"></i>
+                                            <span>29,000,000</span>
+                                            <span class="fans">Subscribers</span>
+                                        </div>
+                                    </div>
+                                </li>-->
+                                <!--<li class="rs-wrp">
+                                    <div class="btn-count">
+                                        <div class="social-counter-metro mask">
+                                            <span>Subscribe</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="rss">
+                                            <i class="rss-sicon-48-white"></i>
+                                            <span>Subscribe</span>
+                                            <span class="fans">To RSS Feed</span>
+                                        </div>
+                                    </div>
+                                </li>-->
+
+
+
+                                <li class="gp-wrp">
+                                    <div class="btn-count">
+                                        <div class="social-counter-metro mask">
+                                            <span>Follow</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="googleplus">
+                                            <i class="googleplus-sicon-48-white"></i>
+                                            <span>29,000,000</span>
+                                            <span class="fans">Followers</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!--<li class="drb-wrp">
+                                    <div class="btn-count">
+                                        <div class="social-counter-metro mask">
+                                            <span>Follow</span>
+                                            <a href="#" class="more"></a>
+                                        </div>
+
+                                        <div class="dribbble">
+                                            <i class="dribbble-sicon-48-white"></i>
+                                            <span>29,000,000</span>
+                                            <span class="fans">Followers</span>
+                                        </div>
+                                    </div>
+                                </li>-->
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- 300x250 Adv -->
+                <!--<aside class="widget w-adv">
+                    <div class="widget-title">
+                        <h4>300x250 Advertisement</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <a href="http://themeforest.net/item/adams-magazine-responsive-magazineblog-theme/4919511" target="_blank">
+                            <img src="../images/ad-300x250.jpg" />
+                        </a>
+                    </div>
+
+                </aside>-->
+                <!-- News Widget -->
+                <aside class="widget w-posts">
+                    <div class="widget-title">
+                        <h4>Popular News</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <div class="posts-in-widget">
+                            <div class="row-fluid modern-items-list">
+
+                                <div id="widget_300_slider1" class="flexslider">
+
+                                    <ul class="slides">
+                                        <li>
+                                            <ul class="items left clearfix">
+                                                <li>
+                                                    <article class="fold-item">
+                                                        <div class="clearfix">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=301&amp;h=200" class="post-img" />
+
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title">Post With Featured Image</h5>
+
+                                                                <div class="info">
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                </div>
+
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                            </div>
+
+                                                            <a href="../post-formats/post-image.html" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li>
+                                                    <article class="fold-item">
+                                                        <div class="clearfix">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=301&amp;h=200" class="post-img" />
+
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title">Post With Sound Cloud</h5>
+
+                                                                <div class="info">
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                </div>
+
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                            </div>
+
+                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
+                                                        </div>
+
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                        <li>
+                                            <ul class="items left clearfix">
+                                                <li>
+                                                    <article class="fold-item">
+                                                        <div class="clearfix">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=301&amp;h=200" class="post-img" />
+
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title">Post With Featured Image and Lightbox</h5>
+
+                                                                <div class="info">
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                </div>
+
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                            </div>
+
+                                                            <a href="../post-formats/post-image-lightbox.html" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li>
+                                                    <article class="fold-item">
+                                                        <div class="clearfix">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=301&amp;h=200" class="post-img" />
+
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title">Post With Self Hosted Audio</h5>
+
+                                                                <div class="info">
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                </div>
+
+                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                            </div>
+
+                                                            <a href="../post-formats/post-self-audio.html" class="more" title=""></a>
+                                                        </div>
+
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+
+                <!-- Tabs --
+                <section class="widget w-tabs">
+                    <h3 class="hidden">Tabs Widget</h3>
+
+                    <div class="widget-content clearfix">
+                        <ul class="tabs-header clearfix">
+                            <li class="btn-theme active"><a data-target="#popular" data-toggle="tab">Popular</a></li>
+                            <li class="btn-theme"><a data-target="#recent" data-toggle="tab">Recent</a></li>
+                            <li class="btn-theme"><a data-target="#comments" data-toggle="tab">Comments</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+
+                            <div class="tab-pane active" id="popular">
+                                <aside class="row-fluid">
+                                    <h4 class="hidden">Popular News Tab</h4>
+
+                                    <div class="posts-in-widget">
+                                        <div class="tabs-special-style">
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-image.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-image.html" title="Post With Featured Image">
+
+                                                                <h5 class="media-heading">Post With Featured Image</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-video.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-video.html" title="Post With Video">
+                                                                <h5 class="media-heading">Post With Video</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-review.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-review.html" title="Post With Review">
+                                                                <h5 class="media-heading">Post With Review</h5>
+                                                            </a>
+
+                                                            <div class="media">
+
+                                                                <div class="rating">
+                                                                    <span class="stars-12" title="70% Very Good">
+                                                                        <span class="fill" style="width: 70%"></span>
+                                                                    </span>
+                                                                </div>
+
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-self-video.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-self-video.html" title="Post With Self Hosted Video">
+                                                                <h5 class="media-heading">Post With Self Hosted Video</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+
+                            <div class="tab-pane" id="recent">
+                                <aside class="row-fluid">
+                                    <h4 class="hidden">Recent News Tab</h4>
+
+                                    <div class="posts-in-widget">
+                                        <div class="tabs-special-style">
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-image-lightbox.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
+                                                                <h5 class="media-heading">Post With Image + Lightbox</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-self-audio.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-self-audio.html" title="Post With Self Hosted Audio">
+                                                                <h5 class="media-heading">Post With Self Hosted Audio</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-soundcloud.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-soundcloud.html" title="Post With Sound-Cloud">
+                                                                <h5 class="media-heading">Post With Sound-Cloud</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <a href="../post-formats/post-googlemap.html" class="span3" title="">
+                                                            <div class="media-object thumb-effect">
+                                                                <div class="mask"></div>
+                                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=65&amp;h=65" />
+                                                            </div>
+                                                        </a>
+
+                                                        <div class="media-body span9">
+                                                            <a href="../post-formats/post-googlemap.html" title="Post With Google Map">
+                                                                <h5 class="media-heading">Post With Google Map</h5>
+                                                            </a>
+
+                                                            <div class="media">
+                                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+
+                            <div class="tab-pane" id="comments">
+                                <aside class="row-fluid">
+                                    <h4 class="hidden">Comments</h4>
+
+                                    <div class="posts-in-widget">
+                                        <div class="tabs-special-style comments">
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <article>
+                                                        <div class="span3 media-object">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a1.jpg&amp;w=65&amp;h=65" />
+                                                        </div>
+
+                                                        <div class="media-body span9">
+                                                            <h5 class="media-heading">Adam</h5>
+
+                                                            <div class="media">
+                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+
+                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
+
+                                                                <div class="leave-comment">
+                                                                    <a href="#">Leave Comment</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <div class="span3 media-object">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a2.jpg&amp;w=65&amp;h=65" />
+                                                        </div>
+
+                                                        <div class="media-body span9">
+                                                            <h5 class="media-heading">Adam</h5>
+
+                                                            <div class="media">
+                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+
+                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
+
+                                                                <div class="leave-comment">
+                                                                    <a href="#">Leave Comment</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <div class="span3 media-object">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a3.jpg&amp;w=65&amp;h=65" />
+                                                        </div>
+
+                                                        <div class="media-body span9">
+                                                            <h5 class="media-heading">Adam</h5>
+
+                                                            <div class="media">
+                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+
+                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
+
+                                                                <div class="leave-comment">
+                                                                    <a href="#">Leave Comment</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li class="media">
+                                                    <article>
+                                                        <div class="span3 media-object">
+                                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a4.jpg&amp;w=65&amp;h=65" />
+                                                        </div>
+
+                                                        <div class="media-body span9">
+                                                            <h5 class="media-heading">Adam</h5>
+
+                                                            <div class="media">
+                                                                <span><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+
+                                                                <p class="summary">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
+
+                                                                <div class="leave-comment">
+                                                                    <a href="#">Leave Comment</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
                 <!-- Random Posts (Classic) -->
                 <aside class="widget w-posts">
                     <div class="widget-title">
@@ -1411,17 +2064,284 @@
                 </aside>
 
 
-                </section>
+                <!-- Video Widget --
+                <aside class="widget w-video">
+                    <div class="widget-title">
+                        <h4>Youtube Video</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <iframe itemprop="contentURL" class="youtube-player" type="text/html"
+                            width="100%" height="200" src="http://www.youtube.com/embed/P5_Msrdg3Hk?wmode=transparent&amp;wmode=opaque"
+                            allowfullscreen frameborder="0"></iframe>
+                    </div>
+
+                </aside>-->
+                <!-- Sound Cloud Widget --
+                <aside class="widget w-audio">
+                    <div class="widget-title">
+                        <h4>SoundCloud Track</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <iframe itemprop="contentURL" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F72646464"></iframe>
+                    </div>
+
+                </aside>-->
+
+            </section>
 
         </div>
 
+        <!-- Footer Advertise
+        <div class="row-fluid visible-desktop">
+            <div class="span12 footer-adv">
+                <a href="#MyThemeAdv" target="_blank">
+                    <img src="../../images/ad-728.jpg" alt="Adv 728" />
+                </a>
+            </div>
+        </div>-->
+
     </div>
+
+    <!-- Twitter Ticker
+    <section class="twitter-ticker-widget w-tweet">
+        <div class="container-fluid">
+            <div class="row-fluid widget-inner">
+                <div class="span2 title visible-desktop">
+                    <h4>Latest Tweets</h4>
+                </div>
+
+                <div id="divLatestTweets" class="span8">
+                </div>
+
+                <div class="span2 follow">
+                    <a href="https://twitter.com/envato" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @envato</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "../../../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                </div>
+            </div>
+        </div>
+    </section>-->
 
     <section class="modern-footer">
         <h2 class="hidden">Sub-Footer Section</h2>
 
         <div class="container-fluid">
             <div class="row-fluid">
+
+                <!--   <aside class="span3">
+                      <div class="f-widget w-tags">
+                          <div class="f-widget-title">
+                              <h4>Tags Cloud</h4>
+                          </div>
+
+                          <div class="f-widget-content">
+                              <div class="tags-cloud">
+                                  <a href="#" class="btn-theme">UK News</a>
+                                  <a href="#" class="btn-theme">Technology</a>
+                                  <a href="#" class="btn-theme">Computer</a>
+                                  <a href="#" class="btn-theme">Headphone</a>
+                                  <a href="#" class="btn-theme">President</a>
+                                  <a href="#" class="btn-theme">Vice President</a>
+                                  <a href="#" class="btn-theme">Microsoft</a>
+                                  <a href="#" class="btn-theme">Apple</a>
+                              </div>
+                          </div>
+
+                      </div>
+                  </aside>
+
+                  <aside class="span3">
+                      <div class="f-widget w-pictures">
+                          <div class="f-widget-title">
+                              <h4>Random Posts</h4>
+                          </div>
+
+                          <div class="f-widget-content clearfix thumbnails">
+                              <ul class="posts-in-images clearfix">
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image" title="">
+                                      <a href="../post-formats/post-image.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Video" title="">
+                                      <a href="../post-formats/post-video.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Sound Cloud" title="">
+                                      <a href="../post-formats/post-soundcloud.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
+                                      <a href="../post-formats/post-image-lightbox.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
+                                      <a href="../post-formats/post-review.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
+                                      <a href="../post-formats/post-googlemap.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
+                                      <a href="../post-formats/post-image-lightbox.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
+                                      <a href="../post-formats/post-review.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+
+                                  <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
+                                      <a href="../post-formats/post-googlemap.html">
+                                          <div class="thumb-effect">
+                                              <div class="mask"></div>
+                                              <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=80&amp;h=75" />
+                                          </div>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                      </div>
+                  </aside>
+
+                  <aside class="span3">
+                      <div class="f-widget w-posts">
+                          <div class="f-widget-title">
+                              <h4>Posts Of The Day</h4>
+                          </div>
+
+                          <div class="f-widget-content">
+                              <div class="posts-in-widget">
+                                  <div class="row-fluid modern-items-list">
+
+                                      <div id="widget_span3_slider2" class="flexslider">
+
+                                          <ul class="slides">
+                                              <li>
+                                                  <ul class="items left clearfix">
+                                                      <li>
+                                                          <article class="fold-item">
+                                                              <div class="clearfix">
+                                                                  <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=286&amp;h=200" />
+
+                                                                  <div class="post-sitemap">
+                                                                      <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                  </div>
+
+                                                                  <div class="description visible-part">
+                                                                      <h5 class="title">Post With Featured Image</h5>
+
+                                                                      <div class="info">
+                                                                          <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                          <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                          <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                      </div>
+
+                                                                      <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                  </div>
+
+                                                                  <a href="../post-formats/post-image.html" class="more" title=""></a>
+                                                              </div>
+                                                          </article>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+
+
+                                              <li>
+                                                  <ul class="items left clearfix">
+                                                      <li>
+                                                          <article class="fold-item">
+                                                              <div class="clearfix">
+                                                                  <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=286&amp;h=200" />
+
+                                                                  <div class="post-sitemap">
+                                                                      <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                  </div>
+
+                                                                  <div class="description visible-part">
+                                                                      <h5 class="title">Post With Self Hosted Audio</h5>
+
+                                                                      <div class="info">
+                                                                          <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                          <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
+                                                                          <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
+                                                                      </div>
+
+                                                                      <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                  </div>
+
+                                                                  <a href="../post-formats/post-self-audio.html" class="more" title=""></a>
+                                                              </div>
+
+                                                          </article>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+                  </aside>
+
+                  <aside class="span3">
+                      <div class="f-widget w-about">
+                          <div class="f-widget-title">
+                              <h4>About Magazine</h4>
+                          </div>
+
+                          <div class="f-widget-content">
+                              <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                          </div>
+
+                      </div>
+                  </aside>-->
 
             </div>
         </div>
@@ -1726,3 +2646,7 @@
 
 </body>
 </html>
+
+
+
+
