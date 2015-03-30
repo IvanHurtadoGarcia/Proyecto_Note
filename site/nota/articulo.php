@@ -1,7 +1,27 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('../php_conexion.php'); 
+    $n=0;
+    $sqll=mysql_query("SELECT * FROM titulos");
+    while($dato=mysql_fetch_array($sqll)){
+        $n++;
+        $v_titulop[$n]=$dato['titulo'];
+        $v_cuadro[$n]=$dato['cuadro'];
+    }
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_texto[$x]=$datos['texto'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>NoteInsideNetwork | Eventos</title>
+    <title>NoteInsideNetwork | Tecnol&oacute;gias</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -39,47 +59,16 @@
                             <i class="icon-reorder"></i>
                         </button>
 
-                        <div class="nav-collapse collapse">
+                        <div class="nav-collapse collapse" style="float:right">
                             <!--<a class="brand" href="#">Serpentsoft</a>-->
 
                             <ul class="nav">
 
-                                <li><a href="#">Features</a></li>
-                                <li class="divider-vertical"></li>
-
-                                <li><a href="#">Link</a></li>
-                                <li class="divider-vertical"></li>
-
-                                <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                    <a href="#" data-target="#" tabindex="-1" class="dropdown-toggle"
-                                        data-hover="dropdown" data-delay="200"
-                                        role="button">Dropdown <i class="icon-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="dropdown-submenu">
-                                            <a href="#" tabindex="-1" data-target="#">Sub Menu</a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li class="nav-header">Nav header</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                              </li>
-                            </ul>
-
+                               
                             <ul class="nav pull-right">
 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>Adams Magazine <i class="icon-angle-down" style="margin-right: 0"></i></a>
+                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>NoteInsideNetwork <i class="icon-angle-down" style="margin-right: 0"></i></a>
 
                                     <ul class="dropdown-menu about-company">
                                         <li>
@@ -87,7 +76,7 @@
 
                                                 <div class="span8 google-map-section clearfix">
                                                     <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-map-marker bo-icon-white"></i>Magazine Location</h3>
+                                                        <h3><i class="bo-icon-map-marker bo-icon-white"></i>¿Donde Estamos?</h3>
                                                         <hr />
                                                     </div>
 
@@ -103,14 +92,14 @@
 
                                                     <div class="row-fluid search-section">
                                                         <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-search bo-icon-white"></i>Search</h3>
+                                                            <h3><i class="bo-icon-search bo-icon-white"></i>Busqueda</h3>
                                                             <hr />
                                                         </div>
 
                                                         <div class="row-fluid">
                                                             <form class="form-search clearfix search-box">
                                                                 <div class="input-append input-block-level">
-                                                                    <input type="text" class="span10 search-query" placeholder="Type and Press Enter" required="required" />
+                                                                    <input type="text" class="span10 search-query" placeholder="¿Buscas algo?" required="required" />
                                                                     <button type="submit" class="btn"><i class="icon-search"></i></button>
                                                                 </div>
                                                             </form>
@@ -118,31 +107,9 @@
                                                     </div>
 
                                                     <div class="row-fluid login-section">
-                                                        <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-user bo-icon-white"></i>Login</h3>
-                                                            <hr />
-                                                        </div>
+                                                       
 
-                                                        <div class="row-fluid">
-                                                            <form method="get" class="login-form">
-                                                                <div class="input-prepend input-block-level">
-                                                                    <span class="add-on"><i class="icon-envelope"></i></span>
-                                                                    <input id="Email1" class="span10" type="email" placeholder="Email" required="required" />
-                                                                </div>
-
-                                                                <div class="input-prepend input-block-level">
-                                                                    <span class="add-on"><i class="icon-key"></i></span>
-                                                                    <input id="Password1" class="span10" type="password" placeholder="Password" required="required" />
-                                                                </div>
-
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" />
-                                                                    Remember me
-                                                                </label>
-
-                                                                <button type="submit" class="btn-theme">Sign in</button>
-                                                            </form>
-                                                        </div>
+                                                        
                                                     </div>
 
                                                 </div>
@@ -154,133 +121,47 @@
                                             <div class="row-fluid">
                                                 <div class="span8">
                                                     <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-flag bo-icon-white"></i>Contact Info</h3>
+                                                        <h3><i class="bo-icon-flag bo-icon-white"></i>Información de Contacto</h3>
                                                         <hr />
                                                     </div>
 
                                                     <ul class="row-fluid contact-info">
 
                                                         <li>
-                                                            <strong>Address:</strong>
-                                                            <span>40 Red Sea st., Taba</span>
+                                                            <strong>Calle:</strong>
+                                                            <span>Heroico Colegio Militar #13, Col. Centro, Pedro Escobedo Querétaro.</span>
                                                         </li>
 
                                                         <li>
-                                                            <strong>Country:</strong>
-                                                            <span>Egypt</span>
+                                                            <strong>País:</strong>
+                                                            <span>México</span>
                                                         </li>
 
                                                         <li>
-                                                            <strong>Telephone:</strong>
-                                                            <span>+20 224 455 66988</span>
+                                                            <strong>Telefono:</strong>
+                                                            <span>(448) 275 0237 </span>
                                                         </li>
 
                                                         <li>
                                                             <strong>Email:</strong>
-                                                            <a href="mailto:magazine@site.com">magazine@site.com</a>
+                                                            <a href="note@insidenetwork.com">note@insidenetwork.com</a>
                                                         </li>
 
                                                     </ul>
 
-                                                    <!-- Join Us - Social Icons -->
-                                                    <div class="row-fluid">
-                                                        <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-plane bo-icon-white"></i>Join Us</h3>
-                                                            <hr />
-                                                        </div>
-
-                                                        <div class="row-fluid">
-                                                            <ul class="social-networks clearfix">
-                                                                <li><a href="#" class="fb-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="facebook" title=""></a></li>
-
-                                                                <li><a href="#" class="twitter-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="twitter" title=""></a></li>
-
-                                                                <li><a href="#" class="googleplus-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="googleplus" title=""></a></li>
-
-                                                                <li><a href="#" class="pinterest-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="pinterest" title=""></a></li>
-
-                                                                <li><a href="#" class="youtube-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="youtube" title=""></a></li>
-
-                                                                <li><a href="#" class="linkedin-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="linkedin" title=""></a></li>
-
-                                                                <li><a href="#" class="rss-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="rss" title=""></a></li>
-
-                                                                <li><a href="#" class="skype-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="skype" title=""></a></li>
-
-                                                                <li><a href="#" class="dribble-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="dribbble" title=""></a></li>
-
-                                                                <li><a href="#" class="instagram-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="instagram" title=""></a></li>
-
-                                                                <li><a href="#" class="flickr-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="flickr" title=""></a></li>
-
-                                                                <li><a href="#" class="dropbox-metro-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                                    data-original-title="dropbox" title=""></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
 
-                                                <div class="span4">
-                                                    <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-question-sign bo-icon-white"></i>About Magazine</h3>
-                                                        <hr />
-                                                    </div>
-
-                                                    <div class="about-desc">
-                                                        <p>
-                                                            A Few Words About your Magazine
-                                                            <br />
-                                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad 
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                              
                                             </div>
 
-                                            <!-- Terms and Conditions -->
-                                            <div class="row-fluid">
-                                                <div class="row-fluid title">
-                                                    <h3><i class="bo-icon-bell bo-icon-white"></i>Terms and Conditions</h3>
-                                                    <hr />
-                                                </div>
-
-                                                <div class="row-fluid">
-                                                    <ul class="span7 terms-conditions clearfix">
-
-                                                        <li><a href="../magazine/privacy-policy.html">Privacy Policy</a></li>
-                                                        <li><a href="../magazine/copyright.html">Copyright</a></li>
-                                                        <li><a href="../magazine/archives.html">Archives</a></li>
-                                                        <li><a href="../magazine/about-us.html">About US</a></li>
-
-
-                                                    </ul>
-
-                                                    <div class="span5 copyright clearfix">
-                                                        <span>&copy; Copyright 2013 by Serpentsoft, All Rights Reserved</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </li>
                                     </ul>
-                              </li>
+                                </li>
 
                                 <li class="divider-vertical"></li>
 
-                                <li>
-                                    <div class="span-datetime clearfix">
-                                        <span><i class="bo-icon-time bo-icon-white"></i>26-Apr-2013, 05:55 AM</span>                                    </div>
-                                </li>
+                                
                             </ul>
 
                         </div>
@@ -289,7 +170,6 @@
             </div>
         </div>
     </nav>
-
     <header>
         <div class="navbar navbar-banner">
             <div class="container-fluid">
@@ -305,7 +185,7 @@
 
     </header>
 
-     <nav class="container-fluid navbar-main enable-fixed">
+    <nav class="container-fluid navbar-main enable-fixed">
         <h2 class="hidden">Site Navigation Bar</h2>
 
 
@@ -324,7 +204,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="../index.html"><i class="icon-home"></i></a>
+                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -332,116 +212,98 @@
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a6" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Vida Y tecnologia<i class="caret"></i></a>
+                                    data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="../home-styles/blog.html" title="">Blog Style</a></li>
-                                    <li><a href="../home-styles/left-sb.html" title="">Left Sidebars</a></li>
-                                    <li><a href="../home-styles/middle-content.html" title="">Middle Content</a></li>
+                                    <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="noticias/left-sb.html" title="">Video Juegos </a></li>
+                                    <li><a href="noticias/middle-content.html" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
 
                             <li class="divider-vertical"></li>
-
+                           
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="A1" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#">Sociedad<i class="caret"></i></a>
+                                   data-hover="dropdown" data-delay="200"
+                                   data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="post-image.html">Eventos</a></li>
-                                    <li><a href="post-video-recomendacion.html">Recomendaciones Musicales</a></li>
-									<li><a href="post-image.html">Fotografia</a></li>
-									<li><a href="post-video.html">Video</a></li>
-									<li><a href="post-image.html">Salud</a></li>
-									
+                                    <li><a href="noticias/blog.html">Eventos</a></li>
+                                    <li><a href="noticias/blog.html">Recomendaciones Musicales</a></li>
+                                    <li><a href="noticias/blog.html">Fotografía</a></li>
+                                    <li><a href="noticias/blog.html">Video</a></li>
+                                    <li><a href="noticias/blog.html">Salud</a></li>
+                                   
+
                                 </ul>
+                            </li>
+                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
+                                <a class="dropdown-toggle" id="a4" role="button"
+                                   data-hover="dropdown" data-delay="200"
+                                   data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="noticias/blog.html">Internacional</a></li>
+                                    <li><a href="noticias/blog.html">Nacional</a></li>
+                                    <li><a href="noticias/blog.html">Opinion</a></li>
+                                    
+
+
+                                </ul>
+
+                            </li>
+
+                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
+                                <a class="dropdown-toggle" id="a4" role="button"
+                                   data-hover="dropdown" data-delay="200"
+                                   data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="noticias/lecturas.html">Lecturas</a></li>
+                                    <li><a href="noticias/descargar.html">Descargas</a></li>
+                                    <li><a href="noticias/random.html">Random</a></li>
+                                    
+
+
+                                </ul>
+
                             </li>
 
                             <li class="divider-vertical"></li>
 
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="ancPostFormats" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Politica<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="../short-codes/boxes-messages.html" title="">Boxes and Messages</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#buttons-section" title="">Buttons</a></li>
-                                    <li><a href="../short-codes/columns.html" title="">Columns</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#font-awesome-section" title="">Font Awesome (Vector Fonts)</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#tooltips-section" title="">Tooltips</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#tabs-section" title="">Tabs</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#accordion-section" title="">Accordion</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#toggle-accordion-section" title="">Toggle Accordion</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#lists-section" title="">Lists (Unlimited Colors)</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#texts-section" title="">Texts and Paragraph</a></li>
-                                    <li><a href="../short-codes/shortcodes.html#typography-section" title="">Typography</a></li>
-                                </ul>
-
-                            </li>
+                          
 
                             <li class="divider-vertical"></li>
 
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a5" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Interes General<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="../page-templates/authors.html" title="">Authors</a></li>
-                                    <li><a href="../page-templates/login-required.html" title="">Login Required</a></li>
-                                    <li><a href="../page-templates/login-page.html" title="">Login Page</a></li>
-                                    <li><a href="../page-templates/sitemap.html" title="Text and Lists">Sitemp</a></li>
-                                    <li><a href="../page-templates/tags.html" title="">Tags</a></li>
-                                    <li><a href="../page-templates/timeline.html" title="">Time Line</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a4" role="button"
-                                    data-hover="dropdown" data-delay="200"
                                     data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a data-target="#" href="../categories/category-template.html" title="">World News</a>
-
-                                        <ul class="dropdown-menu">
-                                            <li><a href="../categories/category-template.html" title="">Europe</a></li>
-                                            <li><a href="../categories/category-template.html" title="">Asia</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a href="../categories/category-template.html" title="">Tecnology</a></li>
-                                    <li><a href="../categories/category-template.html" title="">Health</a></li>
-                                    <li><a href="../categories/category-template.html" title="">Science</a></li>
+                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
+                                    <li><a href="noticias/blog.html">¿Qué somos?</a></li>
+                                    <li><a href="noticias/blog.html">Preguntas Frecuentes</a></li>
                                 </ul>
-
                             </li>
 
                             <li class="divider-vertical"></li>
 
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Purchase Me</a>
-
-                            </li>
+                           
 
                             <li class="divider-vertical"></li>
+
+                           
+
+                            <li class="divider-vertical"></li>
+
                         </ul>
 
                         <ul class="nav pull-right">
                             <li class="divider-vertical"></li>
-
-                            <li>
-                                <a href="#" rel="tooltip" data-toggle="tooltip"
-                                    data-placement="top" data-original-title="Random Post" title=""><i class="icon-random"></i></a>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -494,14 +356,32 @@
 
                                 <div class="figure-container">
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                        <img itemprop="contentURL" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/12.jpg&amp;w=604&amp;h=345" alt="Post With Image" />
-
-                                        <figcaption itemprop="description">Facing Monitor                                        </figcaption>
+                                        <?php 
+                                        $x=0;
+    $sqlx=mysql_query("SELECT * FROM noticias where id='+$id'");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+       
+    }
+                                        ?>
+                                        
+                                <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto['id'].'.jpg'; ?>" height="345" width="604">
+                                        
                                     </figure>
                                 </div>
 
+                                
+                                                            
+                                <h1 itemprop="headline">
 
-                                <h1 itemprop="headline">Eventos</h1>
+                                    <?php 
+                                $id=$_GET["id"];
+                                $sqlx=mysql_query("SELECT * FROM noticias  where id='+$id'"); 
+                                while($datos=mysql_fetch_array($sqlx)){
+                                                         echo $datos['titulo'];
+                                                        }?>
+                                </h1>
 
                                 <div class="post-info">
                                     <div class="post-meta">
@@ -2088,7 +1968,7 @@
 
                 <div class="span2 follow">
                     <a href="https://twitter.com/envato" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @envato</a>
-                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "../../../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "../../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
                 </div>
             </div>
         </div>
@@ -2100,215 +1980,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
 
-                <aside class="span3">
-                    <div class="f-widget w-tags">
-                        <div class="f-widget-title">
-                            <h4>Tags Cloud</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <div class="tags-cloud">
-                                <a href="#" class="btn-theme">UK News</a>
-                                <a href="#" class="btn-theme">Technology</a>
-                                <a href="#" class="btn-theme">Computer</a>
-                                <a href="#" class="btn-theme">Headphone</a>
-                                <a href="#" class="btn-theme">President</a>
-                                <a href="#" class="btn-theme">Vice President</a>
-                                <a href="#" class="btn-theme">Microsoft</a>
-                                <a href="#" class="btn-theme">Apple</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </aside>
-
-                <aside class="span3">
-                    <div class="f-widget w-pictures">
-                        <div class="f-widget-title">
-                            <h4>Random Posts</h4>
-                        </div>
-
-                        <div class="f-widget-content clearfix thumbnails">
-                            <ul class="posts-in-images clearfix">
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image" title="">
-                                    <a href="post-image.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Video" title="">
-                                    <a href="post-video.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Sound Cloud" title="">
-                                    <a href="post-soundcloud.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
-                                    <a href="post-image-lightbox.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
-                                    <a href="post-review.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
-                                    <a href="post-googlemap.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
-                                    <a href="post-image-lightbox.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
-                                    <a href="post-review.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
-                                    <a href="post-googlemap.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </aside>
-
-                <aside class="span3">
-                    <div class="f-widget w-posts">
-                        <div class="f-widget-title">
-                            <h4>Posts Of The Day</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <div class="posts-in-widget">
-                                <div class="row-fluid modern-items-list">
-
-                                    <div id="widget_span3_slider2" class="flexslider">
-
-                                        <ul class="slides">
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li>
-                                                        <article class="fold-item">
-                                                            <div class="clearfix">
-                                                                <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=286&amp;h=200" />
-
-                                                                <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                                </div>
-
-                                                                <div class="description visible-part">
-                                                                    <h5 class="title">Post With Featured Image</h5>
-
-                                                                    <div class="info">
-                                                                        <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                    </div>
-
-                                                                    <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                </div>
-
-                                                                <a href="post-image.html" class="more" title=""></a>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li>
-                                                        <article class="fold-item">
-                                                            <div class="clearfix">
-                                                                <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=286&amp;h=200" />
-
-                                                                <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>                                                                </div>
-
-                                                                <div class="description visible-part">
-                                                                    <h5 class="title">Post With Self Hosted Audio</h5>
-
-                                                                    <div class="info">
-                                                                        <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>                                                                    </div>
-
-                                                                    <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                </div>
-
-                                                                <a href="post-self-audio.html" class="more" title=""></a>
-                                                            </div>
-
-                                                        </article>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </aside>
-
-                <aside class="span3">
-                    <div class="f-widget w-about">
-                        <div class="f-widget-title">
-                            <h4>About Magazine</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
-                        </div>
-
-                    </div>
-                </aside>
+                
 
             </div>
         </div>
@@ -2323,15 +1995,15 @@
                     <nav class="span6 ">
                         <h4 class="hidden">Copyright links</h4>
                         <ul class="copyright-links">
-                            <li><a href="../magazine/archives.html">Archives</a></li>
-                            <li><a href="../magazine/about-us.html">About US</a></li>
-                            <li><a href="../magazine/copyright.html">Copyright</a></li>
-                            <li><a href="../magazine/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#">Archives</a></li>
+                           
+                            <li><a href="#">Copyright</a></li>
+                            
                         </ul>
                     </nav>
 
                     <div class="span6">
-                        <p class="pull-right">&copy; Copyright 2013 Adams Magazine Theme by Serpentsoft, All Rights Reserved</p>
+                        <p class="pull-right">&copy; Copyright 2015 NoteInsideNetwork, All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -2339,203 +2011,8 @@
 
     </section>
 
-    <div id="divStyleSwitcher" class="div-switcher-back-color">
-        <a id="btnToggleStyleSwitcher">
-            <!--<i class="icon-wrench"></i>-->
-            <img src="../../images/settings.png" />
-        </a>
 
-        <div id="divThemeColor" class="row-fluid">
-            <span class="span12">Theme Color</span>
-
-
-            <div class="row-fluid">
-                <div id="divColorRed" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorBlue" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorOrange" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorGreen" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorBlue2" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorMoov" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorFucia" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-
-                <div id="divColorFucia2" class="span1 color-picker">
-                    <a class="select-color-image"></a>
-                </div>
-            </div>
-        </div>
-
-        <div id="divBackgroundColor" class="row-fluid">
-            <div class="span6">
-                <span class="span12">Background Color</span>
-
-                <div class="row-fluid">
-                    <div class="span12 color-picker">
-                        <a class="select-color-image"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span6">
-                <div id="divBoxed" class="row-fluid">
-                    <span class="span12">Body Style</span>
-
-                    <div class="row-fluid">
-                        <div id="divFluidStyle" class="span6">
-                            <a>Fluid</a>
-                        </div>
-
-                        <div id="divFixedStyle" class="span6">
-                            <div class="span2 left-border"></div>
-
-                            <div class="span8"><a>Fixed</a></div>
-
-                            <div class="span2 right-border"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="divStickyNav" class="row-fluid">
-            <a>Sticky Navigation (Disabled)</a>
-        </div>
-
-        <div id="divBackgroundPattern" class="row-fluid">
-            <span class="span12">Background Pattern</span>
-
-            <div class="row-fluid">
-                <div id="divP-1" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/1.png')"></a>
-                </div>
-                <div id="divP-2" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/2.png')"></a>
-                </div>
-                <div id="divP-3" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/3.png')"></a>
-                </div>
-                <div id="divP-4" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/4.png')"></a>
-                </div>
-
-                <div id="divP-5" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/5.png')"></a>
-                </div>
-                <div id="divP-6" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/6.png')"></a>
-                </div>
-                <div id="divP-7" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/7.png')"></a>
-                </div>
-                <div id="divP-8" class="span1 color-picker">
-                    <a class="select-pattern" style="background-image: url('../../images/bg/28/8.png')"></a>
-                </div>
-            </div>
-        </div>
-
-        <div id="divCatColors" class="row-fluid">
-            <span class="span12">Categories Colors (some colors doesn't work here)</span>
-
-            <div class="row-fluid">
-                <div class="modern-accordion-container">
-                    <div id="acc_Cat_Colors" class="accordion">
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_HCat">Horizontal Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_HCat" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner">
-                                    <div id="divH_Cat" class="row-fluid">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_RevCat">Review Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_RevCat" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner">
-                                    <div id="divRev_Cat" class="row-fluid">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_VerCat_1">Vertical Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_VerCat_1" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner row-fluid">
-                                    <div id="divV_Cat" class="span6">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-
-                                    <div id="divV_Cat_2" class="span6">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#acc_Cat_Colors" href="#collapse_HD_Cat">Horizontal Divided Category Colors<i class="icon-angle-down pull-right"></i>
-                                </a>
-                            </div>
-                            <div id="collapse_HD_Cat" class="accordion-body collapse" style="height: 0px;">
-                                <div class="accordion-inner">
-                                    <div id="divHD_Cat" class="row-fluid">
-                                        <div class="span12 color-picker">
-                                            <a class="select-color-image"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
+    
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
 
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>

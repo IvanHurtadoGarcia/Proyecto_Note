@@ -247,7 +247,7 @@
                 <div class="row-fluid">
                     <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
                         <h1 class="hidden" itemprop="name">Serpentsoft</h1>
-                        <a href="index.html">
+                        <a href="index.php">
                             <img itemprop="logo" src="../images/LogoNiN.png" alt="Logo" /></a>
                     </div>
 
@@ -280,7 +280,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.html"><i class="icon-home"></i></a>
+                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -405,7 +405,7 @@
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="post-formats/post-image.html"><?php echo $v_titulo['1'] ?></a></li>
+                                <li><a href="nota/articulo.php?id=1"><?php echo $v_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-video.html"><?php echo $v2_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-soundcloud.html"><?php echo $v3_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-googlemap.html"><?php echo $v4_titulo['1'] ?></a></li>
@@ -1130,15 +1130,7 @@
 
 
                 <!-- 160 (160x600 Adv.) -->
-                <aside class="widget w-adv">
-                    <div class="widget-title">
-                        <h4>Imagen Random</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <img src="#" data-src="holder.js/250x250" />
-                    </div>
-                </aside>
+                
 
 
             </section>
@@ -1399,10 +1391,10 @@
                     <nav class="span6 ">
                         <h4 class="hidden">Copyright links</h4>
                         <ul class="copyright-links">
-                            <li><a href="magazine/archives.html">Archives</a></li>
+                            <li><a href="#">Archives</a></li>
                            
-                            <li><a href="magazine/copyright.html">Copyright</a></li>
-                            <li><a href="magazine/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#">Copyright</a></li>
+                            
                         </ul>
                     </nav>
 
@@ -1448,35 +1440,6 @@
 
     <script type="text/javascript" src="../framework/jsStyleSwitcher.js"></script>
 
-    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-    <!-- Download Google Chrome Frame in order to run theme on internet explorer versions -->
-
-    <!--[if IE]>
-    <script type="text/javascript" 
-     src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-
-    <style>
-     .chromeFrameInstallDefaultStyle {
-       width: 100%; /* default is 800px */
-       border: 2px solid red;
-     }
-    </style>
-
-    <div id="prompt">
-        alert("Your Internet Explorer Needs Google Chrome Frame to work properly");
-    </div>
- 
-    <script>
-        // The conditional ensures that this code will only execute in IE,
-        // Therefore we can use the IE-specific attachEvent without worry
-        window.attachEvent("onload", function () {
-            CFInstall.check({
-                mode: "inline", // the default
-                node: "prompt"
-            });
-        });
-    </script>
-    <![endif]-->
 
     <!-- Histats.com  START (hidden counter)-->
     <script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
