@@ -1989,7 +1989,7 @@
 
                 <div class="span2 follow">
                     <a href="https://twitter.com/envato" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @envato</a>
-                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "../../../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "../../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
                 </div>
             </div>
         </div>
@@ -2001,219 +2001,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
 
-                <aside class="span3">
-                    <div class="f-widget w-tags">
-                        <div class="f-widget-title">
-                            <h4>Tags Cloud</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <div class="tags-cloud">
-                                <a href="#" class="btn-theme">UK News</a>
-                                <a href="#" class="btn-theme">Technology</a>
-                                <a href="#" class="btn-theme">Computer</a>
-                                <a href="#" class="btn-theme">Headphone</a>
-                                <a href="#" class="btn-theme">President</a>
-                                <a href="#" class="btn-theme">Vice President</a>
-                                <a href="#" class="btn-theme">Microsoft</a>
-                                <a href="#" class="btn-theme">Apple</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </aside>
-
-                <aside class="span3">
-                    <div class="f-widget w-pictures">
-                        <div class="f-widget-title">
-                            <h4>Random Posts</h4>
-                        </div>
-
-                        <div class="f-widget-content clearfix thumbnails">
-                            <ul class="posts-in-images clearfix">
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image" title="">
-                                    <a href="../post-formats/post-image.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Video" title="">
-                                    <a href="../post-formats/post-video.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/4.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Sound Cloud" title="">
-                                    <a href="../post-formats/post-soundcloud.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
-                                    <a href="../post-formats/post-image-lightbox.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/6.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
-                                    <a href="../post-formats/post-review.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/7.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
-                                    <a href="../post-formats/post-googlemap.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/8.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Image and Lightbox" title="">
-                                    <a href="../post-formats/post-image-lightbox.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Review" title="">
-                                    <a href="../post-formats/post-review.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Post With Google Map" title="">
-                                    <a href="../post-formats/post-googlemap.html">
-                                        <div class="thumb-effect">
-                                            <div class="mask"></div>
-                                            <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/11.jpg&amp;w=80&amp;h=75" />
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </aside>
-
-                <aside class="span3">
-                    <div class="f-widget w-posts">
-                        <div class="f-widget-title">
-                            <h4>Posts Of The Day</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <div class="posts-in-widget">
-                                <div class="row-fluid modern-items-list">
-
-                                    <div id="widget_span3_slider2" class="flexslider">
-
-                                        <ul class="slides">
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li>
-                                                        <article class="fold-item">
-                                                            <div class="clearfix">
-                                                                <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/10.jpg&amp;w=286&amp;h=200" />
-
-                                                                <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                                </div>
-
-                                                                <div class="description visible-part">
-                                                                    <h5 class="title">Post With Featured Image</h5>
-
-                                                                    <div class="info">
-                                                                        <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                    </div>
-
-                                                                    <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                </div>
-
-                                                                <a href="../post-formats/post-image.html" class="more" title=""></a>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-
-                                            <li>
-                                                <ul class="items left clearfix">
-                                                    <li>
-                                                        <article class="fold-item">
-                                                            <div class="clearfix">
-                                                                <img class="post-img" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/13.jpg&amp;w=286&amp;h=200" />
-
-                                                                <div class="post-sitemap">
-                                                                    <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                                </div>
-
-                                                                <div class="description visible-part">
-                                                                    <h5 class="title">Post With Self Hosted Audio</h5>
-
-                                                                    <div class="info">
-                                                                        <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                        <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                        <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                    </div>
-
-                                                                    <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                                </div>
-
-                                                                <a href="../post-formats/post-self-audio.html" class="more" title=""></a>
-                                                            </div>
-
-                                                        </article>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </aside>
-
-                <aside class="span3">
-                    <div class="f-widget w-about">
-                        <div class="f-widget-title">
-                            <h4>About Magazine</h4>
-                        </div>
-
-                        <div class="f-widget-content">
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
-                        </div>
-
-                    </div>
-                </aside>
+                
 
             </div>
         </div>
@@ -2228,15 +2016,15 @@
                     <nav class="span6 ">
                         <h4 class="hidden">Copyright links</h4>
                         <ul class="copyright-links">
-                            <li><a href="../magazine/archives.html">Archives</a></li>
-                            <li><a href="../magazine/about-us.html">About US</a></li>
-                            <li><a href="../magazine/copyright.html">Copyright</a></li>
-                            <li><a href="../magazine/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#">Archives</a></li>
+                           
+                            <li><a href="#">Copyright</a></li>
+                            
                         </ul>
                     </nav>
 
                     <div class="span6">
-                        <p class="pull-right">&copy; Copyright 2013 Adams Magazine Theme by Serpentsoft, All Rights Reserved</p>
+                        <p class="pull-right">&copy; Copyright 2015 NoteInsideNetwork, All Rights Reserved</p>
                     </div>
                 </div>
             </div>
