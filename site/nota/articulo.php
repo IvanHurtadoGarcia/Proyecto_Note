@@ -356,25 +356,32 @@
 
                                 <div class="figure-container">
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                        <?php 
+                                        $x=0;
+    $sqlx=mysql_query("SELECT * FROM noticias where id='+$id'");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+       
+    }
+                                        ?>
                                         
-                                 <img src="../login/administration/admin/secciones/noticiast/<?php $id=$_GET["id"];
-                                                                                            $sqlx=mysql_query("SELECT * FROM noticias  where id='+$id'"); 
-                                                                                            while($datos=mysql_fetch_array($sqlx)){
-                                                                                             echo $datos['foto'].'.jpg';
-                                                                                            } ?>" height="345" width="604">
+                                <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto['id'].'.jpg'; ?>" height="345" width="604">
                                         
                                     </figure>
                                 </div>
 
                                 
                                                             
-                                <h1 itemprop="headline"><?php 
+                                <h1 itemprop="headline">
+
+                                    <?php 
                                 $id=$_GET["id"];
                                 $sqlx=mysql_query("SELECT * FROM noticias  where id='+$id'"); 
                                 while($datos=mysql_fetch_array($sqlx)){
                                                          echo $datos['titulo'];
-                                                        }
-                                ?></h1>
+                                                        }?>
+                                </h1>
 
                                 <div class="post-info">
                                     <div class="post-meta">
