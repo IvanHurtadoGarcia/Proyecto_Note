@@ -291,9 +291,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/technews.html" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="home-styles/left-sb.html" title="">Video Juegos </a></li>
-                                    <li><a href="home-styles/middle-content.html" title="">Reviews</a></li>
+                                    <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="noticias/left-sb.html" title="">Video Juegos </a></li>
+                                    <li><a href="noticias/middle-content.html" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -306,11 +306,11 @@
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/blog.html">Eventos</a></li>
-                                    <li><a href="home-styles/blog.html">Recomendaciones Musicales</a></li>
-                                    <li><a href="home-styles/blog.html">Fotografía</a></li>
-                                    <li><a href="home-styles/blog.html">Video</a></li>
-                                    <li><a href="home-styles/blog.html">Salud</a></li>
+                                    <li><a href="noticias/blog.html">Eventos</a></li>
+                                    <li><a href="noticias/blog.html">Recomendaciones Musicales</a></li>
+                                    <li><a href="noticias/blog.html">Fotografía</a></li>
+                                    <li><a href="noticias/blog.html">Video</a></li>
+                                    <li><a href="noticias/blog.html">Salud</a></li>
                                    
 
                                 </ul>
@@ -321,9 +321,9 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/blog.html">Internacional</a></li>
-                                    <li><a href="home-styles/blog.html">Nacional</a></li>
-                                    <li><a href="home-styles/blog.html">Opinion</a></li>
+                                    <li><a href="noticias/blog.html">Internacional</a></li>
+                                    <li><a href="noticias/blog.html">Nacional</a></li>
+                                    <li><a href="noticias/blog.html">Opinion</a></li>
                                     
 
 
@@ -337,9 +337,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/lecturas.html">Lecturas</a></li>
-                                    <li><a href="home-styles/descargar.html">Descargas</a></li>
-                                    <li><a href="home-styles/random.html">Random</a></li>
+                                    <li><a href="noticias/lecturas.html">Lecturas</a></li>
+                                    <li><a href="noticias/descargar.html">Descargas</a></li>
+                                    <li><a href="noticias/random.html">Random</a></li>
                                     
 
 
@@ -360,8 +360,8 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="page-templates/authors.html" title="">Autores</a></li>
-                                    <li><a href="home-styles/blog.html">¿Qué somos?</a></li>
-                                    <li><a href="home-styles/blog.html">Preguntas Frecuentes</a></li>
+                                    <li><a href="noticias/blog.html">¿Qué somos?</a></li>
+                                    <li><a href="noticias/blog.html">Preguntas Frecuentes</a></li>
                                 </ul>
                             </li>
 
