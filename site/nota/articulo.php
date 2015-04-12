@@ -1,23 +1,15 @@
 ﻿<?php 
-    include('../php_conexion.php'); 
-    $n=0;
-    $sqll=mysql_query("SELECT * FROM titulos");
-    while($dato=mysql_fetch_array($sqll)){
-        $n++;
-        $v_titulop[$n]=$dato['titulo'];
-        $v_cuadro[$n]=$dato['cuadro'];
-    }
-    $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc ");
-        while($datos=mysql_fetch_array($sqlx)){
-        $x++;
-        $v_foto[$x]=$datos['id'];
-        $v_titulo[$x]=$datos['titulo'];
-        $v_intro[$x]=$datos['intro'];
-        $v_texto[$x]=$datos['texto'];
-        $v_fecha[$x]=$datos['fecha'];
-    }
-    ?>
+    include('php_conexion.php');
+    if(!empty($_GET['id'])){
+        $id=$_GET['id'];
+        $sqlx=mysql_query("SELECT * FROM noticias WHERE id=$id");
+        if($datox=mysql_fetch_array($sqlx)){
+            $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
+            $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
+        }
+    } 
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -176,7 +168,7 @@
               <div class="row-fluid">
                 <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
                         <h1 class="hidden" itemprop="name">Serpentsoft</h1>
-                        <a href="../index.html"><img itemprop="logo" src="../../images/LogoNiN.png" alt="Logo" /></a></div>
+                        <a href="../index.php"><img itemprop="logo" src="../../images/LogoNiN.png" alt="Logo" /></a></div>
 
                   <div class="adv-970 pull-right visible-desktop"></div>
                 </div>
@@ -356,17 +348,10 @@
 
                                 <div class="figure-container">
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                        <?php 
-                                        $x=0;
-    $sqlx=mysql_query("SELECT * FROM noticias where id='+$id'");
-        while($datos=mysql_fetch_array($sqlx)){
-        $x++;
-        $v_foto[$x]=$datos['id'];
-       
-    }
-                                        ?>
                                         
-                                <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto['id'].'.jpg'; ?>" height="345" width="604">
+
+                               <img src="../login/administration/admin/secciones/noticiast/<?php echo $id.'.jpg'; ?>" width="550" height="550">
+                                
                                         
                                     </figure>
                                 </div>
@@ -375,12 +360,7 @@
                                                             
                                 <h1 itemprop="headline">
 
-                                    <?php 
-                                $id=$_GET["id"];
-                                $sqlx=mysql_query("SELECT * FROM noticias  where id='+$id'"); 
-                                while($datos=mysql_fetch_array($sqlx)){
-                                                         echo $datos['titulo'];
-                                                        }?>
+                                <p> <?php echo $ntitulo; ?></p>
                                 </h1>
 
                                 <div class="post-info">
@@ -406,27 +386,15 @@
 
                             <div class="post-entry" itemprop="articleBody">
 
-                                <span class="drop-capital">D</span>
-                                escripcion del evento
+                               
                             
                             
                             <blockquote>
-                                <p>
-                                    Mi opinion respecto al evento antes mencionado
+                                <p style="text-align: justify">
+                                   <?php echo $ntexto; ?>
                                 </p>
                             </blockquote>
-
-                                <p>
-                                    Informacion,fechas,localizacion del evento
-                                </p>
-                                <ul class="icons-ul">
-                                    <li><i class="icon-li icon-ok"></i>More Than 400 List Types.</li>
-                                    <li><i class="icon-li icon-ok"></i>Unlimited Colors.</li>
-                                    <li><i class="icon-li icon-ok"></i>Easy To Use.</li>
-                                    <li><i class="icon-li icon-ok"></i>100% Unique Widget Style.</li>
-                                    <li><i class="icon-li icon-ok"></i>Weather & Poll Widgets.</li>
-                                    <li><i class="icon-li icon-ok"></i>Author Posts.</li>
-                                </ul>
+                               
 
                                
                             </div>
