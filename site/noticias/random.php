@@ -444,12 +444,12 @@
                                         </article>
                                     </li>
 
-                                    <li class="media blog-item">
+                                   <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=604&amp;h=345" />
+                                                <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[2].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="../post-formats/post-video.html" class="more"></a>
+                                                <a href="../post-formats/post-image.html" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -459,11 +459,12 @@
                                                             <div class="date-meta">
                                                                 <div class="post-date">
                                                                     <div class="date">
-                                                                        <span class="month">Mar</span>
-                                                                        <span class="day">22</span>
+
+                                                                        <span class="month"><?php$sdate=date("d")."/".date("m")."/".date("y");?></span>
+                                                                        <span class="day">15</span>
                                                                         <span class="year">2013</span>
                                                                         <hr />
-                                                                        <span class="time">02:00 PM</span>
+                                                                        <span class="time">01:15 PM</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -471,22 +472,22 @@
 
                                                         <div class="span10 blog-desc-container">
                                                             <a href="../post-formats/post-image.html" title="Post with an image">
-                                                                <h4 class="media-heading">otra manera de ver las cosas</h4>
+                                                                <h4 class="media-heading"><?php echo $v_titulo['2']?> </h4>
                                                             </a>
 
                                                             <div class="post-meta clearfix">
                                                                 <ul>
-                                                                    <li><a href="##########################################" title="Post Author"><i class="bo-icon-pencil"></i>Comentar</a></li>
-                                                                    <li><a href="##########################################" title="Comments"><i class="bo-icon-comment"></i>300</a></li>
+                                                                    <li><a href="#" title="Post Author"><i class="bo-icon-pencil"></i>Comentar</a></li>
+                                                                    <li><a href="#" title="Comments"><i class="bo-icon-comment"></i>300</a></li>
                                                                     <li><span title="Views"><i class="bo-icon-eye-open"></i>300</span></li>
                                                                 </ul>
                                                             </div>
 
                                                             <div class="media">
                                                                 <p class="blog-desc">
-                                                                    ...........
+                                                                    <?php echo $v_texto['2']?>
                                                                 </p>
-                                                                <a href="../post-formats/post-video.html" class="btn-theme">mas...</a>
+                                                                <a href="../post-formats/post-image.html" class="btn-theme">mas...</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -500,8 +501,13 @@
                                                 <span class="share-icon icon-caret-right"></span>
 
                                                 <div class="share-icons">
-                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-                                                    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style ">
+                                                        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a>
+                                                        <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        var addthis_config = { "data_track_addressbar": true };
+                                                    </script>
                                                     <script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
                                                 </div>
 
@@ -513,9 +519,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/9.jpg&amp;w=604&amp;h=345" />
+                                                <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[3].'.jpg'; ?>"height="345" width="604">
 
-                                                <a href="../post-formats/post-video.html" class="more"></a>
+                                                <a href="../post-formats/post-image.html" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -525,11 +531,12 @@
                                                             <div class="date-meta">
                                                                 <div class="post-date">
                                                                     <div class="date">
-                                                                        <span class="month">Mar</span>
-                                                                        <span class="day">22</span>
+
+                                                                        <span class="month"><?php$sdate=date("d")."/".date("m")."/".date("y");?></span>
+                                                                        <span class="day">15</span>
                                                                         <span class="year">2013</span>
                                                                         <hr />
-                                                                        <span class="time">02:00 PM</span>
+                                                                        <span class="time">01:15 PM</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -537,22 +544,22 @@
 
                                                         <div class="span10 blog-desc-container">
                                                             <a href="../post-formats/post-image.html" title="Post with an image">
-                                                                <h4 class="media-heading">otra manera de ver las cosas</h4>
+                                                                <h4 class="media-heading"><?php echo $v_titulo['3']?> </h4>
                                                             </a>
 
                                                             <div class="post-meta clearfix">
                                                                 <ul>
-                                                                    <li><a href="##########################################" title="Post Author"><i class="bo-icon-pencil"></i>Comentar</a></li>
-                                                                    <li><a href="##########################################" title="Comments"><i class="bo-icon-comment"></i>300</a></li>
+                                                                    <li><a href="#" title="Post Author"><i class="bo-icon-pencil"></i>Comentar</a></li>
+                                                                    <li><a href="#" title="Comments"><i class="bo-icon-comment"></i>300</a></li>
                                                                     <li><span title="Views"><i class="bo-icon-eye-open"></i>300</span></li>
                                                                 </ul>
                                                             </div>
 
                                                             <div class="media">
                                                                 <p class="blog-desc">
-                                                                    ...........
+                                                                    <?php echo $v_texto['3']?>
                                                                 </p>
-                                                                <a href="../post-formats/post-video.html" class="btn-theme">mas...</a>
+                                                                <a href="../post-formats/post-image.html" class="btn-theme">mas...</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -566,8 +573,13 @@
                                                 <span class="share-icon icon-caret-right"></span>
 
                                                 <div class="share-icons">
-                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-                                                    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style ">
+                                                        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a>
+                                                        <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        var addthis_config = { "data_track_addressbar": true };
+                                                    </script>
                                                     <script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
                                                 </div>
 
@@ -642,55 +654,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                           <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[4].'.jpg'; ?>" height="301" width="240">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['4']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h5 class="title"><?php echo $v_titulo['4']?></h5>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"><?php echo $v_fecha['4']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                <p class="text"><?php echo $v_texto['4']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
                                             </ul>
                                         </li>
                                         <li>
@@ -699,55 +684,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[5].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['5']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h4 class="title"><?php echo $v_titulo['5']?></h4>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['5']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">...........</p>
+                                                                <p class="text"><?php echo $v_texto['5']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
                                             </ul>
                                         </li>
 
@@ -776,55 +734,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[6].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['6']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h5 class="title"><?php echo $v_titulo['6']?></h5>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['6']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                <p class="text"><?php echo $v_texto['6']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
                                             </ul>
                                         </li>
                                         <li>
@@ -833,55 +764,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[7].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['7']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h4 class="title"><?php echo $v_titulo['7']?></h4>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['7']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">...........</p>
+                                                                <p class="text"><?php echo $v_texto['7']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
                                             </ul>
                                         </li>
 
@@ -910,55 +814,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[8].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['8']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h5 class="title"><?php echo $v_titulo['8']?></h5>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['8']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                <p class="text"><?php echo $v_texto['8']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
                                             </ul>
                                         </li>
                                         <li>
@@ -967,55 +844,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[9].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['9']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h4 class="title"><?php echo $v_titulo['9']?></h4>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['9']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">...........</p>
+                                                                <p class="text"><?php echo $v_texto['9']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
                                             </ul>
                                         </li>
 
@@ -1044,55 +894,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[10].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['10']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h5 class="title"><?php echo $v_titulo['10']?></h5>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['10']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
+                                                                <p class="text"><?php echo $v_texto['10']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>  <!--aqui termina 1-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 2-->
                                             </ul>
                                         </li>
                                         <li>
@@ -1101,55 +924,28 @@
                                                 <li>
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
+                                                            <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[11].'.jpg'; ?>"height="301" width="240px">
 
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i><?php echo $v_titulo['11']?></span>
                                                             </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title">Post With Featured Image</h5>
+                                                                <h4 class="title"><?php echo $v_titulo['11']?></h4>
 
                                                                 <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
+                                                                    <span><i class="bo-icon-time bo-icon-white"></i><?php echo $v_titulo['11']?></span>
                                                                     <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
                                                                     <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
                                                                 </div>
 
-                                                                <p class="text">...........</p>
+                                                                <p class="text"><?php echo $v_texto['11']?></p>
                                                             </div>
 
                                                             <a href="../post-formats/post-image.html" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li> <!--aqui termina 3-->
-                                                <!--aqui empiesa un gitget-->
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            <img src="######aqui podemos poner publicidad#########" data-src="holder.js/250x250" />
-
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Media, Technology</span>
-                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title">Post With Sound Cloud</h5>
-
-                                                                <div class="info">
-                                                                    <span><i class="bo-icon-time bo-icon-white"></i>26 Feb 2013, 05:15 AM</span>
-                                                                    <span><i class="bo-icon-comment bo-icon-white"></i>25</span>
-                                                                    <span><i class="bo-icon-eye-open bo-icon-white"></i>320</span>
-                                                                </div>
-
-                                                                <p class="text">...............</p>
-                                                            </div>
-
-                                                            <a href="../post-formats/post-soundcloud.html" class="more" title=""></a>
-                                                        </div>
-
-                                                    </article>
-                                                </li> <!--aqui termina 4-->
                                             </ul>
                                         </li>
 
@@ -1183,17 +979,17 @@
                                         <a href="../post-formats/post-image-lightbox.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/1.jpg&amp;w=65&amp;h=65" />
+                                                <img  <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[12].'.jpg'; ?>"height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
                                             <a href="../post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
-                                                <h5 class="media-heading">Post With Image + Lightbox</h5>
+                                                <h5 class="media-heading"><?php echo $v_titulo['12']?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php$sdate=date("d")."/".date("m")."/".date("y"); ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1201,20 +997,20 @@
 
                                 <li class="media">
                                     <article>
-                                        <a href="../post-formats/post-self-audio.html" class="span3" title="">
+                                        <a href="../post-formats/post-image-lightbox.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/2.jpg&amp;w=65&amp;h=65" />
+                                                <img  <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[13].'.jpg'; ?>"height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="../post-formats/post-self-audio.html" title="Post With Self Hosted Audio">
-                                                <h5 class="media-heading">Post With Self Hosted Audio</h5>
+                                            <a href="../post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
+                                                <h5 class="media-heading"><?php echo $v_titulo['13']?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php$sdate=date("d")."/".date("m")."/".date("y"); ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1222,20 +1018,20 @@
 
                                 <li class="media">
                                     <article>
-                                        <a href="../post-formats/post-soundcloud.html" class="span3" title="">
+                                        <a href="../post-formats/post-image-lightbox.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/3.jpg&amp;w=65&amp;h=65" />
+                                                <img  <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[14].'.jpg'; ?>"height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="../post-formats/post-soundcloud.html" title="Post With Sound-Cloud">
-                                                <h5 class="media-heading">Post With Sound-Cloud</h5>
+                                            <a href="../post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
+                                                <h5 class="media-heading"><?php echo $v_titulo['14']?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php$sdate=date("d")."/".date("m")."/".date("y"); ?></span>
                                             </div>
                                         </div>
                                     </article>
@@ -1243,20 +1039,20 @@
 
                                 <li class="media">
                                     <article>
-                                        <a href="../post-formats/post-googlemap.html" class="span3" title="">
+                                        <a href="../post-formats/post-image-lightbox.html" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/5.jpg&amp;w=65&amp;h=65" />
+                                                <img  <img src="../login/administration/admin/secciones/random/<?php echo $v_foto[15].'.jpg'; ?>"height="65" width="65">
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="../post-formats/post-googlemap.html" title="Post With Google Map">
-                                                <h5 class="media-heading">Post With Google Map</h5>
+                                            <a href="../post-formats/post-image-lightbox.html" title="Post With Image + Lightbox">
+                                                <h5 class="media-heading"><?php echo $v_titulo['15']?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i>26 Feb 2013, 05:15 AM</span>
+                                                <span title="Published Time"><i class="bo-icon-time"></i><?php$sdate=date("d")."/".date("m")."/".date("y"); ?></span>
                                             </div>
                                         </div>
                                     </article>
