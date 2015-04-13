@@ -366,11 +366,11 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="videoreviewdata.php" class="active">VideoJuegos</a></li>
+                                        <li><a href="reviews.php" class="active">Reviews</a></li>
                                     </ul>
                                 </div>
 
-                                <h1 itemprop="headline">Noticias sobre VideoJuegos</h1>
+                                <h1 itemprop="headline">Reviews Informativas</h1>
 
                                 <div class="post-info"></div>
 
@@ -441,7 +441,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/reviews/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="reviewdata.php?titulo=<?php echo $v2_titulo['2'] ?>&id=8" class="more"></a>
+                                                <a href="reviewdata.php?titulo=<?php echo $v2_titulo['1'] ?>&id=9" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">

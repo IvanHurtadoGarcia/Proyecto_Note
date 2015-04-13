@@ -405,7 +405,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="reviews.php" class="active">Reviews</a></li>
                                     </ul>
                                 </div>
 
