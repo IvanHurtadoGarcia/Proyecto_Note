@@ -612,7 +612,7 @@
 
                 <section class="cat-widget h-cat-1">
                     <div class="cat-widget-title">
-                        <a href="#">
+                        <a href="nota/reviews.php">
                             <h3>Ultimas en Reviews</h3>
                         </a>
                     </div>
@@ -637,13 +637,13 @@
                                         </div>
                                     </div>
 
-                                    <a href="#" class="more"></a>
+                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['1'] ?>&id=9" class="more"></a>
                                 </div>
 
                                 <div class="span7">
                                     <div class="post-info">
                                         <div class="post-title clearfix">
-                                            <a href="#" title="Full Post Title">
+                                            <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['1'] ?>&id=9" title="Leer">
                                                 <h4 class="pull-left"><?php echo $v3_titulo['1'] ?></h4>
                                             </a>
                                         </div>
@@ -687,7 +687,7 @@
                                                                         <p class="text"><?php echo $v3_intro['2'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['2'] ?>&id=8" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -707,7 +707,7 @@
                                                                         <p class="text"><?php echo $v3_intro['3'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['3'] ?>&id=7" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -729,7 +729,7 @@
                                                                         <p class="text"><?php echo $v3_intro['4'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['4'] ?>&id=6" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -749,7 +749,7 @@
                                                                         <p class="text"><?php echo $v3_intro['5'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="post-formats/post-image.html" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['5'] ?>&id=5" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -774,7 +774,7 @@
                     <div class="span6">
                         <section class="cat-widget v-cat-1">
                             <div class="cat-widget-title">
-                                <a href="#">
+                                <a href="nota/videojuegos.php">
                                     <h3>Video Juegos</h3>
                                 </a>
                             </div>
@@ -797,10 +797,10 @@
                                                         </div>
                                                     </div>
 
-                                                    <a href="#" class="more"></a>
+                                                    <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
                                                 </div>
 
-                                                <a href="#" class="clearfix" title="Articulo Completo">
+                                                <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="clearfix" title="Articulo Completo">
                                                     <h4><?php echo $v2_titulo['1'] ?></h4>
                                                 </a>
                                             </div>
@@ -839,7 +839,7 @@
                                                                             <p class="text"><?php echo $v2_intro[2]; ?>...</p>
                                                                         </div>
 
-                                                                        <a href="post-formats/post-image.html" class="more" title=""></a>
+                                                                        <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more" title=""></a>
                                                                     </div>
                                                                 </article>
                                                             </li>
@@ -857,7 +857,7 @@
                                                                             <p class="text"><?php echo $v2_intro[3]; ?>...</p>
                                                                          </div>
 
-                                                                        <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
+                                                                        <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1"class="more" title=""></a>
                                                                     </div>
 
                                                                 </article>
@@ -1351,24 +1351,7 @@
 
     </div>
 
-    <!-- Twitter Ticker -->
-    <section class="twitter-ticker-widget w-tweet">
-        <div class="container-fluid">
-            <div class="row-fluid widget-inner">
-                <div class="span2 title visible-desktop">
-                    <h4>Latest Tweets</h4>
-                </div>
-
-                <div id="divLatestTweets" class="span8">
-                </div>
-
-                <div class="span2 follow">
-                    <a href="https://twitter.com/envato" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @envato</a>
-                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "../../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section class="modern-footer">
         <h2 class="hidden">Sub-Footer Section</h2>
