@@ -7,7 +7,15 @@
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
             $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
         }
-    } 
+    }
+
+    $x2=0;
+    $sqlx2=mysql_query("SELECT * FROM usuarios");
+        while($datos2=mysql_fetch_array($sqlx2)){
+        $x2++;
+        $v_usu[$x2]=$datos2['nombre'];
+        
+    }
 ?>
 
 <!DOCTYPE html>
@@ -341,8 +349,8 @@
                                 <div itemscope itemtype="http://schema.org/WebPage">
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
-                                            <a href="#"><i class="bo-icon-home"></i>Eventos</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="#" class="active">Eventos</a></li>
+                                            <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="tecnologias.php" class="active">Tecol&oacute;gias</a></li>
                                     </ul>
                                 </div>
 
@@ -433,7 +441,7 @@
                             <!-- Author Biography -->
                             <aside class="author-bio w-user">
                                 <div class="cat-widget-title">
-                                    <h3>About Serpentsoft</h3>
+                                    <h3>Escribio</h3>
                                 </div>
 
                                 <div class="cat-widget-content">
@@ -441,14 +449,12 @@
 
                                         <div class="media" itemprop="author" itemscope itemtype="http://schema.org/Person">
 
-                                            <!--<a class="thumbnail span2 pull-left" href="author.html" title="More About Author">
-                                            <img itemprop="image" class="media-object" src="" data-src="holder.js/77x77" alt="Author" />
-                                        </a>-->
+                                            
                                             <a href="../page-templates/author-archive.html" class="media-object span2" title="More About Author">
                                                 <div class="thumb-effect">
 
                                                     <div class="mask"></div>
-                                                    <img itemprop="image" src="http://labs.serpentsoft.com/adams-magazine/framework/timthumb.php?src=../images/a1.jpg&amp;w=88&amp;h=88" />
+                                                    
                                                 </div>
                                             </a>
 
@@ -461,7 +467,8 @@
                                                 <div class="media">
                                                     <div itemprop="description">
                                                         <p>
-                                                            A few words about an article author, I am a Web Developer and Designer, i love computer programming either Desktop or Web
+                                                            Hola! <?php echo $v_usu['1'] ?>
+                                                           
                                                         </p>
                                                     </div>
 
