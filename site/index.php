@@ -292,8 +292,8 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="noticias/left-sb.html" title="">Video Juegos </a></li>
-                                    <li><a href="noticias/middle-content.html" title="">Reviews</a></li>
+                                    <li><a href="nota/videojuegos.php" title="">Video Juegos </a></li>
+                                    <li><a href="nota/reviews.php" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -405,7 +405,7 @@
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="nota/articulo.php?id=1"><?php echo $v_titulo['1'] ?></a></li>
+                                <li><a href="nota/tecnologias.php?id=1"><?php echo $v_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-video.html"><?php echo $v2_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-soundcloud.html"><?php echo $v3_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-googlemap.html"><?php echo $v4_titulo['1'] ?></a></li>
@@ -446,7 +446,7 @@
                                                 <p class="text"><?php echo $v_intro[1]; ?></p>
                                             </div>
 
-                                            <a href="post-formats/post-image.html" class="more" title=""></a>
+                                            <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['6'] ?>&id=6" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -471,7 +471,7 @@
                                                  <p class="text"><?php echo $v_intro[2]; ?></p>
                                             </div>
 
-                                            <a href="post-formats/post-soundcloud.html" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['5'] ?>&id=5" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -495,7 +495,7 @@
                                              <p class="text"><?php echo $v_intro[3]; ?></p>
                                             </div>
 
-                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=4" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -518,7 +518,7 @@
                                              <p class="text"><?php echo $v_intro[4]; ?></p>
                                             </div>
 
-                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=3" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -541,7 +541,7 @@
                                              <p class="text"><?php echo $v_intro[5]; ?></p>
                                             </div>
 
-                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=2" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -564,7 +564,7 @@
                                              <p class="text"><?php echo $v_intro[6]; ?></p>
                                             </div>
 
-                                            <a href="post-formats/post-video.html" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=1" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
