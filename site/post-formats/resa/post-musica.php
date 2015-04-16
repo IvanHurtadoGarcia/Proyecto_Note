@@ -1,4 +1,24 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('php_conexion.php');
+    if(!empty($_GET['id'])){
+        $id=$_GET['id'];
+        $sqlx=mysql_query("SELECT * FROM recomendacionm WHERE id=$id");
+        if($datox=mysql_fetch_array($sqlx)){
+            $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
+            $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
+        }
+    } 
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM recomendacionm ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>NoteInsideNetwork | Video</title>
@@ -214,12 +234,12 @@
                                     data-hover="dropdown" data-delay="200"
                                     data-target="#" href="#">Sociedad<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-								<li><a href="post-image-eventos.html">Eventos</a></li>
-                                    <li><a href="post-video-recomendacion.html">MUSICA</a></li>
-                                    <li><a href="post-image-fotografia.html">FOTIGRAFIA</a></li>
-                                    <li><a href="post-video.html">Video</a></li>
-                                    <li><a href="post-salud.html">Salud</a></li>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="post-image-eventos.php">Eventos</a></li>
+                                    <li><a href="post-video-recomendacion.php">Recomendaciones Musicales</a></li>
+                                    <li><a href="post-image-fotografia.html">Fotografia</a></li>
+                                    <li><a href="post-video.php">Video</a></li>
+                                    <li><a href="post-salud.php">Salud</a></li>
                                 </ul>
                             </li>
 
@@ -339,7 +359,7 @@
                                 <div itemscope itemtype="http://schema.org/WebPage">
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
-                                            <a href="#"><i class="bo-icon-home"></i>Recomenad</a>acion Video</li>
+                                            <a href="#"><i class="bo-icon-home"></i>Recomenad</a>acion Musical</li>
                                         <li><a href="#" class="active">Fuente You Tube</a></li>
                                     </ul>
                                 </div>
@@ -357,7 +377,7 @@
                                 </div>
 
 
-                                <h1 itemprop="headline">Video de la semana</h1>
+                                <h1 itemprop="headline">Cancion de la semana</h1>
 
                                 <div class="post-info">
                                     <div class="post-meta">
@@ -382,13 +402,13 @@
 
                             <div class="post-entry" itemprop="articleBody">
 
-                                <span class="drop-capital">O</span>ne Piece- .
+                                <span class="drop-capital">L</span>ana del rey- .
                             
                                 <blockquote>
-                                <p>Edward 'Whitebeard' Newgate AMV - Heart Of Fire </p> 
+                                <p>lana del rey </p> 
                                 </blockquote>
 
-                                <p>Sibido por el usario </p>
+                                <p>Subido por el usario </p>
                           </div>
 
                             <div class="clearfix"></div>
@@ -1079,7 +1099,7 @@
                                                                 <p class="text">Lorem ipsum dolor sit amet, mei eligendi moderatius deterruisset no. Blandit mentitum delicata an eos, novum persius ne per. Soluta rationibus repudiandae ut pro, quidam quodsi audiam ad cum. Duo vero nihil ocurreret at ...</p>
                                                             </div>
 
-                                                            <a href="post-image.html" class="more" title=""></a>
+                                                            <a href="post-image-fotografia.php" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>

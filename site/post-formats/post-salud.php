@@ -1,4 +1,24 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    include('php_conexion.php');
+    if(!empty($_GET['id'])){
+        $id=$_GET['id'];
+        $sqlx=mysql_query("SELECT * FROM salud WHERE id=$id");
+        if($datox=mysql_fetch_array($sqlx)){
+            $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
+            $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
+        }
+    } 
+    $x=0;
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM salud ORDER BY my_date desc ");
+        while($datos=mysql_fetch_array($sqlx)){
+        $x++;
+        $v_foto[$x]=$datos['id'];
+        $v_titulo[$x]=$datos['titulo'];
+        $v_intro[$x]=$datos['intro'];
+        $v_fecha[$x]=$datos['fecha'];
+    }
+    ?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>NoteInsideNetwork | Salud</title>
@@ -201,12 +221,12 @@
                                     data-hover="dropdown" data-delay="200"
                                     data-target="#" href="#">SOCIEDAD<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="post-image-eventos.html">Eventos</a></li>
-                                    <li><a href="post-video-recomendacion.html">Recomendaciones Musicales</a></li>
-									<li><a href="post-image-fotografia.html">Fotografia</a></li>
-									<li><a href="post-video.html">Video</a></li>
-									<li><a href="post-image.html">Salud</a></li>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="post-image-eventos.php">Eventos</a></li>
+                                    <li><a href="post-video-recomendacion.php">Recomendaciones Musicales</a></li>
+                  <li><a href="post-image-fotografia.html">Fotografia</a></li>
+                  <li><a href="post-video.php">Video</a></li>
+                  <li><a href="post-salud.php">Salud</a></li>
                                 </ul>
                             </li>
 
