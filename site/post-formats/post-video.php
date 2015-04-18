@@ -1,5 +1,5 @@
 ﻿<?php 
-    include('php_conexion.php');
+    include('../php_conexion.php');
     if(!empty($_GET['id'])){
         $id=$_GET['id'];
         $sqlx=mysql_query("SELECT * FROM video WHERE id=$id");
@@ -285,8 +285,8 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
-                               <ul class="dropdown-menu">
-                                    <li><a href="post-formats/eventos.html">Eventos</a></li>
+                                <ul class="dropdown-menu">
+                                    <li><a href="post-formats/eventos.php">Eventos</a></li>
                                     <li><a href="post-formats/post-musica.php">Recomendaciones Musicales</a></li>
                                     <li><a href="post-formats/post-image-fotografia.php">Fotografía</a></li>
                                     <li><a href="post-formats/post-video.php">Video</a></li>
@@ -406,7 +406,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="post-videodatos.php" class="active">Tecol&oacute;gias</a></li>
                                     </ul>
                                 </div>
 
@@ -414,7 +414,7 @@
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                         
 
-                               <img src="../login/administration/admin/secciones/video/<?php echo $id.'.jpg'; ?>" width="550" height="550">
+                               <img src="../login/administration/admin/secciones/videos/<?php echo $id.'.jpg'; ?>" width="550" height="550">
                                 
                                         
                                     </figure>
@@ -586,7 +586,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['2'] ?>">
-                                <a href="post-formats/post-video.html">
+                                <a href="post-formats/post-video.php">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[2].'.jpg'; ?>" height="75" width="80">
@@ -683,7 +683,7 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/video/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/videos/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 
@@ -705,7 +705,7 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/video/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/videos/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 
@@ -730,7 +730,7 @@
                                                    <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/video/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/videos/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 
@@ -752,7 +752,7 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/video/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/videos/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 

@@ -10,7 +10,7 @@
     
      
     $x2=0;
-    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM video ORDER BY my_date desc ");
+    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM Video ORDER BY my_date desc ");
         while($datos2=mysql_fetch_array($sqlx2)){
         $x2++;
         $v2_foto[$x2]=$datos2['id'];
@@ -261,11 +261,11 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
-                               <ul class="dropdown-menu">
-                                    <li><a href="post-formats/eventos.html">Eventos</a></li>
-                                    <li><a href="post-formats/post-musica.php">Recomendaciones Musicales</a></li>
-                                    <li><a href="post-formats/post-image-fotografia.php">Fotografía</a></li>
-                                    <li><a href="post-formats/post-video.php">Video</a></li>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="../post-formats/post-eventosdatos.php">Eventos</a></li>
+                                    <li><a href="post-formats/post-musicadatos.php">Recomendaciones Musicales</a></li>
+                                    <li><a href="post-formats/post-image-fotografiadatos.php">Fotografía</a></li>
+                                    <li><a href="post-formats/post-videodatos.php">Video</a></li>
                                     <li><a href="post-formats/post-salud.php">Salud</a></li>
                                    
 
@@ -366,11 +366,11 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="video.php" class="active">Video</a></li>
+                                        <li><a href="post-videodatos.php" class="active">Fotografia</a></li>
                                     </ul>
                                 </div>
 
-                                <h1 itemprop="headline">Noticias sobre Videos</h1>
+                                <h1 itemprop="headline">Fotografia</h1>
 
                                 <div class="post-info"></div>
 
@@ -383,9 +383,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/video/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/videos/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="juegos.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
+                                                <a href="post-video.php?titulo=<?php echo $v2_titulo['1'] ?>&id=1" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -441,7 +441,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/video/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="juegos.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
+                                                <a href="post-video.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -458,7 +458,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="juegos.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
+                                                            <a href="post-video.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['2'] ?></h4>
                                                         </a>
 
@@ -470,7 +470,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['2'] ?>...
                                                             </p>
-                                                            <a href="juegos.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="post-video.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -495,7 +495,7 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/video/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/videos/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
 
                                                 <a href="juegos.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
                                             </div>
@@ -526,7 +526,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['3'] ?>...
                                                             </p>
-                                                            <a href="juegos.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="post-video.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -551,9 +551,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/video/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/post-videodatos/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="juegos.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
+                                                <a href="post-video.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -582,7 +582,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['4'] ?>...
                                                             </p>
-                                                            <a href="juegos.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="post-video.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>

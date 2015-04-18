@@ -1,5 +1,6 @@
-﻿<?php 
-    include('php_conexion.php');
+﻿
+<?php 
+    include('../php_conexion.php');
     if(!empty($_GET['id'])){
         $id=$_GET['id'];
         $sqlx=mysql_query("SELECT * FROM eventos WHERE id=$id");
@@ -285,17 +286,15 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
-                             <ul class="dropdown-menu">
-                                    <li><a href="post-formats/eventos.html">Eventos</a></li>
-                                    <li><a href="post-formats/post-musica.php">Recomendaciones Musicales</a></li>
-                                    <li><a href="post-formats/post-image-fotografia.php">Fotografía</a></li>
-                                    <li><a href="post-formats/post-video.php">Video</a></li>
-                                    <li><a href="post-formats/post-salud.php">Salud</a></li>
+                                <ul class="dropdown-menu">
+                                    <li><a href="noticias/blog.html">Eventos</a></li>
+                                    <li><a href="noticias/blog.html">Recomendaciones Musicales</a></li>
+                                    <li><a href="noticias/blog.html">Fotografía</a></li>
+                                    <li><a href="noticias/blog.html">Video</a></li>
+                                    <li><a href="noticias/blog.html">Salud</a></li>
                                    
 
                                 </ul>
-
-
                             </li>
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a4" role="button"
@@ -408,7 +407,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="post-eventos.php" class="active">salud</a></li>
                                     </ul>
                                 </div>
 
@@ -720,7 +719,7 @@
                                                                 <p class="text"><?php echo $v_intro['2'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
+                                                            <a href="eventos.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -734,7 +733,7 @@
                                                             
                                                             <img src="../login/administration/admin/secciones/eventos/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>eventos</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
@@ -745,7 +744,7 @@
                                                                 <p class="text"><?php echo $v_intro['3'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
+                                                            <a href="eventos.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -767,7 +766,7 @@
                                                                 <p class="text"><?php echo $v_intro['4'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
+                                                            <a href="eventos.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>

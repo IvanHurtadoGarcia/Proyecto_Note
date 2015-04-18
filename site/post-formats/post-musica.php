@@ -1,15 +1,15 @@
 ﻿<?php 
-    include('php_conexion.php');
+    include('../php_conexion.php');
     if(!empty($_GET['id'])){
         $id=$_GET['id'];
-        $sqlx=mysql_query("SELECT * FROM recomendacionm WHERE id=$id");
+        $sqlx=mysql_query("SELECT * FROM recondacionesm WHERE id=$id");
         if($datox=mysql_fetch_array($sqlx)){
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
             $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
         }
     } 
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM recomendacionm ORDER BY my_date desc ");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM recomendacionesm ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];
@@ -683,7 +683,7 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/musica/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/fotografia/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 
