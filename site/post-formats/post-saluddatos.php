@@ -445,7 +445,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/salud/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="post-saluf.php?titulo=<?php echo $v2_titulo['3'] ?>&id=2" class="more"></a>
+                                                <a href="post-salud.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -472,7 +472,7 @@
 
                                                         <div class="media">
                                                             <p class="blog-desc">
-                                                                <?php echo $v2_intro['3'] ?>...
+                                                                <?php echo $v2_intro['2'] ?>...
                                                             </p>
                                                             <a href="post-salud.php?titulo=<?php echo $v2_titulo['3'] ?>&id=3" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
