@@ -286,13 +286,14 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="noticias/blog.html">Eventos</a></li>
-                                    <li><a href="noticias/blog.html">Recomendaciones Musicales</a></li>
-                                    <li><a href="noticias/blog.html">Fotografía</a></li>
-                                    <li><a href="noticias/blog.html">Video</a></li>
-                                    <li><a href="noticias/blog.html">Salud</a></li>
-                                   
+                                 <ul class="dropdown-menu">
+                                    <li><a href="post-formats/post-eventosdatos.php">Eventos</a></li>
+                                    <!--<li><a href="post-formats/post-musicadatos.php">Recomendaciones Musicales</a></li>-->
+                                    <li><a href="post-formats/post-fotografiadatos.php">Fotografía</a></li>
+                                   <!-- <li><a href="noticias/blog.html">Video</a></li>-->
+                                     <li><a href="post-formats/post-saluddatos.php">Salud</a></li>
+                                    
+                                    
 
                                 </ul>
                             </li>

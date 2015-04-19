@@ -1,8 +1,9 @@
-﻿<?php 
+﻿
+<?php 
     include('../php_conexion.php');
     if(!empty($_GET['id'])){
         $id=$_GET['id'];
-        $sqlx=mysql_query("SELECT * FROM recondacionesm WHERE id=$id");
+        $sqlx=mysql_query("SELECT * FROM recomendacionesm WHERE id=$id");
         if($datox=mysql_fetch_array($sqlx)){
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
             $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
@@ -70,7 +71,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>NoteInsideNetwork | Tecnol&oacute;gias</title>
+    <title>NoteInsideNetwork | Rusica</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -286,11 +287,11 @@
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="post-formats/eventos.html">Eventos</a></li>
-                                    <li><a href="post-formats/post-musica.php">Recomendaciones Musicales</a></li>
-                                    <li><a href="post-formats/post-image-fotografia.php">Fotografía</a></li>
-                                    <li><a href="post-formats/post-video.php">Video</a></li>
-                                    <li><a href="post-formats/post-salud.php">Salud</a></li>
+                                    <li><a href="noticias/blog.html">Eventos</a></li>
+                                    <li><a href="noticias/blog.html">Recomendaciones Musicales</a></li>
+                                    <li><a href="noticias/blog.html">Fotografía</a></li>
+                                    <li><a href="noticias/blog.html">Video</a></li>
+                                    <li><a href="noticias/blog.html">Salud</a></li>
                                    
 
                                 </ul>
@@ -406,7 +407,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="post-musica.php" class="active">salud</a></li>
                                     </ul>
                                 </div>
 
@@ -414,7 +415,7 @@
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                         
 
-                               <img src="../login/administration/admin/secciones/musica/<?php echo $id.'.jpg'; ?>" width="550" height="550">
+                               <img src="../login/administration/admin/secciones/recomendacionesm/<?php echo $id.'.jpg'; ?>" width="550" height="550">
                                 
                                         
                                     </figure>
@@ -683,9 +684,9 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/fotografia/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/recomendacionesm/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Musica</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['1'] ?></h5>
@@ -705,9 +706,9 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/musica/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/recomendacionesm/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Musica</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['2'] ?></h5>
@@ -718,7 +719,7 @@
                                                                 <p class="text"><?php echo $v_intro['2'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
+                                                            <a href="post-recomendacionesm.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -730,9 +731,9 @@
                                                    <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/musica/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/recomendacionesm/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Musica</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
@@ -743,7 +744,7 @@
                                                                 <p class="text"><?php echo $v_intro['3'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
+                                                            <a href="post-recomendacionesm.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -752,7 +753,7 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/musica/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/recomendacionesm/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 
@@ -765,7 +766,7 @@
                                                                 <p class="text"><?php echo $v_intro['4'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
+                                                            <a href="post-recomendacionesm.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
