@@ -2,14 +2,14 @@
     include('../php_conexion.php');
     if(!empty($_GET['id'])){
         $id=$_GET['id'];
-        $sqlx=mysql_query("SELECT * FROM internacional WHERE id=$id");
+        $sqlx=mysql_query("SELECT * FROM opinion WHERE id=$id");
         if($datox=mysql_fetch_array($sqlx)){
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
             $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
         }
     } 
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc ");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM opinion ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];

@@ -59,7 +59,7 @@
 
                 <div class="navbar-inner">
                     <div class="container-fluid">
-                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="index.php">
                             <i class="icon-reorder"></i>
                         </button>
 
@@ -277,9 +277,9 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="nota/internacional.php">Internacional</a></li>
-                                    <li><a href="nota/nacional.php">Nacional</a></li>
-                                    <li><a href="nota/opinion.php">Opinion</a></li>
+                                    <li><a href="noticias/internacional.php">Internacional</a></li>
+                                    <li><a href="noticias/nacional.php">Nacional</a></li>
+                                    <li><a href="noticias/opinion.php">Opinion</a></li>
                                     
 
 
@@ -355,7 +355,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="internacional.php" class="active">Internacional</a></li>
+                                        <li><a href="opinion.php" class="active">Internacional</a></li>
                                     </ul>
                                 </div>
 
@@ -372,9 +372,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/opinion/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
+                                                <a href="opin.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -391,7 +391,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" title="">
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['1'] ?></h4>
                                                         </a>
 
@@ -403,7 +403,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['1'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -428,9 +428,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/opinion/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
+                                                <a href="opin.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -447,7 +447,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['2'] ?></h4>
                                                         </a>
 
@@ -459,7 +459,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['2'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -484,9 +484,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/opinion/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
+                                                <a href="opin.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -503,7 +503,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" title="">
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['3'] ?></h4>
                                                         </a>
 
@@ -515,7 +515,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['3'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -540,9 +540,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/opinion/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
+                                                <a href="opin.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -571,7 +571,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['4'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="opin.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
