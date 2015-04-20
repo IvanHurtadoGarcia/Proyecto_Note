@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
     include('../php_conexion.php'); 
     $n=0;
     $sqll=mysql_query("SELECT * FROM titulos");
@@ -77,7 +77,6 @@
                                         <ul class="dropdown-menu about-company">
                                             <li>
                                                 <div class="row-fluid">
-
                                                     <div class="span8 google-map-section clearfix">
                                                         <div class="row-fluid title">
                                                             <h3><i class="bo-icon-map-marker bo-icon-white"></i>¿Donde Estamos?</h3>
