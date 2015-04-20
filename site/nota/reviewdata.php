@@ -271,9 +271,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="nota/videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="nota/reviews.php" title="">Reviews</a></li>
+                                    <li><a href="technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="videojuegos.php" title="">Video Juegos </a></li>
+                                    <li><a href="reviews.php" title="">Reviews</a></li>
                                 </ul>
                             </li>
 
@@ -384,7 +384,7 @@
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6"><?php echo $v_titulo['1'] ?></a></li>
+                                <li><a href="reviewdata.php?titulo=<?php echo $v_titulo['1'] ?>&id=6"><?php echo $v_titulo['1'] ?></a></li>
                                 <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5"><?php echo $v_titulo['2'] ?></a></li>
                                 <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4"><?php echo $v_titulo['3'] ?></a></li>
                                 <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3"><?php echo $v_titulo['4'] ?></a></li>

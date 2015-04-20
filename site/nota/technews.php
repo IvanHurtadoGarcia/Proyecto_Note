@@ -8,7 +8,7 @@
         $v_cuadro[$n]=$dato['cuadro'];
     }
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM videojuegos  ORDER BY my_date desc ");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];
@@ -313,9 +313,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/technews.html" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="home-styles/left-sb.html" title="">Video Juegos </a></li>
-                                    <li><a href="home-styles/middle-content.html" title="">Reviews</a></li>
+                                  <li><a href="technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="videojuegos.php" title="">Video Juegos </a></li>
+                                    <li><a href="reviews.php" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -373,29 +373,7 @@
 
                           
 
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a5" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
-                                    <li><a href="home-styles/blog.html">¿Qué somos?</a></li>
-                                    <li><a href="home-styles/blog.html">Preguntas Frecuentes</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
                            
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
 
                         </ul>
 
