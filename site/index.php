@@ -321,9 +321,9 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/blog.html">Internacional</a></li>
-                                    <li><a href="noticias/blog.html">Nacional</a></li>
-                                    <li><a href="noticias/blog.html">Opinion</a></li>
+                                    <li><a href="nota/internacional.php">Internacional</a></li>
+                                    <li><a href="noticias/nacional.php">Nacional</a></li>
+                                    <li><a href="noticias/opinion.php">Opinion</a></li>
                                     
 
 
