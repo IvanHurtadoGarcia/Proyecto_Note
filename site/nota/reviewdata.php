@@ -64,6 +64,16 @@
         $v6_titulo[$x6]=$datos6['titulo'];
         $v6_intro[$x6]=$datos6['intro'];
         $v6_fecha[$x6]=$datos6['fecha'];
+
+        $x7=0;
+    $sqlx7=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias ORDER BY my_date desc");
+        while($datos7=mysql_fetch_array($sqlx7)){
+        $x7++;
+        $v7_foto[$x7]=$datos7['id'];
+        $v7_titulo[$x7]=$datos7['titulo'];
+        $v7_intro[$x7]=$datos7['intro'];
+        $v7_fecha[$x7]=$datos7['fecha'];
+    }
     }
 ?>
 
@@ -260,7 +270,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -330,29 +340,6 @@
 
                           
 
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a5" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
-                                    <li><a href="noticias/blog.html">¿Qué somos?</a></li>
-                                    <li><a href="noticias/blog.html">Preguntas Frecuentes</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
 
                         </ul>
 
@@ -376,24 +363,7 @@
             <div class="span6 main-content">
 
                 <!-- Breaking News -->
-                <section class="breaking-news-widget">
-                    <div class="row-fluid">
-
-                        <div class="title">
-                            <h3>Ultimas</h3>
-                        </div>
-                        <div id="divBreakingNewsTicker" class="content">
-                            <ul id="js-news" class="js-hidden">
-                                <li><a href="reviewdata.php?titulo=<?php echo $v_titulo['1'] ?>&id=6"><?php echo $v_titulo['1'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5"><?php echo $v_titulo['2'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4"><?php echo $v_titulo['3'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3"><?php echo $v_titulo['4'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['5'] ?>&id=2"><?php echo $v_titulo['5'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['6'] ?>&id=1"><?php echo $v_titulo['6'] ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+               
 
                 <!-- main content -->
                 <article class="article-container" itemscope itemtype="http://schema.org/Article">
@@ -684,7 +654,7 @@
                                                             
                                                             <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Reviews</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['1'] ?></h5>
@@ -695,7 +665,7 @@
                                                                 <p class="text"><?php echo $v_intro['1'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -706,7 +676,7 @@
                                                             
                                                             <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Reviews</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['2'] ?></h5>
@@ -717,7 +687,7 @@
                                                                 <p class="text"><?php echo $v_intro['2'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['2'] ?>&id=2" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -731,7 +701,7 @@
                                                             
                                                             <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>VideoJuegos</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
@@ -742,7 +712,7 @@
                                                                 <p class="text"><?php echo $v_intro['3'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['3'] ?>&id=7" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -753,7 +723,7 @@
                                                             
                                                             <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>VideoJuegos</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['4'] ?></h5>
@@ -764,7 +734,7 @@
                                                                 <p class="text"><?php echo $v_intro['4'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['4'] ?>&id=6" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
