@@ -10,7 +10,7 @@
     
      
     $x2=0;
-    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargar ORDER BY my_date desc ");
+    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM salud ORDER BY my_date desc ");
         while($datos2=mysql_fetch_array($sqlx2)){
         $x2++;
         $v2_foto[$x2]=$datos2['id'];
@@ -248,7 +248,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="nota/descargar.php" title="">Video Juegos </a></li>
+                                    <li><a href="nota/videojuegos.php" title="">Video Juegos </a></li>
                                     <li><a href="nota/reviews.php" title="">Reviews</a></li>
                                 </ul>
 
@@ -293,9 +293,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/descargar.html">descargar</a></li>
+                                    <li><a href="home-styles/lecturas.html">Lecturas</a></li>
                                     <li><a href="home-styles/descargar.html">Descargas</a></li>
-                                    <li><a href="home-styles/descargar.html">descargar</a></li>
+                                    <li><a href="home-styles/random.html">Random</a></li>
                                     
 
 
@@ -309,7 +309,17 @@
 
                             <li class="divider-vertical"></li>
 
-                           
+                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
+                                <a class="dropdown-toggle" id="a5" role="button"
+                                    data-hover="dropdown" data-delay="200"
+                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
+                                    <li><a href="home-styles/blog.html">¿Qué somos?</a></li>
+                                    <li><a href="home-styles/blog.html">Preguntas Frecuentes</a></li>
+                                </ul>
+                            </li>
 
                             <li class="divider-vertical"></li>
 
@@ -356,11 +366,11 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="descargar.php" class="active">descargar</a></li>
+                                        <li><a href="post-salud.php" class="active">salud</a></li>
                                     </ul>
                                 </div>
 
-                                <h1 itemprop="headline">Noticias sobre descargar</h1>
+                                <h1 itemprop="headline">Noticias sobre la salud</h1>
 
                                 <div class="post-info"></div>
 
@@ -373,9 +383,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/descargar/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/salud/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="nota-des.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
+                                                <a href="post-salud.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -392,7 +402,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" title="">
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['1'] ?></h4>
                                                         </a>
 
@@ -404,7 +414,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['1'] ?>...
                                                             </p>
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="btn-theme">Continuar Leyendo...</a>
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -429,9 +439,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/descargar/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/salud/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="nota-des.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
+                                                <a href="post-salud.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -448,7 +458,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['2'] ?></h4>
                                                         </a>
 
@@ -460,7 +470,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['2'] ?>...
                                                             </p>
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuar Leyendo...</a>
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -485,9 +495,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/descargar/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="nota-des.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
+                                                <a href="post-salud.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -504,7 +514,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" title="">
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['3'] ?></h4>
                                                         </a>
 
@@ -516,7 +526,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['3'] ?>...
                                                             </p>
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuar Leyendo...</a>
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -541,9 +551,9 @@
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/descargar/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
+                                                <img src="../login/administration/admin/secciones/salud/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="nota-des.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
+                                                <a href="post-salud.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -560,7 +570,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" title="">
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['4'] ?></h4>
                                                         </a>
 
@@ -572,7 +582,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['4'] ?>...
                                                             </p>
-                                                            <a href="nota-des.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuar Leyendo...</a>
+                                                            <a href="post-salud.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
