@@ -236,7 +236,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -307,29 +307,7 @@
 
                           
 
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a5" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
-                                    <li><a href="home-styles/blog.html">¿Qué somos?</a></li>
-                                    <li><a href="home-styles/blog.html">Preguntas Frecuentes</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
                            
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
 
                         </ul>
 

@@ -1,8 +1,8 @@
 ﻿<?php 
-    include('php_conexion.php');
-    if(!empty($_GET['id'])){
-        $id=$_GET['id'];
-        $sqlx=mysql_query("SELECT * FROM noticias WHERE id=$id");
+   include('php_conexion.php');
+    if(!empty($_GET['noticia'])){
+        $noticia=$_GET['noticia'];
+        $sqlx=mysql_query("SELECT * FROM noticias WHERE id=$noticia");
         if($datox=mysql_fetch_array($sqlx)){
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
             $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
@@ -260,7 +260,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -414,7 +414,7 @@
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                         
 
-                               <img src="../login/administration/admin/secciones/noticiast/<?php echo $id.'.jpg'; ?>" width="550" height="550">
+                               <img src="../login/administration/admin/secciones/noticiast/<?php echo $noticia.'.jpg'; ?>" width="550" height="550">
                                 
                                         
                                     </figure>

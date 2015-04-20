@@ -65,6 +65,16 @@
         $v6_intro[$x6]=$datos6['intro'];
         $v6_fecha[$x6]=$datos6['fecha'];
     }
+
+       $x8=0;
+    $sqlx8=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews ORDER BY my_date desc");
+        while($datos8=mysql_fetch_array($sqlx8)){
+        $x8++;
+        $v8_foto[$x8]=$datos8['id'];
+        $v8_titulo[$x8]=$datos8['titulo'];
+        $v8_intro[$x8]=$datos8['intro'];
+        $v8_fecha[$x8]=$datos8['fecha'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -260,7 +270,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -376,25 +386,7 @@
             <!-- main content -->
             <div class="span6 main-content">
 
-                <!-- Breaking News -->
-                <section class="breaking-news-widget">
-                    <div class="row-fluid">
-
-                        <div class="title">
-                            <h3>Ultimas</h3>
-                        </div>
-                        <div id="divBreakingNewsTicker" class="content">
-                            <ul id="js-news" class="js-hidden">
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6"><?php echo $v_titulo['1'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5"><?php echo $v_titulo['2'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4"><?php echo $v_titulo['3'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3"><?php echo $v_titulo['4'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['5'] ?>&id=2"><?php echo $v_titulo['5'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['6'] ?>&id=1"><?php echo $v_titulo['6'] ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                
 
                 <!-- main content -->
                 <article class="article-container" itemscope itemtype="http://schema.org/Article">
@@ -406,7 +398,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="videojuegos.php" class="active">VideoJuegos</a></li>
                                     </ul>
                                 </div>
 
@@ -683,20 +675,20 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Reviews</span>                                                            </div>
 
                                                             <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['1'] ?></h5>
+                                                                <h5 class="title"><?php echo $v8_titulo['6'] ?></h5>
 
                                                                 <div class="info">
                                                                                                                                 </div>
 
-                                                                <p class="text"><?php echo $v_intro['1'] ?> ...</p>
+                                                                <p class="text"><?php echo $v8_intro['6'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -705,9 +697,9 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Reviews</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['2'] ?></h5>
@@ -718,7 +710,7 @@
                                                                 <p class="text"><?php echo $v_intro['2'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['2'] ?>&id=2" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -730,9 +722,9 @@
                                                    <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>VideoJuegos</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
@@ -743,7 +735,7 @@
                                                                 <p class="text"><?php echo $v_intro['3'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['3'] ?>&id=7" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
@@ -752,9 +744,9 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>VideoJuegos</span>                                                            </div>
 
                                                             <div class="description visible-part">
                                                                 <h5 class="title"><?php echo $v_titulo['4'] ?></h5>
@@ -765,7 +757,7 @@
                                                                 <p class="text"><?php echo $v_intro['4'] ?> ...</p>
                                                             </div>
 
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
+                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['4'] ?>&id=6" class="more" title=""></a>
                                                         </div>
                                                     </article>
                                                 </li>
