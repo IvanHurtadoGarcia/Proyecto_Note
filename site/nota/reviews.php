@@ -1,27 +1,22 @@
-﻿<?php 
-    include('../php_conexion.php'); 
-    $n=0;
-    $sqll=mysql_query("SELECT * FROM titulos");
-    while($dato=mysql_fetch_array($sqll)){
-        $n++;
-        $v2_titulop[$n]=$dato['titulo'];
-        $v_cuadro[$n]=$dato['cuadro'];
-    }
-    
-     
-    $x2=0;
-    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews ORDER BY my_date desc ");
-        while($datos2=mysql_fetch_array($sqlx2)){
-        $x2++;
-        $v2_foto[$x2]=$datos2['id'];
-        $v2_titulo[$x2]=$datos2['titulo'];
-        $v2_intro[$x2]=$datos2['intro'];
-        $v2_fecha[$x2]=$datos2['fecha'];
-    }
-    
+﻿<?php
+        
+        include('../php_conexion.php'); 
+        $n=0;
+        $sqll=mysql_query("SELECT * FROM titulos");
+        while($dato=mysql_fetch_array($sqll)){
+            $n++;
+            $v_titulop[$n]=$dato['titulo'];
+            $v_cuadro[$n]=$dato['cuadro'];
+        }
+        if(!empty($_GET['codigo'])){
+            $codigo=$_GET['codigo'];
+        }else{
+            $codigo=0;
+        }
 
-    
+
 ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -247,9 +242,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                   <li><a href="technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="reviews.php" title="">Reviews</a></li>
+                                  <li><a href="technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -357,13 +352,18 @@
                             <span class="clearfix"></span>
 
                             <div class="blog">
+                                <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
                                 <ul class="media-list">
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/reviews/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
-
-                                                <a href="reviewdata.php?titulo=<?php echo $v2_titulo['1'] ?>&id=9" class="more"></a>
+                                                
+                                                <img src="../login/administration/admin/secciones/reviews/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
+                                                <a href="reviewdata.php?<?php echo $datox['titulo']; ?>&noticia=<?php echo $datox['id']; ?>" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -373,15 +373,15 @@
                                                         <div class="date-meta">
                                                             <div class="post-date">
                                                                 <div class="date">
-                                                                  <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v2_fecha['1'] ?></p></b>
+                                                                  <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $datox['fecha']; ?></p></b>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['1'] ?>&id=9" title="">
-                                                            <h4 class="media-heading"><?php echo $v2_titulo['1'] ?></h4>
+                                                            <a href="reviewdata.php?<?php echo $datox['titulo']; ?>&noticia=<?php echo $datox['id']; ?>" title="">
+                                                            <h4 class="media-heading"><?php echo $datox['titulo']; ?></h4>
                                                         </a>
 
                                                         <div class="post-meta clearfix">
@@ -390,9 +390,9 @@
 
                                                         <div class="media">
                                                             <p class="blog-desc">
-                                                                <?php echo $v2_intro['1'] ?>...
+                                                                <?php echo $datox['intro']; ?>...
                                                             </p>
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['1'] ?>&id=9" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="reviewdata.php?<?php echo $datox['titulo']; ?>&noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -414,175 +414,14 @@
                                         </article>
                                     </li>
 
-                                    <li class="media blog-item">
-                                        <article>
-                                            <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/reviews/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
-
-                                                <a href="reviewdata.php?titulo=<?php echo $v2_titulo['1'] ?>&id=9" class="more"></a>
-                                            </div>
-
-                                            <div class="row-fluid">
-                                            <div class="media-body span12">
-                                                <div class="row-fluid">
-                                                    <div class="span2 blog-date">
-                                                        <div class="date-meta">
-                                                            <div class="post-date">
-                                                                <div class="date">
-                                                                  <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v2_fecha['2'] ?></p></b>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>    
-
-                                                    <div class="span10 blog-desc-container">
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['2'] ?>&id=8" title="">
-                                                            <h4 class="media-heading"><?php echo $v2_titulo['2'] ?></h4>
-                                                        </a>
-
-                                                        <div class="post-meta clearfix">
-                                                            
-                                                        </div>
-
-                                                        <div class="media">
-                                                            <p class="blog-desc">
-                                                                <?php echo $v2_intro['2'] ?>...
-                                                            </p>
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['2'] ?>&id=8" class="btn-theme">Continuuar Leyendo...</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                            </div>
-
-                                            <div class="clearfix"></div>
-
-                                            <footer class="row-fluid social-share-footer">
-                                                <span class="share-icon icon-caret-right"></span>
-
-                                                <div class="share-icons">
-                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script><script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
-                                                </div>
-
-                                            </footer>
-
-                                        </article>
-                                    </li>
-
-                                    <li class="media blog-item">
-                                        <article>
-                                            <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/reviews/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
-
-                                                <a href="reviewdata.php?titulo=<?php echo $v2_titulo['3'] ?>&id=7" class="more"></a>
-                                            </div>
-
-                                            <div class="row-fluid">
-                                            <div class="media-body span12">
-                                                <div class="row-fluid">
-                                                    <div class="span2 blog-date">
-                                                        <div class="date-meta">
-                                                            <div class="post-date">
-                                                                <div class="date">
-                                                                  <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v2_fecha['3'] ?></p></b>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>    
-
-                                                    <div class="span10 blog-desc-container">
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['3'] ?>&id=7" title="">
-                                                            <h4 class="media-heading"><?php echo $v2_titulo['3'] ?></h4>
-                                                        </a>
-
-                                                        <div class="post-meta clearfix">
-                                                            
-                                                        </div>
-
-                                                        <div class="media">
-                                                            <p class="blog-desc">
-                                                                <?php echo $v2_intro['3'] ?>...
-                                                            </p>
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['3'] ?>&id=7" class="btn-theme">Continuuar Leyendo...</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                            </div>
-
-                                            <div class="clearfix"></div>
-
-                                            <footer class="row-fluid social-share-footer">
-                                                <span class="share-icon icon-caret-right"></span>
-
-                                                <div class="share-icons">
-                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script><script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
-                                                </div>
-
-                                            </footer>
-
-                                        </article>
-                                    </li>
-
-                                    <li class="media blog-item">
-                                        <article>
-                                            <div class="span12 img-container" title="">
-                                                <img src="../login/administration/admin/secciones/reviews/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
-
-                                                <a href="reviewdata.php?titulo=<?php echo $v2_titulo['4'] ?>&id=6" class="more"></a>
-                                            </div>
-
-                                            <div class="row-fluid">
-                                            <div class="media-body span12">
-                                                <div class="row-fluid">
-                                                    <div class="span2 blog-date">
-                                                        <div class="date-meta">
-                                                            <div class="post-date">
-                                                                <div class="date">
-                                                                  <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v2_fecha['4'] ?></p></b>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>    
-
-                                                    <div class="span10 blog-desc-container">
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['4'] ?>&id=6" title="">
-                                                            <h4 class="media-heading"><?php echo $v2_titulo['4'] ?></h4>
-                                                        </a>
-
-                                                        <div class="post-meta clearfix">
-                                                            
-                                                        </div>
-
-                                                        <div class="media">
-                                                            <p class="blog-desc">
-                                                                <?php echo $v2_intro['4'] ?>...
-                                                            </p>
-                                                            <a href="reviewdata.php?titulo=<?php echo $v2_titulo['4'] ?>&id=6" class="btn-theme">Continuuar Leyendo...</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                            </div>
-
-                                            <div class="clearfix"></div>
-
-                                            <footer class="row-fluid social-share-footer">
-                                                <span class="share-icon icon-caret-right"></span>
-
-                                                <div class="share-icons">
-                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script><script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
-                                                </div>
-
-                                            </footer>
-
-                                        </article>
-                                    </li>
-
-                                    
+                                   <?php } 
+                                  $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+                                 if(!$datox=mysql_fetch_array($sqlx)){
+                                  echo '<div class="alert alert-error" align="center">
+                                <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                               </div>';               
+                                     }
+                                     ?>
                                 </ul>
 
 

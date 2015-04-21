@@ -231,7 +231,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="site/index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -242,9 +242,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                  <li><a href="technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="reviews.php" title="">Reviews</a></li>
+                                  <li><a href="technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -363,7 +363,7 @@
                                             <div class="span12 img-container" title="">
                                                 
                                                 <img src="../login/administration/admin/secciones/noticiast/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
-                                                <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
+                                                <a href="tecnologias.php?<?php echo $datox['titulo']; ?>&noticia=<?php echo $datox['id']; ?>" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -380,7 +380,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                            <a href="tecnologias.php?<?php echo $datox['titulo']; ?>&noticia=<?php echo $datox['id']; ?>" title="">
                                                             <h4 class="media-heading"><?php echo $datox['titulo']; ?></h4>
                                                         </a>
 
@@ -392,7 +392,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $datox['intro']; ?>...
                                                             </p>
-                                                            <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="tecnologias.php?<?php echo $datox['titulo']; ?>&noticia=<?php echo $datox['id']; ?>"class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>

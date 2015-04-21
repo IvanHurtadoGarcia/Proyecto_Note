@@ -1,16 +1,23 @@
 <?php 
     include('php_conexion.php'); 
-    $n=0;
-    $sqll=mysql_query("SELECT * FROM titulos");
-    while($dato=mysql_fetch_array($sqll)){
-        $n++;
-        $v_titulop[$n]=$dato['titulo'];
-        $v_cuadro[$n]=$dato['cuadro'];
-    }
+        $n=0;
+        $sqll=mysql_query("SELECT * FROM titulos");
+        while($dato=mysql_fetch_array($sqll)){
+            $n++;
+            $v_titulop[$n]=$dato['titulo'];
+            $v_cuadro[$n]=$dato['cuadro'];
+        }
+        if(!empty($_GET['codigo'])){
+            $codigo=$_GET['codigo'];
+        }else{
+            $codigo=0;
+        }
+
     $x=0;
     $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
+        $v_cod[$x]=$datos['id'];
         $v_foto[$x]=$datos['id'];
         $v_titulo[$x]=$datos['titulo'];
         $v_intro[$x]=$datos['intro'];
@@ -21,6 +28,7 @@
     $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM videojuegos ORDER BY my_date desc ");
         while($datos2=mysql_fetch_array($sqlx2)){
         $x2++;
+        $v2_cod[$x2]=$datos2['id'];
         $v2_foto[$x2]=$datos2['id'];
         $v2_titulo[$x2]=$datos2['titulo'];
         $v2_intro[$x2]=$datos2['intro'];
@@ -30,6 +38,7 @@
     $sqlx3=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM reviews ORDER BY my_date desc");
         while($datos3=mysql_fetch_array($sqlx3)){
         $x3++;
+        $v3_cod[$x3]=$datos3['id'];
         $v3_foto[$x3]=$datos3['id'];
         $v3_titulo[$x3]=$datos3['titulo'];
         $v3_intro[$x3]=$datos3['intro'];
@@ -292,8 +301,8 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="nota/technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="nota/videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="nota/reviews.php" title="">Reviews</a></li>
+                                    <li><a href="nota/videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="nota/reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -379,7 +388,7 @@
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="nota/tecnologias.php?id=1"><?php echo $v_titulo['1'] ?></a></li>
+                                <li><a href="nota/tecnologias.php?<?php echo $v_titulo['1'] ?>&noticia=<?php echo $v_cod[1]; ?>"><?php echo $v_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-video.html"><?php echo $v2_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-soundcloud.html"><?php echo $v3_titulo['1'] ?></a></li>
                                 <li><a href="post-formats/post-googlemap.html"><?php echo $v4_titulo['1'] ?></a></li>
@@ -392,13 +401,16 @@
                 
 
                 <!-- Slider -->
+
                 <section class="pic-slider">
+
                     <h2 class="hidden">Slider Section</h2>
 
                     <div class="row-fluid modern-items-list">
                         <div id="mainSlider1" class="flexslider large">
                             <ul class="slides">
                                 <li>
+
                                     <article class="fold-item span12">
                                         <div class="clearfix">
                                             <img src="login/administration/admin/secciones/noticiast/<?php echo $v_foto[1].'.jpg'; ?>" height="345" width="604">
@@ -420,7 +432,7 @@
                                                 <p class="text"><?php echo $v_intro[1]; ?></p>
                                             </div>
 
-                                            <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['6'] ?>&id=6" class="more" title=""></a>
+                                            <a href="nota/tecnologias.php?<?php echo $v_titulo['1'] ?>&noticia=<?php echo $v_cod[1]; ?>"class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -445,7 +457,7 @@
                                                  <p class="text"><?php echo $v_intro[2]; ?></p>
                                             </div>
 
-                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['5'] ?>&id=5" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?<?php echo $v_titulo['2'] ?>&noticia=<?php echo $v_cod[2]; ?>" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -469,7 +481,7 @@
                                              <p class="text"><?php echo $v_intro[3]; ?></p>
                                             </div>
 
-                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=4" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?<?php echo $v_titulo['3'] ?>&noticia=<?php echo $v_cod[3]; ?>"class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -492,7 +504,7 @@
                                              <p class="text"><?php echo $v_intro[4]; ?></p>
                                             </div>
 
-                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=3" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?<?php echo $v_titulo['5'] ?>&noticia=<?php echo $v_cod[4]; ?>" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -515,7 +527,7 @@
                                              <p class="text"><?php echo $v_intro[5]; ?></p>
                                             </div>
 
-                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=2" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?<?php echo $v_titulo['5'] ?>&noticia=<?php echo $v_cod[5]; ?>" class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -538,7 +550,7 @@
                                              <p class="text"><?php echo $v_intro[6]; ?></p>
                                             </div>
 
-                                           <a href="nota/tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=1" class="more" title=""></a>
+                                           <a href="nota/tecnologias.php?<?php echo $v_titulo['6'] ?>&noticia=<?php echo $v_cod[6]; ?>"class="more" title=""></a>
                                         </div>
                                     </article>
                                 </li>
@@ -611,13 +623,13 @@
                                         </div>
                                     </div>
 
-                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['1'] ?>&id=9" class="more"></a>
+                                    <a href="nota/reviewdata.php?<?php echo $v3_titulo['1'] ?>&noticia=<?php echo $v3_cod[1]; ?>" class="more"></a>
                                 </div>
 
                                 <div class="span7">
                                     <div class="post-info">
                                         <div class="post-title clearfix">
-                                            <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['1'] ?>&id=9" title="Leer">
+                                            <a href="nota/reviewdata.php?<?php echo $v3_titulo['1'] ?>&noticia=<?php echo $v3_cod[1]; ?>" title="Leer">
                                                 <h4 class="pull-left"><?php echo $v3_titulo['1'] ?></h4>
                                             </a>
                                         </div>
@@ -661,7 +673,7 @@
                                                                         <p class="text"><?php echo $v3_intro['2'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['2'] ?>&id=8" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?<?php echo $v3_titulo['2'] ?>&noticia=<?php echo $v3_cod[2]; ?>"class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -681,7 +693,7 @@
                                                                         <p class="text"><?php echo $v3_intro['3'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['3'] ?>&id=7" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?<?php echo $v3_titulo['3'] ?>&noticia=<?php echo $v3_cod[3]; ?>"class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -703,7 +715,7 @@
                                                                         <p class="text"><?php echo $v3_intro['4'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['4'] ?>&id=6" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?<?php echo $v3_titulo['4'] ?>&noticia=<?php echo $v3_cod[4]; ?>" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -723,7 +735,7 @@
                                                                         <p class="text"><?php echo $v3_intro['5'] ?>...</p>
                                                                     </div>
 
-                                                                    <a href="nota/reviewdata.php?titulo=<?php echo $v3_titulo['5'] ?>&id=5" class="more" title=""></a>
+                                                                    <a href="nota/reviewdata.php?<?php echo $v3_titulo['5'] ?>&noticia=<?php echo $v3_cod[5]; ?>" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -771,10 +783,10 @@
                                                         </div>
                                                     </div>
 
-                                                    <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
+                                                    <a href="nota/juegos.php?<?php echo $v2_titulo['1'] ?>&noticia=<?php echo $v2_cod[1]; ?>" class="more"></a>
                                                 </div>
 
-                                                <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="clearfix" title="Articulo Completo">
+                                                <a href="nota/juegos.php?<?php echo $v2_titulo['1'] ?>&noticia=<?php echo $v2_cod[1]; ?>" class="clearfix" title="Articulo Completo">
                                                     <h4><?php echo $v2_titulo['1'] ?></h4>
                                                 </a>
                                             </div>
@@ -813,7 +825,7 @@
                                                                             <p class="text"><?php echo $v2_intro[2]; ?>...</p>
                                                                         </div>
 
-                                                                        <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more" title=""></a>
+                                                                        <a href="nota/juegos.php?<?php echo $v2_titulo['2'] ?>&noticia=<?php echo $v2_cod[2]; ?>"class="more" title=""></a>
                                                                     </div>
                                                                 </article>
                                                             </li>
@@ -831,7 +843,7 @@
                                                                             <p class="text"><?php echo $v2_intro[3]; ?>...</p>
                                                                          </div>
 
-                                                                        <a href="nota/juegos.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1"class="more" title=""></a>
+                                                                        <a href="nota/juegos.php?<?php echo $v2_titulo['3'] ?>&noticia=<?php echo $v2_cod[3]; ?>"class="more" title=""></a>
                                                                     </div>
 
                                                                 </article>
