@@ -10,7 +10,7 @@
     
      
     $x2=0;
-    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc ");
+    $sqlx2=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM nacional ORDER BY my_date desc ");
         while($datos2=mysql_fetch_array($sqlx2)){
         $x2++;
         $v2_foto[$x2]=$datos2['id'];
@@ -355,11 +355,11 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="internacional.php" class="active">Internacional</a></li>
+                                        <li><a href="nacional.php" class="active">Nacional</a></li>
                                     </ul>
                                 </div>
 
-                                <h1 itemprop="headline">Noticias Internacional</h1>
+                                <h1 itemprop="headline">Noticias Nacional</h1>
 
                                 <div class="post-info"></div>
 
@@ -374,7 +374,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[1].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
+                                                <a href="nacio.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -391,7 +391,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" title="">
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['1'] ?></h4>
                                                         </a>
 
@@ -403,7 +403,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['1'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['1'] ?>&id=3" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -430,7 +430,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[2].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
+                                                <a href="nacio.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -447,7 +447,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['2'] ?></h4>
                                                         </a>
 
@@ -459,7 +459,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['2'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['2'] ?>&id=2" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -486,7 +486,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[3].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
+                                                <a href="nacio.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -503,7 +503,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" title="">
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['3'] ?></h4>
                                                         </a>
 
@@ -515,7 +515,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['3'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['3'] ?>&id=1" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -542,7 +542,7 @@
                                             <div class="span12 img-container" title="">
                                                 <img src="../login/administration/admin/secciones/internacional/<?php echo $v2_foto[4].'.jpg'; ?>" height="345" width="604">
 
-                                                <a href="inter.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
+                                                <a href="nacio.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -550,6 +550,8 @@
                                                 <div class="row-fluid">
                                                     <div class="span2 blog-date">
                                                         <div class="date-meta">
+
+                                                    
                                                             <div class="post-date">
                                                                 <div class="date">
                                                                   <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $v2_fecha['4'] ?></p></b>
@@ -559,7 +561,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" title="">
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" title="">
                                                             <h4 class="media-heading"><?php echo $v2_titulo['4'] ?></h4>
                                                         </a>
 
@@ -571,7 +573,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $v2_intro['4'] ?>...
                                                             </p>
-                                                            <a href="inter.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="nacio.php?titulo=<?php echo $v2_titulo['4'] ?>&id=4" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
