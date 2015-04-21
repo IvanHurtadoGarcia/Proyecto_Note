@@ -1,7 +1,7 @@
 ﻿<?php 
     include('php_conexion.php');
-    if(!empty($_GET['id'])){
-        $id=$_GET['id'];
+    if(!empty($_GET['noticia'])){
+        $id=$_GET['noticia'];
         $sqlx=mysql_query("SELECT * FROM videojuegos WHERE id=$id");
         if($datox=mysql_fetch_array($sqlx)){
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
@@ -281,9 +281,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="reviews.php" title="">Reviews</a></li>
+                                    <li><a href="technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
