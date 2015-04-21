@@ -166,7 +166,7 @@
 
                    }else if($tipo=="5"){
 
-                    $can=mysql_query("SELECT MAX(id) as numero FROM recomendacionesm");
+                    $can=mysql_query("SELECT MAX(id) as numero FROM recomentacionesm");
                 if($dato=mysql_fetch_array($can)){
                     $id=$dato['numero']+1;
                 }else{

@@ -1,5 +1,4 @@
-
-<?php
+﻿<?php
         session_start();
         include('../php_conexion.php'); 
         $n=0;
@@ -21,7 +20,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>NoteInsideNetwork-Fotografia</title>
+    <title>NoteInsideNetwork</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -258,9 +257,11 @@
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="../post-formats/post-eventosdatos.php?codigo=4">Eventos</a></li>
-                                    <li><a href="../post-formats/post-fotografiadatos.php?codigo=6">Fotografía</a></li>
-                                    <li><a href="../post-formats/post-saluddatos.php?codigo=8">Salud</a></li>
+                                    <li><a href="home-styles/blog.html">Eventos</a></li>
+                                    <li><a href="home-styles/blog.html">Recomendaciones Musicales</a></li>
+                                    <li><a href="home-styles/blog.html">Fotografía</a></li>
+                                    <li><a href="home-styles/blog.html">Video</a></li>
+                                    <li><a href="home-styles/blog.html">Salud</a></li>
                                    
 
                                 </ul>
@@ -287,9 +288,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="../noticias/lecturas.php?codigo=15#">Lecturas</a></li>
-                                    <li><a href="../noticias/descargar.php?codigo=13#">Descargas</a></li>
-                                    <li><a href="../noticias/random.php?codigo=15#">Random</a></li>
+                                    <li><a href="home-styles/lecturas.html">Lecturas</a></li>
+                                    <li><a href="home-styles/descargar.html">Descargas</a></li>
+                                    <li><a href="home-styles/random.html">Random</a></li>
                                     
 
 
@@ -316,8 +317,6 @@
     </nav>
 
 
-
-
     <div class="container-fluid" itemscope itemtype="http://schema.org/CreativeWork">
 
         <!-- Main Content -->
@@ -340,11 +339,11 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="post-fotografia.php" class="active">Fotografia</a></li>
+                                        <li><a href="technews.php" class="active">Noticias de Tecnol&oacute;gia</a></li>
                                     </ul>
                                 </div>
 
-                                <h1 itemprop="headline">Fotografia</h1>
+                                <h1 itemprop="headline">Noticias de Tecnol&oacute;gia</h1>
 
                                 <div class="post-info"></div>
 
@@ -353,19 +352,18 @@
                             <span class="clearfix"></span>
 
                             <div class="blog">
-
-<?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM fotografia WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+                                <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM eventos WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
-                              <ul class="media-list">
+                                <ul class="media-list">
                                     <li class="media blog-item">
                                         <article>
                                             <div class="span12 img-container" title="">
                                                 
-                                                <img src="../login/administration/admin/secciones/fotografia/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
-                                                <a href="post-fotografia.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
+                                                <img src="../login/administration/admin/secciones/eventos/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
+                                                <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -382,7 +380,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="post-fotografia.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                            <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" title="">
                                                             <h4 class="media-heading"><?php echo $datox['titulo']; ?></h4>
                                                         </a>
 
@@ -394,7 +392,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $datox['intro']; ?>...
                                                             </p>
-                                                            <a href="post-fofografia.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -417,14 +415,13 @@
                                     </li>
 
                                    <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM fofografia WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM eventos WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
                  </div>';               
     }
                ?>
-                                    
                                 </ul>
 
 
