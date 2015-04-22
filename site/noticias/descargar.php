@@ -336,7 +336,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="descargar.php?codigo=13" class="active">descargar</a></li>
+                                        <li><a href="descargar.php?codigo=13" class="active">descargas</a></li>
                                     </ul>
                                 </div>
 
