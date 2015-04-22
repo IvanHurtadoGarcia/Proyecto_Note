@@ -946,7 +946,7 @@
                                                                             <p class="text"><?php echo $datox['intro']; ?>...</p>
                                                                         </div>
 
-                                                                        <a "noticias/nota-des.php?noticia=<?php echo $datox['id']; ?>" class="more" title=""></a>
+                                                                        <a href="noticias/nota-des.php?noticia=<?php echo $datox['id']; ?>" class="more" title=""></a>
                                                                     </div>
                                                                 </article>
 
