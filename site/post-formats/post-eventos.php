@@ -257,10 +257,10 @@
 
                         <ul class="nav">
 
-                            <li class="dropdown active" role="menu" aria-labelledby="dLabel">
+                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="site/index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -726,7 +726,7 @@
                 <h2 class="hidden">Left Sidebar</h2>
 
                 <!-- Posts Of The Day -->
-                <aside class="widget w-posts">
+                <!--<aside class="widget w-posts">
                     <div class="widget-title">
                         <h4>Descargas</h4>
                     </div>
@@ -796,7 +796,7 @@
                             </div>
                         </div>
                     </div>
-                </aside>
+                </aside>-->
 
 
                 <!-- Social Counter -->
