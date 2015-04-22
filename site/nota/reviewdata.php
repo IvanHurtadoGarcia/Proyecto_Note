@@ -324,9 +324,6 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                               <ul class="dropdown-menu">
-                                    <li><a href="../noticias/lecturas.php?codigo=12#">Lecturas</a></li>
-                                    <li><a href="../noticias/descargar.php?codigo=13#">Descargas</a></li>
-                                    <li><a href="../noticias/random.php?codigo=14#">Random</a></li>
                                     
 
 

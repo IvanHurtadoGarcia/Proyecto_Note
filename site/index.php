@@ -314,10 +314,12 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
-                             <ul class="dropdown-menu">
-                                    <li><a href="post-formats/post-eventosdatos.php?codigo=4" title="">Eventos</a></li>
-                                    <li><a href="post-formats/post-fotografiadatos.php?codigo=6" title="">Fotografia </a></li>
-                                    <li><a href="post-formats/post-saluddatos.php?codigo=8" title="">Salud</a></li>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="post-formats/post-eventosdatos.php?codigo=4">Eventos</a></li>
+                                    <li><a href="post-formats/post-fotografiadatos.php?codigo=6">Fotografía</a></li>
+                                    <li><a href="post-formats/post-saluddatos.php?codigo=8">Salud</a></li>
+                                   
+
                                 </ul>
                             </li>
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
@@ -326,9 +328,9 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/internacional.php">Internacional</a></li>
-                                    <li><a href="noticias/nacional.php">Nacional</a></li>
-                                    <li><a href="noticias/opinion.php">Opinion</a></li>
+                                    <li><a href="site/noticias/internacional.php">Internacional</a></li>
+                                    <li><a href="site/noticias/nacional.php">Nacional</a></li>
+                                    <li><a href="site/noticias/opinion.php">Opinion</a></li>
                                     
 
 
@@ -342,9 +344,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="../noticias/lecturas.php?codigo=12#">Lecturas</a></li>
-                                    <li><a href="../noticias/descargar.php?codigo=13#">Descargas</a></li>
-                                    <li><a href="../noticias/random.php?codigo=14#">Random</a></li>
+                                    <li><a href="../site/noticias/lecturas.php?codigo=12#">Lecturas</a></li>
+                                    <li><a href="../site/noticias/descargar.php?codigo=13#">Descargas</a></li>
+                                    <li><a href="../site/noticias/random.php?codigo=14#">Random</a></li>
                                     
 
 
