@@ -260,7 +260,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -299,9 +299,10 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/internacional.php">Internacional</a></li>
-                                    <li><a href="noticias/nacional.php">Nacional</a></li>
-                                    <li><a href="noticias/opinion.php">Opinion</a></li>
+                                    <li><a href="../site/noticias/internacional.php">Internacional</a></li>
+                                    <li><a href="../site/noticias/nacional.php">Nacional</a></li>
+                                    <li><a href="../site/noticias/opinion.php">Opinion</a></li>
+
                                     
 
 

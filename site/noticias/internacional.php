@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
     include('../php_conexion.php'); 
     $n=0;
     $sqll=mysql_query("SELECT * FROM titulos");
@@ -236,7 +236,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -262,7 +262,7 @@
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/blog.html">Eventos</a></li>
+                                    <li><a href="post-eventos">Eventos</a></li>
                                     <li><a href="home-styles/blog.html">Recomendaciones Musicales</a></li>
                                     <li><a href="home-styles/blog.html">Fotografía</a></li>
                                     <li><a href="home-styles/blog.html">Video</a></li>
