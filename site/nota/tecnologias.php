@@ -668,7 +668,7 @@
 
 
 
-                <!-- Random Posts (Classic) -->
+               <!-- Random Posts (Classic) -->
                 <aside class="widget w-posts">
                     <div class="widget-title">
                         <h4>Random</h4>
@@ -676,91 +676,42 @@
 
                     <div class="widget-content clearfix">
                         <div class="posts-in-widget">
+                            <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date desc LIMIT 9");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
                             <ul class="media-list">
                                 <li class="media">
                                     <article>
-                                        <a href="post-formats/post-image-lightbox.html" class="span3" title="">
+                                        <a href="nota-ram.php?noticia=<?php echo $datox['id']; ?>" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[1].'.jpg'; ?>" height="65" width="65">
+                                                <img src="../login/administration/admin/secciones/random/<?php echo $datox['id'].'.jpg'; ?>" height="65" width="65">
                                                 
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-image-lightbox.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['1'] ?></h5>
+                                            <a href="nota-ram.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                <h5 class="media-heading"><?php echo $datox['titulo']; ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['1'] ?></span>
+                                                <span title=""><i class="bo-icon-time"></i><?php echo $datox['fecha']; ?></span>
                                             </div>
                                         </div>
                                     </article>
                                 </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-self-audio.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[2].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-self-audio.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['2'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['2'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-soundcloud.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[3].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-soundcloud.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['3'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['3'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-googlemap.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                                <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[4].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-googlemap.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['4'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['4'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
+    <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date desc LIMIT 9");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
+                                
                             </ul>
                         </div>
                     </div>
