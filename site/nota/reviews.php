@@ -256,12 +256,10 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="home-styles/blog.html">Eventos</a></li>
-                                    <li><a href="home-styles/blog.html">Recomendaciones Musicales</a></li>
-                                    <li><a href="home-styles/blog.html">Fotografía</a></li>
-                                    <li><a href="home-styles/blog.html">Video</a></li>
-                                    <li><a href="home-styles/blog.html">Salud</a></li>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="../post-formats/post-eventosdatos.php?codigo=4">Eventos</a></li>
+                                    <li><a href="../post-formats/post-fotografiadatos.php?codigo=6">Fotografía</a></li>
+                                    <li><a href="../post-formats/post-saluddatos.php?codigo=8">Salud</a></li>
                                    
 
                                 </ul>
@@ -288,9 +286,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="home-styles/lecturas.html">Lecturas</a></li>
-                                    <li><a href="home-styles/descargar.html">Descargas</a></li>
-                                    <li><a href="home-styles/random.html">Random</a></li>
+                                    <li><a href="../noticias/lecturas.php?codigo=12#">Lecturas</a></li>
+                                    <li><a href="../noticias/descargar.php?codigo=13#">Descargas</a></li>
+                                    <li><a href="../noticias/random.php?codigo=14#">Random</a></li>
                                     
 
 

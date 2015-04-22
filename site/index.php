@@ -1,5 +1,5 @@
 <?php 
-    include('php_conexion.php'); 
+    include('php_conexion.php');  
         $n=0;
         $sqll=mysql_query("SELECT * FROM titulos");
         while($dato=mysql_fetch_array($sqll)){
@@ -346,9 +346,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/lecturas.php">Lecturas</a></li>
-                                    <li><a href="noticias/descargar.php">Descargas</a></li>
-                                    <li><a href="noticias/random.php">Random</a></li>
+                                    <li><a href="../noticias/lecturas.php?codigo=12#">Lecturas</a></li>
+                                    <li><a href="../noticias/descargar.php?codigo=13#">Descargas</a></li>
+                                    <li><a href="../noticias/random.php?codigo=14#">Random</a></li>
                                     
 
 
@@ -873,11 +873,17 @@
                                 <div class="row-fluid cat-vertical">
 
                                     <div class="span12 last-post clearfix">
+                                                                <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date desc LIMIT 1");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
+                     
                                         <article class="post-info">
                                             <div>
                                                 <div class="span12 img-container">
                                                     
-                                                    <img src="login/administration/admin/secciones/descargas/<?php echo $v4_foto[1].'.jpg'; ?>" height="180" width="294">
+                                                    <img src="login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>" height="180" width="294">
                                                     <div class="img-meta">
                                                         <div class="post-date">
                                                             <div class="date">
@@ -886,11 +892,11 @@
                                                         </div>
                                                     </div>
 
-                                                    <a href="#" class="more"></a>
+                                                    <a href="noticias/nota-des.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
                                                 </div>
 
-                                                <a href="#" class="clearfix" title="Full Post Title">
-                                                    <h4><?php echo $v4_titulo['1'] ?></h4>
+                                                <a href="noticias/nota-des.php?noticia=<?php echo $datox['id']; ?>" class="clearfix" title="<?php echo $datox['titulo']; ?>">
+                                                    <h4><?php echo $datox['titulo']; ?></h4>
                                                 </a>
                                             </div>
 
@@ -899,11 +905,20 @@
                                             </div>
 
                                             <div class="post-desc">
-                                                <p><?php echo $v4_intro['1'] ?> </p>
+                                                <p><?php echo $datox['intro']; ?> </p>
                                             </div>
 
 
                                         </article>
+
+                           <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date desc LIMIT 1");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
                                     </div>
 
                                     <div class="cat-vert-divider"></div>
@@ -916,43 +931,38 @@
                                                     <li>
                                                         <ul class="items left clearfix">
                                                             <li>
+                                                                <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 1");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
                                                                 <article class="fold-item span12">
                                                                     <div class="clearfix">
-                                                                         <img src="login/administration/admin/secciones/descargas/<?php echo $v4_foto[2].'.jpg'; ?>" height="190" width="294">
+                                                                         <img src="login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>"height="190" width="294">
 
                                                                         <div class="description visible-part">
-                                                                            <h5 class="title"><?php echo $v4_titulo['2'] ?></h5>
+                                                                            <h5 class="title"><?php echo $datox['titulo']; ?></h5>
 
                                                                             <div class="info">
                                                                               
                                                                             </div>
 
-                                                                            <p class="text"><?php echo $v4_intro['2'] ?> ...</p>
+                                                                            <p class="text"><?php echo $datox['intro']; ?>...</p>
                                                                         </div>
 
                                                                         <a href="post-formats/post-image.html" class="more" title=""></a>
                                                                     </div>
                                                                 </article>
-                                                            </li>
 
-                                                             <li>
-                                                                <article class="fold-item span12">
-                                                                    <div class="clearfix">
-                                                                         <img src="login/administration/admin/secciones/descargas/<?php echo $v4_foto[3].'.jpg'; ?>" height="190" width="294">
 
-                                                                        <div class="description visible-part">
-                                                                            <h5 class="title"><?php echo $v4_titulo['3'] ?></h5>
-
-                                                                            <div class="info">
-                                                                              
-                                                                            </div>
-
-                                                                            <p class="text"><?php echo $v4_intro['3'] ?> ...</p>
-                                                                        </div>
-
-                                                                        <a href="post-formats/post-image.html" class="more" title=""></a>
-                                                                    </div>
-                                                                </article>
+                           <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 1");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -1208,7 +1218,7 @@
                     </div>
                 </aside>
 
-                <!-- Random Posts (Classic) -->
+                  <!-- Random Posts (Classic) -->
                 <aside class="widget w-posts">
                     <div class="widget-title">
                         <h4>Random</h4>
@@ -1216,92 +1226,42 @@
 
                     <div class="widget-content clearfix">
                         <div class="posts-in-widget">
+                            <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date desc LIMIT 9");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
                             <ul class="media-list">
                                 <li class="media">
                                     <article>
-                                        <a href="noticias/random.php">Random
-                                        <a href="noticias/random.php" class="span3" title="">
+                                        <a href="noticias/nota-ram.php?noticia=<?php echo $datox['id']; ?>" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[1].'.jpg'; ?>" height="65" width="65">
+                                                <img src="login/administration/admin/secciones/random/<?php echo $datox['id'].'.jpg'; ?>" height="65" width="65">
                                                 
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="noticias/random.php" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['1'] ?></h5>
+                                            <a href="noticias/nota-ram.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                <h5 class="media-heading"><?php echo $datox['titulo']; ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['1'] ?></span>
+                                                <span title=""><i class="bo-icon-time"></i><?php echo $datox['fecha']; ?></span>
                                             </div>
                                         </div>
                                     </article>
                                 </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="noticias/random.php" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[2].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="noticias/random.php" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['2'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['2'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="noticias/random.php" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[3].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="noticias/random.php" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['3'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['3'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="noticias/random.php" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                                <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[4].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="noticias/random.php" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['4'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title="Published Time"><i class="bo-icon-time"></i><?php echo $v7_fecha['4'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
+    <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date desc LIMIT 9");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
+                                
                             </ul>
                         </div>
                     </div>

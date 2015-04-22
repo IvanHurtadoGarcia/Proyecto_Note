@@ -230,7 +230,7 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="site/index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -241,9 +241,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                  <li><a href="technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="reviews.php" title="">Reviews</a></li>
+                                  <li><a href="technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
