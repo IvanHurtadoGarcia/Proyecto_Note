@@ -350,25 +350,7 @@
             <!-- main content -->
             <div class="span6 main-content">
 
-                <!-- Breaking News -->
-                <section class="breaking-news-widget">
-                    <div class="row-fluid">
-
-                        <div class="title">
-                            <h3>Ultimas</h3>
-                        </div>
-                        <div id="divBreakingNewsTicker" class="content">
-                            <ul id="js-news" class="js-hidden">
-                                <li><a href="tecnologias.php?<?php echo $v_titulo['1'] ?>&noticia=<?php echo $v_cod[1]; ?>"><?php echo $v_titulo['1'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5"><?php echo $v_titulo['2'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4"><?php echo $v_titulo['3'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3"><?php echo $v_titulo['4'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['5'] ?>&id=2"><?php echo $v_titulo['5'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['6'] ?>&id=1"><?php echo $v_titulo['6'] ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+               
 
                 <!-- main content -->
                 <article class="article-container" itemscope itemtype="http://schema.org/Article">
@@ -541,100 +523,41 @@
                 </p>
                 
 
-                <!-- New In Pictures -->
+               <!-- New In Pictures -->
                  <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>Ultimas en Polit&iacute;ca</h4>
+                        <h4>Ultimas Descargas</h4>
                     </div>
 
                     <div class="widget-content clearfix thumbnails">
+
                         <ul class="posts-in-images clearfix">
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['1'] ?>">
-                                <a href="post-formats/post-image.html">
+                            <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $datox['titulo']; ?>">
+                                <a href="nota-des.php?noticia=<?php echo $datox['id']; ?>">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[1].'.jpg'; ?>" height="75" width="80">
+                                        <img src="../login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
                                         
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['2'] ?>">
-                                <a href="post-formats/post-video.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[2].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['3'] ?>">
-                                <a href="post-formats/post-soundcloud.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[3].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['4'] ?>">
-                                <a href="post-formats/post-image-lightbox.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[4].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['5'] ?>">
-                                <a href="post-formats/post-review.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[5].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['6'] ?>">
-                                <a href="post-formats/post-googlemap.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[6].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['1'] ?>">
-                                <a href="post-formats/post-image-lightbox.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[1].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['2'] ?>">
-                                <a href="post-formats/post-review.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[2].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['3'] ?>">
-                                <a href="post-formats/post-googlemap.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[3].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
+                           <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
                         </ul>
                     </div>
                 </aside>
-
 
                 <!-- Tags Cloud -->
                 
