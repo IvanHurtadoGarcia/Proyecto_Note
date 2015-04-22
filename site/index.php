@@ -1001,10 +1001,10 @@
                     
             ?>
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $datox['titulo']; ?>">
-                                <a href="aqui_va_tu_pagina.php?noticia=<?php echo $datox['id']; ?>">
+                                <a href="../site/nota/inter.php?noticia=<?php echo $datox['id']; ?>">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
+                                        <img src="login/administration/admin/secciones/internacional/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
                                         
                                     </div>
                                 </a>
