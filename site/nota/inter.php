@@ -1,76 +1,27 @@
-﻿<?php 
-    include('../php_conexion.php');
-    if(!empty($_GET['id'])){
-        $id=$_GET['id'];
-        $sqlx=mysql_query("SELECT * FROM internacional WHERE id=$id");
-        if($datox=mysql_fetch_array($sqlx)){
-            $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
-            $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
+
+<?php
+        session_start();
+        include('../php_conexion.php'); 
+        $n=0;
+        $sqll=mysql_query("SELECT * FROM titulos");
+        while($dato=mysql_fetch_array($sqll)){
+            $n++;
+            $v_titulop[$n]=$dato['titulo'];
+            $v_cuadro[$n]=$dato['cuadro'];
         }
-    } 
-    $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc ");
-        while($datos=mysql_fetch_array($sqlx)){
-        $x++;
-        $v_foto[$x]=$datos['id'];
-        $v_titulo[$x]=$datos['titulo'];
-        $v_intro[$x]=$datos['intro'];
-        $v_fecha[$x]=$datos['fecha'];
-    }
+        if(!empty($_GET['codigo'])){
+            $codigo=$_GET['codigo'];
+        }else{
+            $codigo=0;
+        }
 
-    $x2=0;
-    $sqlx2=mysql_query("SELECT * FROM usuarios");
-        while($datos2=mysql_fetch_array($sqlx2)){
-        $x2++;
-        $v_usu[$x2]=$datos2['nombre'];
-        
-    }
 
-    $x7=0;
-    $sqlx7=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random ORDER BY my_date desc");
-        while($datos7=mysql_fetch_array($sqlx7)){
-        $x7++;
-        $v7_foto[$x7]=$datos7['id'];
-        $v7_titulo[$x7]=$datos7['titulo'];
-        $v7_intro[$x7]=$datos7['intro'];
-        $v7_fecha[$x7]=$datos7['fecha'];
-    }
-
-    $x4=0;
-    $sqlx4=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas ORDER BY my_date desc ");
-        while($datos4=mysql_fetch_array($sqlx4)){
-        $x4++;
-        $v4_foto[$x4]=$datos4['id'];
-        $v4_titulo[$x4]=$datos4['titulo'];
-        $v4_intro[$x4]=$datos4['intro'];
-        $v4_fecha[$x4]=$datos4['fecha'];
-    }
-
-    $x5=0;
-    $sqlx5=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM nacional ORDER BY my_date desc");
-        while($datos5=mysql_fetch_array($sqlx5)){
-        $x5++;
-        $v5_foto[$x5]=$datos5['id'];
-        $v5_titulo[$x5]=$datos5['titulo'];
-        $v5_intro[$x5]=$datos5['intro'];
-        $v5_fecha[$x5]=$datos5['fecha'];
-    }
-
-    $x6=0;
-    $sqlx6=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc");
-        while($datos6=mysql_fetch_array($sqlx6)){
-        $x6++;
-        $v6_foto[$x6]=$datos6['id'];
-        $v6_titulo[$x6]=$datos6['titulo'];
-        $v6_intro[$x6]=$datos6['intro'];
-        $v6_fecha[$x6]=$datos6['fecha'];
-    }
 ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>NoteInsideNetwork | Tecnol&oacute;gias</title>
+    <title>NoteInsideNetwork-Internacional</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -79,7 +30,7 @@
 
     <!-- Styles Should be After Script -->
     <link rel="stylesheet" href="../style.css" />
-
+    <link rel="shortcut icon" href="../images/favicon.png">
     <link id="cssThemeColor" rel="stylesheet" href="#" />
 
     <!--[if IE 7]>
@@ -96,14 +47,7 @@
 
 <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
     <nav class="top-menu-2">
         <div class="row-fluid">
             <div class="navbar navbar-inverse">
@@ -120,105 +64,127 @@
 
                             <ul class="nav">
 
-                               
-                            <ul class="nav pull-right">
 
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>NoteInsideNetwork <i class="icon-angle-down" style="margin-right: 0"></i></a>
+                                <ul class="nav pull-right">
 
-                                    <ul class="dropdown-menu about-company">
-                                        <li>
-                                            <div class="row-fluid">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-delay="200"><i class="bo-icon-info-sign bo-icon-white"></i>NoteInsideNetwork <i class="icon-angle-down" style="margin-right: 0"></i></a>
 
-                                                <div class="span8 google-map-section clearfix">
-                                                    <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-map-marker bo-icon-white"></i>¿Donde Estamos?</h3>
-                                                        <hr />
-                                                    </div>
+                                        <ul class="dropdown-menu about-company">
+                                            <li>
+                                                <div class="row-fluid">
 
-                                                    <div class="row-fluid">
-                                                        <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;aq=t&amp;sll=27.907286,34.314079&amp;sspn=0.043006,0.084543&amp;ie=UTF8&amp;hq=&amp;hnear=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;ll=29.492568,34.894903&amp;spn=0.344213,0.676346&amp;t=m&amp;z=11&amp;output=embed"></iframe>
-                                                        <br />
-                                                        <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;aq=t&amp;sll=27.907286,34.314079&amp;sspn=0.043006,0.084543&amp;ie=UTF8&amp;hq=&amp;hnear=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;ll=29.492568,34.894903&amp;spn=0.344213,0.676346&amp;t=m&amp;z=11" style="color: #0000FF; text-align: left">View Larger Map</a></small>
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="span4">
-
-                                                    <div class="row-fluid search-section">
+                                                    <div class="span8 google-map-section clearfix">
                                                         <div class="row-fluid title">
-                                                            <h3><i class="bo-icon-search bo-icon-white"></i>Busqueda</h3>
+                                                            <h3><i class="bo-icon-map-marker bo-icon-white"></i>¿Donde Estamos?</h3>
                                                             <hr />
                                                         </div>
 
                                                         <div class="row-fluid">
-                                                            <form class="form-search clearfix search-box">
-                                                                <div class="input-append input-block-level">
-                                                                    <input type="text" class="span10 search-query" placeholder="¿Buscas algo?" required="required" />
-                                                                    <button type="submit" class="btn"><i class="icon-search"></i></button>
-                                                                </div>
-                                                            </form>
+                                                            <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;aq=t&amp;sll=27.907286,34.314079&amp;sspn=0.043006,0.084543&amp;ie=UTF8&amp;hq=&amp;hnear=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;ll=29.492568,34.894903&amp;spn=0.344213,0.676346&amp;t=m&amp;z=11&amp;output=embed"></iframe>
+                                                            <br />
+                                                            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;aq=t&amp;sll=27.907286,34.314079&amp;sspn=0.043006,0.084543&amp;ie=UTF8&amp;hq=&amp;hnear=Taba,+Qesm+Nwebaa,+South+Sinai,+Egypt&amp;ll=29.492568,34.894903&amp;spn=0.344213,0.676346&amp;t=m&amp;z=11" style="color: #0000FF; text-align: left">View Larger Map</a></small>
                                                         </div>
+
                                                     </div>
 
-                                                    <div class="row-fluid login-section">
-                                                       
+                                                    <div class="span4">
 
-                                                        
+                                                        <div class="row-fluid search-section">
+                                                            <div class="row-fluid title">
+                                                                <h3><i class="bo-icon-search bo-icon-white"></i>Busqueda</h3>
+                                                                <hr />
+                                                            </div>
+
+                                                            <div class="row-fluid">
+                                                                <form class="form-search clearfix search-box">
+                                                                    <div class="input-append input-block-level">
+                                                                        <input type="text" class="span10 search-query" placeholder="¿Buscas algo?" required="required" />
+                                                                        <button type="submit" class="btn"><i class="icon-search"></i></button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row-fluid login-section">
+                                                            <div class="row-fluid title">
+                                                                <h3><i class="bo-icon-user bo-icon-white"></i>Login</h3>
+                                                                <hr />
+                                                            </div>
+
+                                                            <div class="row-fluid">
+                                                                <form method="get" class="login-form">
+                                                                    <div class="input-prepend input-block-level">
+                                                                        <span class="add-on"><i class="icon-envelope"></i></span>
+                                                                        <input id="Email1" class="span10" type="email" placeholder="Email" required="required" />
+                                                                    </div>
+
+                                                                    <div class="input-prepend input-block-level">
+                                                                        <span class="add-on"><i class="icon-key"></i></span>
+                                                                        <input id="Password1" class="span10" type="password" placeholder="Password" required="required" />
+                                                                    </div>
+
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" />
+                                                                        Remember me
+                                                                    </label>
+
+                                                                    <button type="submit" class="btn-theme">Sign in</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
 
                                                 </div>
 
-                                            </div>
+                                                <hr />
 
-                                            <hr />
+                                                <div class="row-fluid">
+                                                    <div class="span8">
+                                                        <div class="row-fluid title">
+                                                            <h3><i class="bo-icon-flag bo-icon-white"></i>Información de Contacto</h3>
+                                                            <hr />
+                                                        </div>
 
-                                            <div class="row-fluid">
-                                                <div class="span8">
-                                                    <div class="row-fluid title">
-                                                        <h3><i class="bo-icon-flag bo-icon-white"></i>Información de Contacto</h3>
-                                                        <hr />
+                                                        <ul class="row-fluid contact-info">
+
+                                                            <li>
+                                                                <strong>Calle:</strong>
+                                                                <span>Heroico Colegio Militar #13, Col. Centro, Pedro Escobedo Querétaro.</span>
+                                                            </li>
+
+                                                            <li>
+                                                                <strong>País:</strong>
+                                                                <span>México</span>
+                                                            </li>
+
+                                                            <li>
+                                                                <strong>Telefono:</strong>
+                                                                <span>(448) 275 0237 </span>
+                                                            </li>
+
+                                                            <li>
+                                                                <strong>Email:</strong>
+                                                                <a href="note@insidenetwork.com">note@insidenetwork.com</a>
+                                                            </li>
+
+                                                        </ul>
+
                                                     </div>
 
-                                                    <ul class="row-fluid contact-info">
-
-                                                        <li>
-                                                            <strong>Calle:</strong>
-                                                            <span>Heroico Colegio Militar #13, Col. Centro, Pedro Escobedo Querétaro.</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <strong>País:</strong>
-                                                            <span>México</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <strong>Telefono:</strong>
-                                                            <span>(448) 275 0237 </span>
-                                                        </li>
-
-                                                        <li>
-                                                            <strong>Email:</strong>
-                                                            <a href="note@insidenetwork.com">note@insidenetwork.com</a>
-                                                        </li>
-
-                                                    </ul>
 
                                                 </div>
 
-                                              
-                                            </div>
 
-                                            
-                                        </li>
-                                    </ul>
-                                </li>
+                                            </li>
+                                        </ul>
+                                    </li>
 
-                                <li class="divider-vertical"></li>
+                                    <li class="divider-vertical"></li>
 
-                                
-                            </ul>
+
+                                </ul>
 
                         </div>
                     </div>
@@ -226,23 +192,29 @@
             </div>
         </div>
     </nav>
+
     <header>
         <div class="navbar navbar-banner">
             <div class="container-fluid">
-              <div class="row-fluid">
-                <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
+                <div class="row-fluid">
+                    <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
                         <h1 class="hidden" itemprop="name">Serpentsoft</h1>
-                        <a href="../index.php"><img itemprop="logo" src="../../images/LogoNiN.png" alt="Logo" /></a></div>
+                        <a href="../index.php">
+                            <img itemprop="logo" src="../../images/LogoNiN.png" alt="Logo" /></a>
+                    </div>
 
-                  <div class="adv-970 pull-right visible-desktop"></div>
+                    <div class="adv-970 pull-right visible-desktop">
+                        <a href="#MyThemeAdv" target="_blank">
+                            <img class="pull-right" src="../../images/ad-970.jpg" alt="970x90" /></a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </header>
 
-    <nav class="container-fluid navbar-main enable-fixed">
-        <h2 class="hidden">Site Navigation Bar</h2>
+     <nav class="container-fluid navbar-main enable-fixed">
+        <h2 class="hidden">Site Navigation </h2>
 
 
         <div class="navbar">
@@ -260,7 +232,8 @@
                             <li class="dropdown active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="../index.php"><i class="icon-home"></i></a>
+                                    data-target="#" href="../
+                                    index.php"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -271,26 +244,24 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="nota/videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="nota/reviews.php" title="">Reviews</a></li>
+                                    <li><a href="../nota/technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="../nota/videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="../nota/reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
 
                             <li class="divider-vertical"></li>
-                           
+                            
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="A1" role="button"
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#">Sociedad y Cultura<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/blog.html">Eventos</a></li>
-                                    <li><a href="noticias/blog.html">Recomendaciones Musicales</a></li>
-                                    <li><a href="noticias/blog.html">Fotografía</a></li>
-                                    <li><a href="noticias/blog.html">Video</a></li>
-                                    <li><a href="noticias/blog.html">Salud</a></li>
+                                    <li><a href="../post-formats/post-eventosdatos.php?codigo=4">Eventos</a></li>
+                                    <li><a href="../post-formats/post-fotografiadatos.php?codigo=6">Fotografía</a></li>
+                                    <li><a href="../post-formats/post-saluddatos.php?codigo=8">Salud</a></li>
                                    
 
                                 </ul>
@@ -301,10 +272,10 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="../site/noticias/internacional.php">Internacional</a></li>
-                                    <li><a href="../site/noticias/nacional.php">Nacional</a></li>
-                                    <li><a href="../site/noticias/opinion.php">Opinion</a></li>
-
+                                   li><a href="../noticias/internacional.php?codigo=9">Internacional</a></li>
+                                    <li><a href="../noticias/nacional.php?codigo=10">Nacional</a></li>
+                                    <li><a href="../noticias/opinion.php?codigo=11">Opinion</a></li>
+                                    
                                     
 
 
@@ -318,9 +289,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/lecturas.html">Lecturas</a></li>
-                                    <li><a href="noticias/descargar.html">Descargas</a></li>
-                                    <li><a href="noticias/random.html">Random</a></li>
+                                    <li><a href="../noticias/lecturas.php?codigo=15#">Lecturas</a></li>
+                                    <li><a href="../noticias/descargar.php?codigo=13#">Descargas</a></li>
+                                    <li><a href="../noticias/random.php?codigo=15#">Random</a></li>
                                     
 
 
@@ -332,29 +303,7 @@
 
                           
 
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a5" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
-                                    <li><a href="noticias/blog.html">¿Qué somos?</a></li>
-                                    <li><a href="noticias/blog.html">Preguntas Frecuentes</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
                            
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
 
                         </ul>
 
@@ -369,6 +318,8 @@
     </nav>
 
 
+
+
     <div class="container-fluid" itemscope itemtype="http://schema.org/CreativeWork">
 
         <!-- Main Content -->
@@ -378,24 +329,8 @@
             <div class="span6 main-content">
 
                 <!-- Breaking News -->
-                <section class="breaking-news-widget">
-                    <div class="row-fluid">
-
-                        <div class="title">
-                            <h3>Ultimas</h3>
-                        </div>
-                        <div id="divBreakingNewsTicker" class="content">
-                            <ul id="js-news" class="js-hidden">
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6"><?php echo $v_titulo['1'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5"><?php echo $v_titulo['2'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4"><?php echo $v_titulo['3'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3"><?php echo $v_titulo['4'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['5'] ?>&id=2"><?php echo $v_titulo['5'] ?></a></li>
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['6'] ?>&id=1"><?php echo $v_titulo['6'] ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+               
+                
 
                 <!-- main content -->
                 <article class="article-container" itemscope itemtype="http://schema.org/Article">
@@ -406,380 +341,132 @@
                                 <div itemscope itemtype="http://schema.org/WebPage">
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
-                                            <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="inter.php" class="active">Noticias</a></li>
+                                            <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><li><a href="../noticias/internacional.php?codigo=9">Internacional</a></li>
                                     </ul>
                                 </div>
 
-                                <div class="figure-container">
-                                    <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                        
+                                <h1 itemprop="headline">Noticas</h1>
 
-                               <img src="../login/administration/admin/secciones/internacional/<?php echo $id.'.jpg'; ?>" width="550" height="550">
-                                
-                                        
-                                    </figure>
-                                </div>
-
-                                
-                                                            
-                                <h1 itemprop="headline">
-
-                                <p> <?php echo $ntitulo; ?></p>
-                                </h1>
-
-                                <div class="post-info">
-                                    <div class="post-meta">
-                                        <ul>
-                                            <li title="Post Author"><a href="#"><i class="bo-icon-pencil"></i><?php echo $v_usu['1'] ?></a></li>
-                                            <li title="Publish Time" itemprop="datePublished"><i class="bo-icon-time"></i><?php echo $nfecha;?></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-
+                                <div class="post-info"></div>
 
                             </header>
 
-
-
-
                             <span class="clearfix"></span>
 
-                            <div class="post-entry" itemprop="articleBody">
+                            <div class="blog">
 
-                               
-                            
-                            
-                            <blockquote>
-                                <p style="text-align: justify">
-                                   <?php echo $ntexto; ?>
-                                </p>
-                            </blockquote>
-                               
+<?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional WHERE tipo='9'  ORDER BY my_date desc LIMIT 5");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
+                              <ul class="media-list">
+                                    <li class="media blog-item">
+                                        <article>
+                                            <div class="span12 img-container" title="">
+                                                
+                                                <img src="../login/administration/admin/secciones/internacional/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
+                                                <a href="internacionsl.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
+                                            </div>
 
-                               
+                                            <div class="row-fluid">
+                                            <div class="media-body span12">
+                                                <div class="row-fluid">
+                                                    <div class="span2 blog-date">
+                                                        <div class="date-meta">
+                                                            <div class="post-date">
+                                                                <div class="date">
+                                                                  <b><p>Post:</p><p style="font-size:12px;font-family:cursive" align="center"><br /><?php echo $datox['fecha']; ?></p></b>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>    
+
+                                                    <div class="span10 blog-desc-container">
+                                                            <a href="internacional.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                            <h4 class="media-heading"><?php echo $datox['titulo']; ?></h4>
+                                                        </a>
+
+                                                        <div class="post-meta clearfix">
+                                                            
+                                                        </div>
+
+                                                        <div class="media">
+                                                            <p class="blog-desc">
+                                                                <?php echo $datox['intro']; ?>...
+                                                            </p>
+                                                            <a href="internacional.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+
+                                            <footer class="row-fluid social-share-footer">
+                                                <span class="share-icon icon-caret-right"></span>
+
+                                                <div class="share-icons">
+                                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script><script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
+                                                </div>
+
+                                            </footer>
+
+                                        </article>
+                                    </li>
+
+                                   <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional WHERE tipo='9'  ORDER BY my_date desc LIMIT 5");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
+                                    
+                                </ul>
+
+
+                                
                             </div>
+
 
                             <div class="clearfix"></div>
 
-                            <div class="row-fluid social-share-footer">
-                                <span class="share-icon icon-caret-right"></span>
-
-                                <div class="share-icons">
-                                    <!-- Add Social Share Buttons Here --> <!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script><script type="text/javascript" src="../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5052d92e104432e3"></script><!-- AddThis Button END -->
-                                </div>
-
-                            </div>
+                            
                         </div>
 
 
-                        <!-- Article Footer Start from author bio to comments box  -->
-                        <footer>
-
-                          
-
-                            <!-- Author Biography -->
-                            <aside class="author-bio w-user">
-                                <div class="cat-widget-title">
-                                    <h3>El de la Nota</h3>
-                                </div>
-
-                                <div class="cat-widget-content">
-                                    <div class="row-fluid">
-
-                                        <div class="media" itemprop="author" itemscope itemtype="http://schema.org/Person">
-
-                                            <!--<a class="thumbnail span2 pull-left" href="author.html" title="More About Author">
-                                            <img itemprop="image" class="media-object" src="" data-src="holder.js/77x77" alt="Author" />
-                                        </a>-->
-                                            <a href="#" class="media-object span2" title="Author">
-                                                <div class="thumb-effect">
-
-                                                    <div class="mask"></div>
-                                                     it´s me <?php echo $v_usu['1'] ?>
-                                                </div>
-                                            </a>
-
-                                            <div class="media-body span10">
-
-                                                <a itemprop="name" class="hidden" href="../page-templates/author-archive.html" title="More About Author">
-                                                    <h4 class="media-heading hidden">Serpentsoft</h4>
-                                                </a>
-
-                                               <div class="media">
-
-                                                    <ul class="author-personal-info social-networks clearfix">
-
-                                                        <li><a href="https://www.facebook.com/ivan.hurtado.3760" class="fb-metro-24px-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                            data-original-title="facebook" title=""></a></li>
-
-                                                        <li><a href="https://twitter.com/1VnAx" class="twitter-metro-24px-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                            data-original-title="twitter" title=""></a></li>
-
-                                                        <li><a href="https://plus.google.com/u/0/+IvAnHurtado13" class="googleplus-metro-24px-but" rel="tooltip" data-toggle="tooltip" data-placement="top"
-                                                            data-original-title="googleplus" title=""></a></li>
-
-                                                       
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </aside>
-
-                            <!-- Related Posts -->
-                          
-
-                            <!-- Posts Navigator -->
-                            
-
-                            <!-- Members Comments -->
-                            <div class="fb-comments" data-href="https://www.facebook.com/noteinside?fref=ts" data-numposts="5" data-colorscheme="light"></div>
-
-                        </footer>
 
                     </div>
                 </article>
             </div>
 
 
-            <!-- Right sidebar -->
+           <!-- Right sidebar -->
             <section class="span270">
                 <h2 class="hidden">Right Sidebar</h2>
 
-              
+               
 
                 <!-- Weather -->
                 <aside class="widget w-weather">
-                  <div class="widget-content clearfix"></div>
-              </aside>
-
-                <p>
-                  <!-- Poll Cloud -->
-                </p>
-                <p>
-                  <!-- Sponsors (4x125 Adv.) -->
-                </p>
-                
-
-                <!-- New In Pictures -->
-                 <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>Ultimas en Polit&iacute;ca</h4>
-                    </div>
-
-                    <div class="widget-content clearfix thumbnails">
-                        <ul class="posts-in-images clearfix">
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['1'] ?>">
-                                <a href="post-formats/post-image.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[1].'.jpg'; ?>" height="75" width="80">
-                                        
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['2'] ?>">
-                                <a href="post-formats/post-video.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[2].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['3'] ?>">
-                                <a href="post-formats/post-soundcloud.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[3].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['4'] ?>">
-                                <a href="post-formats/post-image-lightbox.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[4].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['5'] ?>">
-                                <a href="post-formats/post-review.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[5].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['6'] ?>">
-                                <a href="post-formats/post-googlemap.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[6].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['1'] ?>">
-                                <a href="post-formats/post-image-lightbox.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[1].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['2'] ?>">
-                                <a href="post-formats/post-review.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[2].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['3'] ?>">
-                                <a href="post-formats/post-googlemap.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[3].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-
-
-                <!-- Tags Cloud -->
-                
-
-                <!-- Recent News -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Recientes</h4>
+                        <h4>El clima</h4>
                     </div>
 
                     <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_270_slider1" class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/internacional/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['1'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['1'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['2'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['2'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                   <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['3'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/videojuegos/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['4'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['4'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
+                        <div class="widget-weather">
+                          <!-- www.TuTiempo.net - Ancho:274px - Alto:91px -->
+<div id="TT_RCNEEEkkkllc4QsK7frjjzjjjWnKMpS2bYEYkZCIa1zo3IG5G"><a href="http://www.tutiempo.net">El tiempo 15 días</a></div>
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RCNEEEkkkllc4QsK7frjjzjjjWnKMpS2bYEYkZCIa1zo3IG5G"></script>
                         </div>
                     </div>
                 </aside>
+
 
 
                 <!-- 160 (160x600 Adv.) -->
@@ -796,282 +483,15 @@
 
             </section>
 
-
             <!-- Left sidebar -->
             <section class="span300">
                 <h2 class="hidden">Left Sidebar</h2>
 
                 <!-- Posts Of The Day -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Descargas</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_300_slider3" class="flexslider">
-
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            
-                                                          <img src="../login/administration/admin/secciones/descargas/<?php echo $v4_foto[1].'.jpg'; ?>" height="200" width="301">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Descargas</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v4_titulo['1'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                  </div>
-
-                                                                <p class="text"><?php echo $v4_intro['1'] ?>...</p>
-                                                            </div>
-
-                                                            <a href="post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            
-                                                          <img src="../login/administration/admin/secciones/descargas/<?php echo $v4_foto[2].'.jpg'; ?>" height="200" width="301">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Descargas</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v4_titulo['2'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                  </div>
-
-                                                                <p class="text"><?php echo $v4_intro['2'] ?>...</p>
-                                                            </div>
-
-                                                            <a href="post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-
-                <!-- Social Counter -->
-               <aside class="widget w-social-counter">
-                    <div class="widget-title">
-                        <h4>Nuestras Redes Sociales</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="social-counter-metro">
-                            <ul class="clearfix">
-
-                                <li class="fb-wrp">
-                                    <div class="btn-count">
-
-                                        <div class="social-counter-metro mask">
-                                            <span>Like</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="facebook">
-                                            <i class="facebook-sicon-48-white"></i>
-                                            <span>Like us!</span>
-                                            <span class="fans">Fans</span>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-
-                                <li class="tr-wrp">
-                                    <div class="btn-count">
-                                        <div class="social-counter-metro mask">
-                                            <span>Follow</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="twitter">
-
-                                            <i class="twitter-sicon-48-white"></i>
-                                            <span>Follow us!</span>
-                                            <span class="fans">(ouo)</span>
-
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="yt-wrp">
-                                    <div class="btn-count">
-                                        <div class="social-counter-metro mask">
-                                            <span>Subscribe</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="youtube">
-                                            <i class="youtube-sicon-48-white"></i>
-                                            <span>\(0u0)/</span>
-                                            <span class="fans">Subscribe</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="gp-wrp">
-                                    <div class="btn-count">
-                                        <div class="social-counter-metro mask">
-                                            <span>Follow</span>
-                                            <a href="#" class="more"></a>
-                                        </div>
-
-                                        <div class="googleplus">
-                                            <i class="googleplus-sicon-48-white"></i>
-                                            <span>Plus!</span>
-                                            <span class="fans">:v</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- 300x250 Adv -->
-                <aside class="widget w-adv">
-                    <div class="widget-title">
-                        <h4>300x250 Advertisement</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <a href="#MyThemeAdv" target="_blank">
-                            <img src="../../images/ad-300x250.jpg" />
-                        </a>
-                    </div>
-
-                </aside>
-
-
-
-                <!-- Random Posts (Classic) -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Random</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <ul class="media-list">
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-image-lightbox.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                                <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[1].'.jpg'; ?>" height="65" width="65">
-                                                
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-image-lightbox.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['1'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['1'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-self-audio.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[2].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-self-audio.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['2'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['2'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-soundcloud.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[3].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-soundcloud.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['3'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['3'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-googlemap.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                                <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[4].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-googlemap.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['4'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['4'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </aside>
-
-
                
 
-            </section>
+              
+
         </div>
 
         <!-- Footer Advertise -->
@@ -1125,8 +545,8 @@
 
     </section>
 
+  
 
-    
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
 
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
