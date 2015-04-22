@@ -346,9 +346,9 @@
                                    data-target="#" href="#" title="">Inter&eacute;s General<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/lecturas.html">Lecturas</a></li>
-                                    <li><a href="noticias/descargar.html">Descargas</a></li>
-                                    <li><a href="noticias/random.html">Random</a></li>
+                                    <li><a href="noticias/lecturas.php">Lecturas</a></li>
+                                    <li><a href="noticias/descargar.php">Descargas</a></li>
+                                    <li><a href="noticias/random.php">Random</a></li>
                                     
 
 
@@ -1219,7 +1219,8 @@
                             <ul class="media-list">
                                 <li class="media">
                                     <article>
-                                        <a href="post-formats/post-image-lightbox.html" class="span3" title="">
+                                        <a href="noticias/random.php">Random
+                                        <a href="noticias/random.php" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
                                                 <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[1].'.jpg'; ?>" height="65" width="65">
@@ -1228,7 +1229,7 @@
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-image-lightbox.html" title="">
+                                            <a href="noticias/random.php" title="">
                                                 <h5 class="media-heading"><?php echo $v7_titulo['1'] ?></h5>
                                             </a>
 
@@ -1241,7 +1242,7 @@
 
                                 <li class="media">
                                     <article>
-                                        <a href="post-formats/post-self-audio.html" class="span3" title="">
+                                        <a href="noticias/random.php" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
                                                <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[2].'.jpg'; ?>" height="65" width="65">
@@ -1249,7 +1250,7 @@
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-self-audio.html" title="">
+                                            <a href="noticias/random.php" title="">
                                                 <h5 class="media-heading"><?php echo $v7_titulo['2'] ?></h5>
                                             </a>
 
@@ -1262,7 +1263,7 @@
 
                                 <li class="media">
                                     <article>
-                                        <a href="post-formats/post-soundcloud.html" class="span3" title="">
+                                        <a href="noticias/random.php" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
                                                <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[3].'.jpg'; ?>" height="65" width="65">
@@ -1270,7 +1271,7 @@
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-soundcloud.html" title="">
+                                            <a href="noticias/random.php" title="">
                                                 <h5 class="media-heading"><?php echo $v7_titulo['3'] ?></h5>
                                             </a>
 
@@ -1283,7 +1284,7 @@
 
                                 <li class="media">
                                     <article>
-                                        <a href="post-formats/post-googlemap.html" class="span3" title="">
+                                        <a href="noticias/random.php" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
                                                 <img src="login/administration/admin/secciones/random/<?php echo $v7_foto[4].'.jpg'; ?>" height="65" width="65">
@@ -1291,7 +1292,7 @@
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-googlemap.html" title="">
+                                            <a href="noticias/random.php" title="">
                                                 <h5 class="media-heading"><?php echo $v7_titulo['4'] ?></h5>
                                             </a>
 
