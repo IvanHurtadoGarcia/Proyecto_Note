@@ -366,7 +366,7 @@
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
-                            <li><a href="nota-lec.php?noticia=<?php echo $datox['id']; ?>"><?php echo $datox['titulo']; ?></a></li>
+                            <li><a href="nota-ram.php?noticia=<?php echo $datox['id']; ?>"><?php echo $datox['titulo']; ?></a></li>
 
                            <?php } 
     $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date asc LIMIT 9");

@@ -557,13 +557,13 @@
                 <!-- New In Pictures -->
                  <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>Ultimas en Polit&iacute;ca</h4>
+                        <h4>Lo primero en lecturas</h4>
                     </div>
 
                     <div class="widget-content clearfix thumbnails">
                          <ul class="posts-in-images clearfix">
                             <?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM lecturas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM lecturas WHERE tipo='12'  ORDER BY my_date asc LIMIT 9");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
@@ -578,7 +578,7 @@
                             </li>
 
                            <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM lecturas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM lecturas WHERE tipo='12'  ORDER BY my_date asc LIMIT 9");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>

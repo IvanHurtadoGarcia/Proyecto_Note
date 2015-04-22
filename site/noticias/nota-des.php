@@ -366,7 +366,7 @@
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
-                            <li><a href="nota-lec.php?noticia=<?php echo $datox['id']; ?>"><?php echo $datox['titulo']; ?></a></li>
+                            <li><a href="nota-des.php?noticia=<?php echo $datox['id']; ?>"><?php echo $datox['titulo']; ?></a></li>
 
                            <?php } 
     $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
