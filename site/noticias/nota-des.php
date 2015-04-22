@@ -555,7 +555,7 @@
                 <!-- New In Pictures -->
                  <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>Ultimas en Polit&iacute;ca</h4>
+                        <h4>Ultimas Descargas</h4>
                     </div>
 
                     <div class="widget-content clearfix thumbnails">
