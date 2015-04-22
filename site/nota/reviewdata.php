@@ -650,78 +650,7 @@
             <section class="span300">
                 <h2 class="hidden">Left Sidebar</h2>
 
-                <!-- Posts Of The Day -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Descargas</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_300_slider3" class="flexslider">
-
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            
-                                                          <img src="../login/administration/admin/secciones/descargas/<?php echo $v4_foto[1].'.jpg'; ?>" height="200" width="301">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Descargas</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v4_titulo['1'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                  </div>
-
-                                                                <p class="text"><?php echo $v4_intro['1'] ?>...</p>
-                                                            </div>
-
-                                                            <a href="post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            
-                                                          <img src="../login/administration/admin/secciones/descargas/<?php echo $v4_foto[2].'.jpg'; ?>" height="200" width="301">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Descargas</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v4_titulo['2'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                  </div>
-
-                                                                <p class="text"><?php echo $v4_intro['2'] ?>...</p>
-                                                            </div>
-
-                                                            <a href="post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+               
 
 
                 <!-- Social Counter -->
