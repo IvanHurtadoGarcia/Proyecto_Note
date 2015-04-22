@@ -298,15 +298,13 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="home-styles/blog.html">Internacional</a></li>
-                                    <li><a href="home-styles/blog.html">Nacional</a></li>
-                                    <li><a href="home-styles/blog.html">Opinion</a></li>
-                                    
+                                 <ul class="dropdown-menu">
+                                    <li><a href="../site/noticias/internacional.php?codigo=9">Internacional</a></li>
+                                   <li><a href="../site/noticias/nacional.php?codigo=10">Nacional</a></li>
+                                     <li><a href="../site/noticias/opinion.php?codigo=11">Opinion</a></li>
 
 
                                 </ul>
-
                             </li>
 
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
