@@ -380,7 +380,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecnol&oacute;gias</a></li>
+                                        <li><a href="technews.php?codigo=1" class="active">Tecnol&oacute;gias</a></li>
                                     </ul>
                                 </div>
 

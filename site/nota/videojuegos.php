@@ -337,7 +337,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="videojuegos.php" class="active">Video Juegos</a></li>
+                                        <li><a href="videojuegos.php?codigo=2" class="active">Video Juegos</a></li>
                                     </ul>
                                 </div>
 

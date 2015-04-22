@@ -387,11 +387,9 @@
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
                                 <li><a href="nota/tecnologias.php?<?php echo $v_titulo['1'] ?>&noticia=<?php echo $v_cod[1]; ?>"><?php echo $v_titulo['1'] ?></a></li>
-                                <li><a href="post-formats/post-video.html"><?php echo $v2_titulo['1'] ?></a></li>
-                                <li><a href="post-formats/post-soundcloud.html"><?php echo $v3_titulo['1'] ?></a></li>
-                                <li><a href="post-formats/post-googlemap.html"><?php echo $v4_titulo['1'] ?></a></li>
-                                <li><a href="post-formats/post-image-lightbox.html"><?php echo $v5_titulo['1'] ?></a></li>
-                                <li><a href="post-formats/post-review.html"><?php echo $v6_titulo['1'] ?></a></li>
+                                <li><a href="nota/juegos.php?<?php echo $v2_titulo['1'] ?>&noticia=<?php echo $v2_cod[1]; ?>"><?php echo $v2_titulo['1'] ?></a></li>
+                                <li><a href="nota/reviewdata.php?<?php echo $v3_titulo['1'] ?>&noticia=<?php echo $v3_cod[1]; ?>"><?php echo $v3_titulo['1'] ?></a></li>
+                                
                             </ul>
                         </div>
                     </div>
