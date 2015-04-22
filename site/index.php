@@ -1023,24 +1023,7 @@
                 </aside>
 
                
-                <!-- Feedburner -->
-                <aside class="widget w-rss-feed">
-                    <div class="widget-title">
-                        <h4>Suscribete v&iacute;a RSS Feed</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="feedburner-subscribe">
-                            <form>
-                                <div class="input-append input-block-level">
-                                    <input type="email" class="span12 search-query" placeholder="Ingresa tu email" required="required">
-                                    <button type="submit" class="btn-theme">Suscribir</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </aside>
+               
 
                 <!-- Weather -->
                 <aside class="widget w-weather">
