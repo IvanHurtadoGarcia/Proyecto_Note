@@ -546,7 +546,7 @@
                     
             ?>
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $datox['titulo']; ?>">
-                                <a href="nota-des.php?noticia=<?php echo $datox['id']; ?>">
+                                <a href="../noticias/nota-des.php?noticia=<?php echo $datox['id']; ?>">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="../login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
@@ -704,7 +704,7 @@
                             <ul class="media-list">
                                 <li class="media">
                                     <article>
-                                        <a href="nota-ram.php?noticia=<?php echo $datox['id']; ?>" class="span3" title="">
+                                        <a href="../noticias/nota-ram.php?noticia=<?php echo $datox['id']; ?>" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
                                                 <img src="../login/administration/admin/secciones/random/<?php echo $datox['id'].'.jpg'; ?>" height="65" width="65">
@@ -713,7 +713,7 @@
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="nota-ram.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                            <a href="../noticias/nota-ram.php?noticia=<?php echo $datox['id']; ?>" title="">
                                                 <h5 class="media-heading"><?php echo $datox['titulo']; ?></h5>
                                             </a>
 
