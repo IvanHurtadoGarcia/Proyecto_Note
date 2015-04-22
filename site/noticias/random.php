@@ -337,7 +337,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="random.php" class="active">random</a></li>
+                                        <li><a href="random.php?codigo=14" class="active">random</a></li>
                                     </ul>
                                 </div>
 

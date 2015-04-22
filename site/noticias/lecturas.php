@@ -240,10 +240,10 @@
                                     data-hover="dropdown" data-delay="200"
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-                                  <li><a href="technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="videojuegos.php?codigo=2" title="">Video Juegos </a></li>
-                                    <li><a href="reviews.php?codigo=3" title="">Reviews</a></li>
+                               <ul class="dropdown-menu">
+                                    <li><a href="../nota/technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="../nota/videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="../nota/reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -337,7 +337,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="lecturas.php" class="active">lecturas</a></li>
+                                        <li><a href="lecturas.php?codigo=12" class="active">lecturas</a></li>
                                     </ul>
                                 </div>
 
@@ -390,7 +390,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $datox['intro']; ?>...
                                                             </p>
-                                                            <a href="tecnologias.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="nota-des.php?noticia=<?php echo $datox['id']; ?>">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
