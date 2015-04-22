@@ -247,9 +247,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="noticias/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="nota/videojuegos.php" title="">Video Juegos </a></li>
-                                    <li><a href="nota/reviews.php" title="">Reviews</a></li>
+                                    <li><a href="../nota/technews.php" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="../nota/videojuegos.php" title="">Video Juegos </a></li>
+                                    <li><a href="../nota/reviews.php" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
