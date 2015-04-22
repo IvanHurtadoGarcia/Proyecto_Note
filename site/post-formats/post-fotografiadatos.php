@@ -415,8 +415,8 @@
                                         </article>
                                     </li>
 
-                                   <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM fofografia WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+                                         <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM fotografia WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>

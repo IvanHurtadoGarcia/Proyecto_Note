@@ -298,10 +298,10 @@
                                    data-hover="dropdown" data-delay="200"
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="home-styles/blog.html">Internacional</a></li>
-                                    <li><a href="home-styles/blog.html">Nacional</a></li>
-                                    <li><a href="home-styles/blog.html">Opinion</a></li>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="../noticias/internacional.php?codigo=9#">Internacional</a></li>
+                                    <li><a href="../noticias/nacional.php?codigo=10#">Nacional</a></li>
+                                    <li><a href="../noticias/opinion.php?codigo=11#">Opinion</a></li>
                                     
 
 
@@ -366,7 +366,7 @@
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
-                            <li><a href="nota-lec.php?noticia=<?php echo $datox['id']; ?>"><?php echo $datox['titulo']; ?></a></li>
+                            <li><a href="nota-ram.php?noticia=<?php echo $datox['id']; ?>"><?php echo $datox['titulo']; ?></a></li>
 
                            <?php } 
     $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date asc LIMIT 9");
@@ -391,7 +391,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="random.php?codigo=14" class="active">random</a></li>
                                     </ul>
                                 </div>
 

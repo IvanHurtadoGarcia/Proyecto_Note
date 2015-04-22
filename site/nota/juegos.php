@@ -534,218 +534,48 @@
                 
 
                 <!-- New In Pictures -->
+              <!-- New In Pictures -->
                  <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h4>Ultimas en Polit&iacute;ca</h4>
+                        <h4>Ultimas Descargas</h4>
                     </div>
 
                     <div class="widget-content clearfix thumbnails">
+
                         <ul class="posts-in-images clearfix">
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['1'] ?>">
-                                <a href="post-formats/post-image.html">
+                            <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
+                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $datox['titulo']; ?>">
+                                <a href="../noticias/nota-des.php?noticia=<?php echo $datox['id']; ?>">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[1].'.jpg'; ?>" height="75" width="80">
+                                        <img src="../login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
                                         
                                     </div>
                                 </a>
                             </li>
 
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['2'] ?>">
-                                <a href="post-formats/post-video.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[2].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['3'] ?>">
-                                <a href="post-formats/post-soundcloud.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[3].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['4'] ?>">
-                                <a href="post-formats/post-image-lightbox.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[4].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['5'] ?>">
-                                <a href="post-formats/post-review.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[5].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v5_titulo['6'] ?>">
-                                <a href="post-formats/post-googlemap.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v5_foto[6].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['1'] ?>">
-                                <a href="post-formats/post-image-lightbox.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[1].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['2'] ?>">
-                                <a href="post-formats/post-review.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[2].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="" title="<?php echo $v6_titulo['3'] ?>">
-                                <a href="post-formats/post-googlemap.html">
-                                    <div class="thumb-effect">
-                                        <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[3].'.jpg'; ?>" height="75" width="80">
-                                    </div>
-                                </a>
-                            </li>
+                           <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
                         </ul>
                     </div>
                 </aside>
 
 
+
                 <!-- Tags Cloud -->
                 
 
-                <!-- Recent News -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Recientes</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_270_slider1" class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Reviews</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v8_titulo['6'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v8_intro['6'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Reviews</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['2'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['2'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['2'] ?>&id=2" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                   <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>VideoJuegos</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['3'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['3'] ?>&id=7" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-
-                                                <li>
-                                                    <article class="fold-item span12">
-                                                        <div class="clearfix">
-                                                            
-                                                            <img src="../login/administration/admin/secciones/reviews/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>VideoJuegos</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v_titulo['4'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                </div>
-
-                                                                <p class="text"><?php echo $v_intro['4'] ?> ...</p>
-                                                            </div>
-
-                                                            <a href="reviewdata.php?titulo=<?php echo $v_titulo['4'] ?>&id=6" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
+               
 
                 <!-- 160 (160x600 Adv.) -->
                 <aside class="widget w-adv">
@@ -766,78 +596,7 @@
             <section class="span300">
                 <h2 class="hidden">Left Sidebar</h2>
 
-                <!-- Posts Of The Day -->
-                <aside class="widget w-posts">
-                    <div class="widget-title">
-                        <h4>Descargas</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <div class="posts-in-widget">
-                            <div class="row-fluid modern-items-list">
-
-                                <div id="widget_300_slider3" class="flexslider">
-
-                                    <ul class="slides">
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            
-                                                          <img src="../login/administration/admin/secciones/descargas/<?php echo $v4_foto[1].'.jpg'; ?>" height="200" width="301">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Descargas</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v4_titulo['1'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                  </div>
-
-                                                                <p class="text"><?php echo $v4_intro['1'] ?>...</p>
-                                                            </div>
-
-                                                            <a href="post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li>
-                                            <ul class="items left clearfix">
-                                                <li>
-                                                    <article class="fold-item">
-                                                        <div class="clearfix">
-                                                            
-                                                          <img src="../login/administration/admin/secciones/descargas/<?php echo $v4_foto[2].'.jpg'; ?>" height="200" width="301">
-                                                            <div class="post-sitemap">
-                                                                <span><i class="bo-icon-home bo-icon-white"></i>Descargas</span>                                                            </div>
-
-                                                            <div class="description visible-part">
-                                                                <h5 class="title"><?php echo $v4_titulo['2'] ?></h5>
-
-                                                                <div class="info">
-                                                                                                                                  </div>
-
-                                                                <p class="text"><?php echo $v4_intro['2'] ?>...</p>
-                                                            </div>
-
-                                                            <a href="post-image.html" class="more" title=""></a>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+                
 
 
                 <!-- Social Counter -->
@@ -942,91 +701,42 @@
 
                     <div class="widget-content clearfix">
                         <div class="posts-in-widget">
+                            <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date desc LIMIT 9");
+    while($datox=mysql_fetch_array($sqlx)){
+                    
+            ?>
                             <ul class="media-list">
                                 <li class="media">
                                     <article>
-                                        <a href="post-formats/post-image-lightbox.html" class="span3" title="">
+                                        <a href="../noticias/nota-ram.php?noticia=<?php echo $datox['id']; ?>" class="span3" title="">
                                             <div class="media-object thumb-effect">
                                                 <div class="mask"></div>
-                                                <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[1].'.jpg'; ?>" height="65" width="65">
+                                                <img src="../login/administration/admin/secciones/random/<?php echo $datox['id'].'.jpg'; ?>" height="65" width="65">
                                                 
                                             </div>
                                         </a>
 
                                         <div class="media-body span9">
-                                            <a href="post-formats/post-image-lightbox.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['1'] ?></h5>
+                                            <a href="../noticias/nota-ram.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                <h5 class="media-heading"><?php echo $datox['titulo']; ?></h5>
                                             </a>
 
                                             <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['1'] ?></span>
+                                                <span title=""><i class="bo-icon-time"></i><?php echo $datox['fecha']; ?></span>
                                             </div>
                                         </div>
                                     </article>
                                 </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-self-audio.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[2].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-self-audio.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['2'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['2'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-soundcloud.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                               <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[3].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-soundcloud.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['3'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['3'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-                                <li class="media">
-                                    <article>
-                                        <a href="post-formats/post-googlemap.html" class="span3" title="">
-                                            <div class="media-object thumb-effect">
-                                                <div class="mask"></div>
-                                                <img src="../login/administration/admin/secciones/random/<?php echo $v7_foto[4].'.jpg'; ?>" height="65" width="65">
-                                            </div>
-                                        </a>
-
-                                        <div class="media-body span9">
-                                            <a href="post-formats/post-googlemap.html" title="">
-                                                <h5 class="media-heading"><?php echo $v7_titulo['4'] ?></h5>
-                                            </a>
-
-                                            <div class="media">
-                                                <span title=""><i class="bo-icon-time"></i><?php echo $v7_fecha['4'] ?></span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </li>
+    <?php } 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='14'  ORDER BY my_date desc LIMIT 9");
+    if(!$datox=mysql_fetch_array($sqlx)){
+            echo '<div class="alert alert-error" align="center">
+                        <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
+                 </div>';               
+    }
+               ?>
+                                
                             </ul>
                         </div>
                     </div>
