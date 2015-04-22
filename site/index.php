@@ -928,7 +928,7 @@
                                                         <ul class="items left clearfix">
                                                             <li>
                                                                 <?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 2");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 1");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
@@ -952,7 +952,7 @@
 
 
                            <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 2");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 1");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
