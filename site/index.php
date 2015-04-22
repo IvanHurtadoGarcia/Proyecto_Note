@@ -926,12 +926,12 @@
                                                 <ul>
                                                     <li>
                                                         <ul class="items left clearfix">
-                                                            <li>
-                                                                <?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 1");
+                                                            <?php 
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 2");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
+            <li>        
                                                                 <article class="fold-item span12">
                                                                     <div class="clearfix">
                                                                          <img src="login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>"height="190" width="294">
@@ -952,7 +952,7 @@
 
 
                            <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 1");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 2");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
