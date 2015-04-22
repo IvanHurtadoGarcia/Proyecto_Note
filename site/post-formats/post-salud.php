@@ -271,9 +271,9 @@
                                     data-target="#" href="#" title="">Vida y Tecnol&oacute;gia<i class="caret"></i></a>
 
                                <ul class="dropdown-menu">
-                                    <li><a href="nota/technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
-                                    <li><a href="nota/videojuegos.php?codigo=2" title="">Video Juegos </a></li>
-                                    <li><a href="nota/reviews.php?codigo=3" title="">Reviews</a></li>
+                                    <li><a href="../nota/technews.php?codigo=1" title="">Noticias Tecnol&oacute;gicas</a></li>
+                                    <li><a href="../nota/videojuegos.php?codigo=2" title="">Video Juegos </a></li>
+                                    <li><a href="../nota/reviews.php?codigo=3" title="">Reviews</a></li>
                                 </ul>
 
                             </li>
@@ -382,7 +382,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="post-salud.php" class="active">Salud</a></li>
+                                        <li><a href="../post-formats/post-saluddatos.php?codigo=8">Salud</a></li>
                                     </ul>
                                 </div>
 
