@@ -12,6 +12,7 @@
     $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM noticias  ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
+        $v_cod[$x]=$datos['id'];
         $v_foto[$x]=$datos['id'];
         $v_titulo[$x]=$datos['titulo'];
         $v_intro[$x]=$datos['intro'];
@@ -327,31 +328,6 @@
 
                             <li class="divider-vertical"></li>
 
-                          
-
-                            <li class="divider-vertical"></li>
-
-                            <li class="dropdown" role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" id="a5" role="button"
-                                    data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="#" title="">Nosotros<i class="caret"></i></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="page-templates/authors.html" title="">Autores</a></li>
-                                    <li><a href="noticias/blog.html">¿Qué somos?</a></li>
-                                    <li><a href="noticias/blog.html">Preguntas Frecuentes</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
-
-                           
-
-                            <li class="divider-vertical"></li>
 
                         </ul>
 
@@ -383,7 +359,7 @@
                         </div>
                         <div id="divBreakingNewsTicker" class="content">
                             <ul id="js-news" class="js-hidden">
-                                <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6"><?php echo $v_titulo['1'] ?></a></li>
+                                <li><a href="tecnologias.php?<?php echo $v_titulo['1'] ?>&noticia=<?php echo $v_cod[1]; ?>"><?php echo $v_titulo['1'] ?></a></li>
                                 <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5"><?php echo $v_titulo['2'] ?></a></li>
                                 <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4"><?php echo $v_titulo['3'] ?></a></li>
                                 <li><a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3"><?php echo $v_titulo['4'] ?></a></li>
@@ -404,7 +380,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="technews.php" class="active">Tecol&oacute;gias</a></li>
+                                        <li><a href="technews.php" class="active">Tecnol&oacute;gias</a></li>
                                     </ul>
                                 </div>
 
@@ -950,19 +926,7 @@
                     </div>
                 </aside>
 
-                <!-- 300x250 Adv -->
-                <aside class="widget w-adv">
-                    <div class="widget-title">
-                        <h4>300x250 Advertisement</h4>
-                    </div>
-
-                    <div class="widget-content clearfix">
-                        <a href="#MyThemeAdv" target="_blank">
-                            <img src="../../images/ad-300x250.jpg" />
-                        </a>
-                    </div>
-
-                </aside>
+               
 
 
 

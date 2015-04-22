@@ -2,14 +2,14 @@
     include('../php_conexion.php');
     if(!empty($_GET['id'])){
         $id=$_GET['id'];
-        $sqlx=mysql_query("SELECT * FROM internacional WHERE id=$id");
+        $sqlx=mysql_query("SELECT * FROM nacional WHERE id=$id");
         if($datox=mysql_fetch_array($sqlx)){
             $ntitulo=$datox['titulo'];  $nintro=$datox['intro'];
             $ntexto=$datox['texto'];    $nfecha=$datox['fecha'];
         }
     } 
     $x=0;
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc ");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM nacional ORDER BY my_date desc ");
         while($datos=mysql_fetch_array($sqlx)){
         $x++;
         $v_foto[$x]=$datos['id'];
@@ -57,7 +57,7 @@
     }
 
     $x6=0;
-    $sqlx6=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional ORDER BY my_date desc");
+    $sqlx6=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM nacional ORDER BY my_date desc");
         while($datos6=mysql_fetch_array($sqlx6)){
         $x6++;
         $v6_foto[$x6]=$datos6['id'];
@@ -404,7 +404,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="inter.php" class="active">Noticias</a></li>
+                                        <li><a href="nacio.php" class="active">Noticias</a></li>
                                     </ul>
                                 </div>
 
@@ -412,7 +412,7 @@
                                     <figure class="featured-post-figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                         
 
-                               <img src="../login/administration/admin/secciones/internacional/<?php echo $id.'.jpg'; ?>" width="550" height="550">
+                               <img src="../login/administration/admin/secciones/nacional/<?php echo $id.'.jpg'; ?>" width="550" height="550">
                                 
                                         
                                     </figure>
@@ -633,7 +633,7 @@
                                 <a href="post-formats/post-image-lightbox.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                       <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[1].'.jpg'; ?>" height="75" width="80">
+                                       <img src="../login/administration/admin/secciones/nacional/<?php echo $v6_foto[1].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
@@ -642,7 +642,7 @@
                                 <a href="post-formats/post-review.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[2].'.jpg'; ?>" height="75" width="80">
+                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v6_foto[2].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
@@ -651,7 +651,7 @@
                                 <a href="post-formats/post-googlemap.html">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/internacional/<?php echo $v6_foto[3].'.jpg'; ?>" height="75" width="80">
+                                        <img src="../login/administration/admin/secciones/nacional/<?php echo $v6_foto[3].'.jpg'; ?>" height="75" width="80">
                                     </div>
                                 </a>
                             </li>
@@ -681,7 +681,7 @@
                                                     <article class="fold-item span12">
                                                         <div class="clearfix">
                                                             
-                                                            <img src="../login/administration/admin/secciones/internacional/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
+                                                            <img src="../login/administration/admin/secciones/nacional/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
                                                             <div class="post-sitemap">
                                                                 <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
 
