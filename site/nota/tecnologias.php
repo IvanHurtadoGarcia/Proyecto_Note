@@ -639,7 +639,121 @@
                 <!-- Tags Cloud -->
                 
 
-                
+                <!-- Recent News -->
+                <aside class="widget w-posts">
+                    <div class="widget-title">
+                        <h4>Recientes</h4>
+                    </div>
+
+                    <div class="widget-content clearfix">
+                        <div class="posts-in-widget">
+                            <div class="row-fluid modern-items-list">
+
+                                <div id="widget_270_slider1" class="flexslider">
+                                    <ul class="slides">
+                                        <li>
+                                            <ul class="items left clearfix">
+                                                <li>
+                                                    <article class="fold-item span12">
+                                                        <div class="clearfix">
+                                                            
+                                                            <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto[1].'.jpg'; ?>" height="200" width="271">
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title"><?php echo $v_titulo['1'] ?></h5>
+
+                                                                <div class="info">
+                                                                                                                                </div>
+
+                                                                <p class="text"><?php echo $v_intro['1'] ?> ...</p>
+                                                            </div>
+
+                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['1'] ?>&id=6" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li>
+                                                    <article class="fold-item span12">
+                                                        <div class="clearfix">
+                                                            
+                                                            <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto[2].'.jpg'; ?>" height="200" width="271">
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title"><?php echo $v_titulo['2'] ?></h5>
+
+                                                                <div class="info">
+                                                                                                                                </div>
+
+                                                                <p class="text"><?php echo $v_intro['2'] ?> ...</p>
+                                                            </div>
+
+                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['2'] ?>&id=5" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="items left clearfix">
+                                                <li>
+                                                   <article class="fold-item span12">
+                                                        <div class="clearfix">
+                                                            
+                                                            <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto[3].'.jpg'; ?>" height="200" width="271">
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title"><?php echo $v_titulo['3'] ?></h5>
+
+                                                                <div class="info">
+                                                                                                                                </div>
+
+                                                                <p class="text"><?php echo $v_intro['3'] ?> ...</p>
+                                                            </div>
+
+                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['3'] ?>&id=4" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li>
+
+                                                <li>
+                                                    <article class="fold-item span12">
+                                                        <div class="clearfix">
+                                                            
+                                                            <img src="../login/administration/admin/secciones/noticiast/<?php echo $v_foto[4].'.jpg'; ?>" height="200" width="271">
+                                                            <div class="post-sitemap">
+                                                                <span><i class="bo-icon-home bo-icon-white"></i>Tecnol&oacute;gias</span>                                                            </div>
+
+                                                            <div class="description visible-part">
+                                                                <h5 class="title"><?php echo $v_titulo['4'] ?></h5>
+
+                                                                <div class="info">
+                                                                                                                                </div>
+
+                                                                <p class="text"><?php echo $v_intro['4'] ?> ...</p>
+                                                            </div>
+
+                                                            <a href="tecnologias.php?titulo=<?php echo $v_titulo['4'] ?>&id=3" class="more" title=""></a>
+                                                        </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
 
                 <!-- 160 (160x600 Adv.) -->
                 <aside class="widget w-adv">
