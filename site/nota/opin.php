@@ -299,9 +299,9 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="../site/noticias/internacional.php?codigo=9">Internacional</a></li>
-                                   <li><a href="../site/noticias/nacional.php?codigo=10">Nacional</a></li>
-                                     <li><a href="../site/noticias/opinion.php?codigo=11">Opinion</a></li>
+                                    <li><a href="../noticias/internacional.php?codigo=9">Internacional</a></li>
+                                   <li><a href="../noticias/nacional.php?codigo=10">Nacional</a></li>
+                                     <li><a href="../noticias/opinion.php?codigo=11">Opinion</a></li>
 
 
                                 </ul>
@@ -383,7 +383,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Inicio</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                       <li><a href="../noticias/opinion.php?codigo=11">Eventos</a></li>
+                                       <li><a href="../noticias/opinion.php?codigo=11"></a></li>
                                         
                                     </ul>
                                 </div>
@@ -479,7 +479,7 @@
                                                 <div class="thumb-effect">
 
                                                     <div class="mask"></div>
-                                                     it´s me <?php echo $v_usu['2'] ?>
+                                                     it´s me <?php echo $v_usu['3'] ?>
                                                 </div>
                                             </a>
 

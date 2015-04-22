@@ -272,9 +272,9 @@
                                    data-target="#" href="#" title="">Polit&iacute;ca<i class="caret"></i></a>
 
                              <ul class="dropdown-menu">
-                                    <li><a href="../site/noticias/internacional.php?codigo=9">Internacional</a></li>
-                                   <li><a href="../site/noticias/nacional.php?codigo=10">Nacional</a></li>
-                                     <li><a href="../site/noticias/opinion.php?codigo=11">Opinion</a></li>
+                                    <li><a href="../noticias/internacional.php?codigo=9">Internacional</a></li>
+                                   <li><a href="../noticias/nacional.php?codigo=10">Nacional</a></li>
+                                     <li><a href="../noticias/opinion.php?codigo=11">Opinion</a></li>
 
 
                                 </ul>
@@ -356,7 +356,7 @@
                             <div class="blog">
 
 <?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM opinion WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM opinion WHERE tipo='11'  ORDER BY my_date desc LIMIT 5");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
@@ -366,7 +366,7 @@
                                             <div class="span12 img-container" title="">
                                                 
                                                 <img src="../login/administration/admin/secciones/eventos/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
-                                                <a href="opin.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
+                                                <a href="../nota/opin.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -383,7 +383,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="opin.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                            <a href="../nota/opin.php?noticia=<?php echo $datox['id']; ?>" title="">
                                                             <h4 class="media-heading"><?php echo $datox['titulo']; ?></h4>
                                                         </a>
 
@@ -395,7 +395,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $datox['intro']; ?>...
                                                             </p>
-                                                            <a href="opin.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="../nota/opin.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -418,7 +418,7 @@
                                     </li>
 
                                    <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM opinion WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM opinion WHERE tipo='11'  ORDER BY my_date desc LIMIT 5");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>

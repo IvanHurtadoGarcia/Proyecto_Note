@@ -273,8 +273,8 @@
 
                              <ul class="dropdown-menu">
                                     <li><a href="../site/noticias/internacional.php?codigo=9">Internacional</a></li>
-                                   <li><a href="../site/noticias/nacional.php?codigo=10">Nacional</a></li>
-                                     <li><a href="../site/noticias/opinion.php?codigo=11">Opinion</a></li>
+                                   <li><a href="../nacional.php?codigo=10">Nacional</a></li>
+                                     <li><a href="../noticias/opinion.php?codigo=11">Opinion</a></li>
 
 
                                 </ul>
@@ -341,7 +341,7 @@
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li>
                                             <a href="../index.php"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><li><a href="../noticias/internacional.php?codigo=9">Internacional</a></li>
+                                        <li><li><a href="../site/noticias/internacional.php?codigo=9">Internacional</a></li>
                                     </ul>
                                 </div>
 
@@ -356,7 +356,7 @@
                             <div class="blog">
 
 <?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional WHERE tipo='9'  ORDER BY my_date desc LIMIT 5");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
@@ -365,8 +365,8 @@
                                         <article>
                                             <div class="span12 img-container" title="">
                                                 
-                                                <img src="../login/administration/admin/secciones/eventos/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
-                                                <a href="inter.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
+                                                <img src="../login/administration/admin/secciones/internacional/<?php echo $datox['id'].'.jpg'; ?>" height="345" width="604">
+                                                <a href="../nota/inter.php?noticia=<?php echo $datox['id']; ?>" class="more"></a>
                                             </div>
 
                                             <div class="row-fluid">
@@ -383,7 +383,7 @@
                                                     </div>    
 
                                                     <div class="span10 blog-desc-container">
-                                                            <a href="inter.php?noticia=<?php echo $datox['id']; ?>" title="">
+                                                            <a href="../nota/inter.php?noticia=<?php echo $datox['id']; ?>" title="">
                                                             <h4 class="media-heading"><?php echo $datox['titulo']; ?></h4>
                                                         </a>
 
@@ -395,7 +395,7 @@
                                                             <p class="blog-desc">
                                                                 <?php echo $datox['intro']; ?>...
                                                             </p>
-                                                            <a href="inter.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
+                                                            <a href="../nota/inter.php?noticia=<?php echo $datox['id']; ?>" class="btn-theme">Continuuar Leyendo...</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -418,7 +418,7 @@
                                     </li>
 
                                    <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional WHERE tipo='$codigo'  ORDER BY my_date desc LIMIT 5");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM internacional WHERE tipo='9'  ORDER BY my_date desc LIMIT 5");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
