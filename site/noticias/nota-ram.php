@@ -561,7 +561,7 @@
                     <div class="widget-content clearfix thumbnails">
                          <ul class="posts-in-images clearfix">
                             <?php 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
     while($datox=mysql_fetch_array($sqlx)){
                     
             ?>
@@ -569,14 +569,14 @@
                                 <a href="nota-des.php?noticia=<?php echo $datox['id']; ?>">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="../login/administration/admin/secciones/random/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
+                                        <img src="../login/administration/admin/secciones/descargas/<?php echo $datox['id'].'.jpg'; ?>" height="75" width="80">
                                         
                                     </div>
                                 </a>
                             </li>
 
                            <?php } 
-    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM random WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
+    $sqlx=mysql_query("SELECT *, DATE_FORMAT(`fecha`,'%d/%m/%Y %H:%i:%s') AS my_date FROM descargas WHERE tipo='13'  ORDER BY my_date asc LIMIT 9");
     if(!$datox=mysql_fetch_array($sqlx)){
             echo '<div class="alert alert-error" align="center">
                         <strong><i class="icon-warning-sign"></i> No hay noticias de esta categoria</strong>
